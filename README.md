@@ -5,7 +5,7 @@
 <h1 align="center">Rajora.Ai — Complete Free Tools Setup Manual 2026</h1>
 
 <p align="center">
-  <strong>A curated, interactive guide to 150+ free developer tools across GenAI, DevOps, Cloud, Data Analytics & Full Stack.</strong>
+  <strong>A curated, interactive guide to 150+ free developer tools across GenAI, DevOps, Cloud, Data Analytics &amp; Full Stack.</strong>
 </p>
 
 <p align="center">
@@ -16,9 +16,30 @@
   <a href="#tech-stack"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white&labelColor=14161B" alt="Tailwind CSS" /></a>
   <a href="#tech-stack"><img src="https://img.shields.io/badge/GSAP-3.14-88CE02?style=flat-square&logo=greensock&logoColor=white&labelColor=14161B" alt="GSAP" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-B6FF2E?style=flat-square&labelColor=14161B" alt="MIT License" /></a>
+  <img src="https://img.shields.io/github/last-commit/rajeevrajora77-lab/rajora-Ai-tool-guide?style=flat-square&labelColor=14161B&color=B6FF2E" alt="Last Commit" />
+  <img src="https://img.shields.io/github/stars/rajeevrajora77-lab/rajora-Ai-tool-guide?style=flat-square&labelColor=14161B&color=B6FF2E" alt="Stars" />
 </p>
 
 <br />
+
+---
+
+## 📌 Table of Contents
+
+- [About](#-about)
+- [Live Demo](#-live-demo)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [The 6 Layers](#-the-6-layers)
+- [Getting Started](#-getting-started)
+- [Available Scripts](#-available-scripts)
+- [Contributing](#-contributing)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Author](#-author)
+
+---
 
 ## 🎯 About
 
@@ -26,7 +47,13 @@
 
 Whether you're a beginner setting up your first dev environment or a senior engineer exploring new free-tier services, this guide maps out everything you need — with install commands, free-tier details, and direct links.
 
-<br />
+---
+
+## 🌐 Live Demo
+
+> 🚀 **[rajora-ai-tool-guide.vercel.app](https://rajora-ai-tool-guide.vercel.app)** *(deploy to activate)*
+
+---
 
 ## ✨ Features
 
@@ -41,65 +68,105 @@ Whether you're a beginner setting up your first dev environment or a senior engi
 | **Responsive Design** | Fully optimized for desktop, tablet & mobile viewports |
 | **Accessible** | Keyboard navigable, reduced-motion support, semantic HTML |
 
-<br />
+---
 
 ## 🏗️ Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | React 19 + TypeScript 5.9 |
-| **Build Tool** | Vite 7 |
-| **Styling** | Tailwind CSS 3.4 + Custom CSS |
-| **Animations** | GSAP 3.14 (ScrollTrigger) |
-| **UI Components** | Radix UI Primitives (53 components) |
-| **Typography** | Space Grotesk · Inter · IBM Plex Mono |
-| **Icons** | Lucide React |
+| Layer | Technology | Version |
+|-------|-----------|--------|
+| **Framework** | React + TypeScript | 19 / 5.9 |
+| **Build Tool** | Vite | 7 |
+| **Styling** | Tailwind CSS + Custom CSS | 3.4 |
+| **Animations** | GSAP (ScrollTrigger) | 3.14 |
+| **UI Components** | Radix UI Primitives | 53 components |
+| **Typography** | Space Grotesk · Inter · IBM Plex Mono | — |
+| **Icons** | Lucide React | latest |
+| **Linting** | ESLint | configured |
 
-<br />
+---
 
 ## 📁 Project Structure
 
 ```
 rajora-ai-tool-guide/
-├── public/                    # Static assets (hero images, tool visuals)
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md          # Bug report template
+│   │   └── feature_request.md     # Feature request template
+│   └── PULL_REQUEST_TEMPLATE.md   # PR checklist template
+├── public/                        # Static assets (hero images, tool visuals)
 ├── src/
 │   ├── components/
-│   │   ├── Navigation.tsx     # Fixed navbar with mobile drawer
-│   │   └── ui/                # 53 Radix-based UI primitives
+│   │   ├── Navigation.tsx         # Fixed navbar with mobile drawer
+│   │   └── ui/                    # 53 Radix-based UI primitives
 │   ├── data/
-│   │   ├── tools.ts           # Master tools database (150+ entries)
-│   │   ├── manualContent.ts   # Layer content aggregator
-│   │   └── layers/            # Per-layer detailed tool guides (L0–L5)
+│   │   ├── tools.ts               # Master tools database (150+ entries)
+│   │   ├── manualContent.ts       # Layer content aggregator
+│   │   └── layers/                # Per-layer detailed tool guides (L0–L5)
 │   ├── sections/
-│   │   ├── HeroSection.tsx    # Landing hero with GSAP entrance/exit
-│   │   ├── WorkflowSection.tsx # 3-step workflow cards
-│   │   ├── LayerSection.tsx   # Reusable layer showcase component
-│   │   ├── DirectorySection.tsx # Searchable tools directory
-│   │   ├── NewsletterSection.tsx # Email capture section
-│   │   └── FooterSection.tsx  # Footer with navigation & socials
+│   │   ├── HeroSection.tsx        # Landing hero with GSAP entrance/exit
+│   │   ├── WorkflowSection.tsx    # 3-step workflow cards
+│   │   ├── LayerSection.tsx       # Reusable layer showcase component
+│   │   ├── DirectorySection.tsx   # Searchable tools directory
+│   │   ├── NewsletterSection.tsx  # Email capture section
+│   │   └── FooterSection.tsx      # Footer with navigation & socials
 │   ├── hooks/
-│   │   └── use-mobile.ts     # Mobile breakpoint detection
+│   │   └── use-mobile.ts          # Mobile breakpoint detection
 │   ├── lib/
-│   │   └── utils.ts          # Tailwind merge utilities
-│   ├── App.tsx               # Root layout with GSAP snap scrolling
-│   ├── App.css               # Custom animations & scrollbar styles
-│   ├── index.css             # Design tokens & Tailwind config
-│   └── main.tsx              # React DOM entry point
-├── index.html                # HTML entry with SEO meta tags
-├── tailwind.config.js        # Extended Tailwind theme
-├── vite.config.ts            # Vite + path aliases
-├── tsconfig.json             # TypeScript configuration
-└── package.json              # Dependencies & scripts
+│   │   └── utils.ts               # Tailwind merge utilities
+│   ├── App.tsx                    # Root layout with GSAP snap scrolling
+│   ├── App.css                    # Custom animations & scrollbar styles
+│   ├── index.css                  # Design tokens & Tailwind config
+│   └── main.tsx                   # React DOM entry point
+├── index.html                     # HTML entry with SEO meta tags
+├── tailwind.config.js             # Extended Tailwind theme
+├── vite.config.ts                 # Vite + path aliases
+├── tsconfig.json                  # TypeScript root configuration
+├── tsconfig.app.json              # App-level TypeScript config
+├── tsconfig.node.json             # Node-level TypeScript config
+├── eslint.config.js               # ESLint rules
+├── postcss.config.js              # PostCSS pipeline
+├── components.json                # shadcn/ui component config
+├── package.json                   # Dependencies & scripts
+├── CHANGELOG.md                   # Version history
+├── CONTRIBUTING.md                # Contribution guidelines
+└── LICENSE                        # MIT License
 ```
 
-<br />
+---
+
+## 🗂️ The 6 Layers
+
+```
+┌─────────────────────────────────────────────────┐
+│  Layer 5 — Full Stack                           │
+│  Next.js · Supabase · Auth · UI Kits            │
+├─────────────────────────────────────────────────┤
+│  Layer 4 — Data Analytics                       │
+│  SQL · Python Analytics · Visualization · BI    │
+├─────────────────────────────────────────────────┤
+│  Layer 3 — GenAI & Data Science                 │
+│  LangChain · Vector DBs · Free LLM APIs         │
+├─────────────────────────────────────────────────┤
+│  Layer 2 — DevOps                               │
+│  CI/CD · GitHub Actions · Monitoring            │
+├─────────────────────────────────────────────────┤
+│  Layer 1 — Cloud Infrastructure                 │
+│  AWS · GCP · Azure · Vercel · Railway           │
+├─────────────────────────────────────────────────┤
+│  Layer 0 — Foundation                           │
+│  Terminal · Git · VS Code · Node · Python       │
+└─────────────────────────────────────────────────┘
+```
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - **Node.js** ≥ 20.x
-- **npm** ≥ 10.x (or pnpm / yarn)
+- **npm** ≥ 10.x (or `pnpm` / `yarn`)
 
 ### Installation
 
@@ -115,7 +182,7 @@ npm install
 npm run dev
 ```
 
-The app will be running at `http://localhost:5173`
+The app will be available at **`http://localhost:5173`**
 
 ### Build for Production
 
@@ -124,7 +191,7 @@ npm run build
 npm run preview
 ```
 
-<br />
+---
 
 ## 🔧 Available Scripts
 
@@ -133,55 +200,40 @@ npm run preview
 | `npm run dev` | Start Vite dev server with HMR |
 | `npm run build` | Type-check + production build |
 | `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint on all files |
+| `npm run lint` | Run ESLint on all source files |
 
-<br />
-
-## 🗂️ The 6 Layers
-
-```
-┌─────────────────────────────────────────────────┐
-│  Layer 5 — Full Stack                           │
-│  Next.js · Supabase · Auth · UI Kits            │
-├─────────────────────────────────────────────────┤
-│  Layer 4 — Data Analytics                       │
-│  SQL · Python Analytics · Visualization · BI    │
-├─────────────────────────────────────────────────┤
-│  Layer 3 — GenAI & Data Science                 │
-│  LangChain · Vector DBs · Free LLM APIs        │
-├─────────────────────────────────────────────────┤
-│  Layer 2 — DevOps                               │
-│  CI/CD · GitHub Actions · Monitoring            │
-├─────────────────────────────────────────────────┤
-│  Layer 1 — Cloud Infrastructure                 │
-│  AWS · GCP · Azure · Vercel · Railway           │
-├─────────────────────────────────────────────────┤
-│  Layer 0 — Foundation                           │
-│  Terminal · Git · VS Code · Node · Python       │
-└─────────────────────────────────────────────────┘
-```
-
-<br />
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and suggest new tools.
+Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) before submitting a pull request.
 
-<br />
+**Quick steps:**
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Commit using [Conventional Commits](https://www.conventionalcommits.org/): `feat(tools): add new GenAI tools for Layer 3`
+4. Push and open a Pull Request
+
+---
+
+## 📋 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
+
+---
 
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-<br />
+---
 
 ## 👤 Author
 
 **Rajeev Rajora**
 
 - GitHub: [@rajeevrajora77-lab](https://github.com/rajeevrajora77-lab)
-
-<br />
+- Email: rajeev.rajora.77@gmail.com
 
 ---
 
