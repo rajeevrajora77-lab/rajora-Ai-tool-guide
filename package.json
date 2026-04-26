@@ -1,8 +1,16 @@
 {
-  "name": "my-app",
+  "name": "rajora-ai-tool-guide",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A curated, interactive guide to 150+ free developer tools across GenAI, DevOps, Cloud, Data Analytics & Full Stack.",
+  "author": "Rajeev Rajora",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajeevrajora77-lab/rajora-Ai-tool-guide.git"
+  },
+  "homepage": "https://github.com/rajeevrajora77-lab/rajora-Ai-tool-guide#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
