@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Rajora.Ai Dark Theme */
+    --background: 220 14% 4%;
+    --foreground: 210 20% 96%;
+    --card: 220 12% 8%;
+    --card-foreground: 210 20% 96%;
+    --popover: 220 12% 8%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 82 100% 59%;
+    --primary-foreground: 220 14% 4%;
+    --secondary: 220 12% 8%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 220 10% 15%;
+    --muted-foreground: 215 14% 68%;
+    --accent: 82 100% 59%;
+    --accent-foreground: 220 14% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 96%;
+    --border: 210 10% 20%;
+    --input: 210 10% 20%;
+    --ring: 82 100% 59%;
+    --radius: 0.625rem;
+    
+    /* Custom colors */
+    --raitora-bg: #0B0C10;
+    --raitora-bg-secondary: #14161B;
+    --raitora-accent: #B6FF2E;
+    --raitora-text: #F2F5F8;
+    --raitora-text-muted: #A7AFBA;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0B0C10] text-[#F2F5F8] antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  code, pre {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #B6FF2E 0%, #d4ff6e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-neon {
+    border-color: rgba(182, 255, 46, 0.35);
+  }
+  
+  .bg-grid {
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        rgba(242, 245, 248, 0.03) 0px,
+        rgba(242, 245, 248, 0.03) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(242, 245, 248, 0.03) 0px,
+        rgba(242, 245, 248, 0.03) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
