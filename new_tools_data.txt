@@ -1,0 +1,1064 @@
+WEB BROWSERS		Google Chrome	google.com/chrome	https://google.com/chrome	Free	Cross-platform browser by Google with V8 engine
+WEB BROWSERS		Mozilla Firefox	mozilla.org/firefox	https://mozilla.org/firefox	Free/OSS	Privacy-focused open-source browser
+WEB BROWSERS		Microsoft Edge	microsoft.com/edge	https://microsoft.com/edge	Free	Chromium-based browser by Microsoft
+WEB BROWSERS		Apple Safari	apple.com/safari	https://apple.com/safari	Free	Default macOS/iOS browser with WebKit engine
+WEB BROWSERS		Opera	opera.com	https://opera.com	Free	Feature-rich browser with built-in VPN
+WEB BROWSERS		Opera GX	opera.com/gx	https://opera.com/gx	Free	Gaming-focused browser with RAM/CPU limiter
+WEB BROWSERS		Brave	brave.com	https://brave.com	Free/OSS	Privacy-first browser with ad-blocking built-in
+WEB BROWSERS		Vivaldi	vivaldi.com	https://vivaldi.com	Free	Highly customizable Chromium browser
+WEB BROWSERS		Tor Browser	torproject.org	https://torproject.org	Free/OSS	Anonymity browser routing through Tor network
+WEB BROWSERS		Waterfox	waterfox.net	https://waterfox.net	Free/OSS	Firefox fork focused on privacy
+WEB BROWSERS		Pale Moon	palemoon.org	https://palemoon.org	Free/OSS	Optimized Firefox fork, own Goanna engine
+WEB BROWSERS		LibreWolf	librewolf.net	https://librewolf.net	Free/OSS	Hardened Firefox fork, privacy-first
+WEB BROWSERS		Ungoogled Chromium	github.com/ungoogled-software	https://github.com/ungoogled-software	Free/OSS	Chromium without Google integration
+WEB BROWSERS		SeaMonkey	seamonkey-project.org	https://seamonkey-project.org	Free/OSS	All-in-one internet suite
+WEB BROWSERS		Basilisk	basilisk-browser.org	https://basilisk-browser.org	Free/OSS	XUL-based browser, Firefox-like
+WEB BROWSERS		Maxthon	maxthon.com	https://maxthon.com	Free	Cloud browser with sync features
+WEB BROWSERS		Yandex Browser	browser.yandex.com	https://browser.yandex.com	Free	Russian browser with Protect technology
+WEB BROWSERS		Avast Secure Browser	avast.com/browser	https://avast.com/browser	Free	Security-focused browser with privacy tools
+WEB BROWSERS		Epic Privacy Browser	epicbrowser.com	https://epicbrowser.com	Free	Always-on private browsing
+WEB BROWSERS		Iridium Browser	iridiumbrowser.de	https://iridiumbrowser.de	Free/OSS	Chromium hardened for privacy
+WEB BROWSERS		Beaker Browser	beakerbrowser.com	https://beakerbrowser.com	Free/OSS	Peer-to-peer browser using Dat protocol
+WEB BROWSERS		Min Browser	minbrowser.org	https://minbrowser.org	Free/OSS	Minimal distraction-free browser
+WEB BROWSERS		qutebrowser	qutebrowser.org	https://qutebrowser.org	Free/OSS	Keyboard-driven browser with vi-like bindings
+WEB BROWSERS		Midori	astian.org/midori-browser	https://astian.org/midori-browser	Free/OSS	Lightweight GTK browser
+WEB BROWSERS		Falkon	falkon.org	https://falkon.org	Free/OSS	KDE browser using QtWebEngine
+WEB BROWSERS		Lynx	lynx.invisible-island.net	https://lynx.invisible-island.net	Free/OSS	Text-only terminal browser
+WEB BROWSERS		w3m	w3m.sourceforge.net	https://w3m.sourceforge.net	Free/OSS	Terminal-based browser with image support
+WEB BROWSERS		Links2	jikos.cz/links	https://jikos.cz/links	Free/OSS	Graphical and text-mode browser
+WEB BROWSERS		Konqueror	konqueror.org	https://konqueror.org	Free/OSS	KDE file manager and browser
+WEB BROWSERS		Dillo	dillo.org	https://dillo.org	Free/OSS	Tiny, fast browser for low-resource systems
+WEB BROWSERS	u Mobile Browsers	Chrome for Android/iOS	google.com/chrome	https://google.com/chrome	Free	Google Chrome mobile version
+WEB BROWSERS	u Mobile Browsers	Firefox for Android/iOS	mozilla.org/firefox/mobile	https://mozilla.org/firefox/mobile	Free/OSS	Mozilla Firefox mobile
+WEB BROWSERS	u Mobile Browsers	Safari for iOS	apple.com/safari	https://apple.com/safari	Free	Apple's default iOS browser
+WEB BROWSERS	u Mobile Browsers	Samsung Internet	samsung.com/internet	https://samsung.com/internet	Free	Browser for Samsung Galaxy devices
+WEB BROWSERS	u Mobile Browsers	UC Browser	ucweb.com	https://ucweb.com	Free	Data-saving mobile browser popular in Asia
+WEB BROWSERS	u Mobile Browsers	DuckDuckGo Browser	duckduckgo.com/app	https://duckduckgo.com/app	Free	Privacy browser with tracker blocking
+WEB BROWSERS	u Mobile Browsers	Kiwi Browser	kiwibrowser.com	https://kiwibrowser.com	Free	Chromium browser supporting desktop extensions
+WEB BROWSERS	u Mobile Browsers	Puffin Browser	puffinbrowser.com	https://puffinbrowser.com	Freemium	Cloud-rendering mobile browser
+WEB BROWSERS	u Mobile Browsers	Cake Browser	cakebrowser.com	https://cakebrowser.com	Free	Swipeable multi-tab mobile browser
+WEB BROWSERS	u Mobile Browsers	Aloha Browser	alohabrowser.com	https://alohabrowser.com	Free	Mobile browser with built-in VPN
+WEB BROWSERS	u Mobile Browsers	Firefox Focus	mozilla.org/firefox/focus	https://mozilla.org/firefox/focus	Free/OSS	Privacy browser, auto-erase history
+WEB BROWSERS	u Mobile Browsers	Onion Browser	onionbrowser.com	https://onionbrowser.com	Free	Tor-based browser for iOS
+WEB BROWSERS	u Mobile Browsers	Brave for Mobile	brave.com	https://brave.com	Free/OSS	Privacy browser for Android/iOS
+WEB BROWSERS	u Mobile Browsers	Dolphin Browser	dolphin.com	https://dolphin.com	Free	Feature-rich mobile browser with gestures
+WEB BROWSERS	u Team Messaging	Slack	slack.com	https://slack.com	Freemium	The de-facto team chat platform
+WEB BROWSERS	u Team Messaging	Microsoft Teams	microsoft.com/teams	https://microsoft.com/teams	Freemium	Office 365 integrated team hub
+WEB BROWSERS	u Team Messaging	Discord	discord.com	https://discord.com	Freemium	Voice, video, text for communities & teams
+WEB BROWSERS	u Team Messaging	Mattermost	mattermost.com	https://mattermost.com	Free/OSS	Self-hosted Slack alternative
+WEB BROWSERS	u Team Messaging	Rocket.Chat	rocket.chat	https://rocket.chat	Free/OSS	Open-source team messaging platform
+WEB BROWSERS	u Team Messaging	Zulip	zulip.com	https://zulip.com	Free/OSS	Topic-based team chat
+WEB BROWSERS	u Team Messaging	Twist	twist.com	https://twist.com	Freemium	Async-first messaging by Doist
+WEB BROWSERS	u Team Messaging	Flock	flock.com	https://flock.com	Freemium	Team messaging with built-in productivity tools
+WEB BROWSERS	u Team Messaging	Chanty	chanty.com	https://chanty.com	Freemium	Simple team chat with task management
+WEB BROWSERS	u Team Messaging	Glip by RingCentral	ringcentral.com/glip	https://ringcentral.com/glip	Freemium	Team messaging with video
+WEB BROWSERS	u Team Messaging	Workplace by Meta	workplace.com	https://workplace.com	Paid	Enterprise social network by Facebook
+WEB BROWSERS	u Team Messaging	Google Chat	chat.google.com	https://chat.google.com	Freemium	Google's team messaging app
+WEB BROWSERS	u Team Messaging	Cisco Webex Teams	webex.com	https://webex.com	Freemium	Enterprise collaboration platform
+WEB BROWSERS	u Team Messaging	Wire	wire.com	https://wire.com	Freemium	Secure collaboration platform E2E encrypted
+WEB BROWSERS	u Team Messaging	Element (Matrix)	element.io	https://element.io	Free/OSS	Decentralized Matrix protocol client
+WEB BROWSERS	u Team Messaging	Keybase	keybase.io	https://keybase.io	Free	Encrypted messaging with crypto identity
+WEB BROWSERS	u Team Messaging	Ryver	ryver.com	https://ryver.com	Paid	Team messaging with workflow automation
+WEB BROWSERS	u Team Messaging	Stride (discontinued)	â€”		â€”	Atlassian's team messaging, now Teams
+WEB BROWSERS	u Team Messaging	Blink	joinblink.com	https://joinblink.com	Freemium	Frontline worker communication
+WEB BROWSERS	u Team Messaging	Pumble	pumble.com	https://pumble.com	Freemium	Free team chat, unlimited history
+WEB BROWSERS	u Team Messaging	Spike	spikenow.com	https://spikenow.com	Freemium	Email as chat, conversational email
+WEB BROWSERS	u Team Messaging	Noysi	noysi.com	https://noysi.com	Freemium	Team messaging with file storage
+WEB BROWSERS	u Team Messaging	Zoho Cliq	zoho.com/cliq	https://zoho.com/cliq	Freemium	Team chat by Zoho suite
+WEB BROWSERS	u Team Messaging	Brosix	brosix.com	https://brosix.com	Freemium	Secure instant messaging for teams
+WEB BROWSERS	u Video Conferencing	Zoom	zoom.us	https://zoom.us	Freemium	Leading video conferencing platform
+WEB BROWSERS	u Video Conferencing	Google Meet	meet.google.com	https://meet.google.com	Freemium	Google's video calling platform
+WEB BROWSERS	u Video Conferencing	Microsoft Teams	microsoft.com/teams	https://microsoft.com/teams	Freemium	Teams video conferencing
+WEB BROWSERS	u Video Conferencing	Cisco Webex	webex.com	https://webex.com	Freemium	Enterprise video conferencing
+WEB BROWSERS	u Video Conferencing	GoToMeeting	goto.com/meeting	https://goto.com/meeting	Paid	Professional video meetings
+WEB BROWSERS	u Video Conferencing	Jitsi Meet	meet.jit.si	https://meet.jit.si	Free/OSS	Open-source video conferencing
+WEB BROWSERS	u Video Conferencing	BigBlueButton	bigbluebutton.org	https://bigbluebutton.org	Free/OSS	Open-source web conferencing for education
+WEB BROWSERS	u Video Conferencing	Whereby	whereby.com	https://whereby.com	Freemium	Browser-based video meetings, no install
+WEB BROWSERS	u Video Conferencing	Around	around.co	https://around.co	Freemium	Floating video calls for remote teams
+WEB BROWSERS	u Video Conferencing	Loom	loom.com	https://loom.com	Freemium	Async video messaging
+WEB BROWSERS	u Video Conferencing	Dyte	dyte.io	https://dyte.io	Freemium	Embeddable video SDK
+WEB BROWSERS	u Video Conferencing	Daily.co	daily.co	https://daily.co	Freemium	Video API for developers
+WEB BROWSERS	u Video Conferencing	Whereby Embedded	whereby.com/embedded	https://whereby.com/embedded	Paid	Embeddable video calls
+WEB BROWSERS	u Video Conferencing	Amazon Chime	aws.amazon.com/chime	https://aws.amazon.com/chime	Freemium	AWS video conferencing
+WEB BROWSERS	u Video Conferencing	8x8 Meet	8x8.com	https://8x8.com	Freemium	Business video meetings
+WEB BROWSERS	u Video Conferencing	BlueJeans	bluejeans.com	https://bluejeans.com	Paid	Enterprise video conferencing by Verizon
+WEB BROWSERS	u Video Conferencing	Vonage Video API	vonage.com/communications-apis/video	https://vonage.com/communications-apis/video	Paid	Programmable video
+WEB BROWSERS	u Video Conferencing	Twilio Video	twilio.com/video	https://twilio.com/video	Paid	Programmable video platform
+WEB BROWSERS	u Video Conferencing	Stream Video	getstream.io/video	https://getstream.io/video	Freemium	Video calling SDK
+WEB BROWSERS	u Video Conferencing	Agora	agora.io	https://agora.io	Freemium	Real-time voice & video SDK
+WEB BROWSERS	u Video Conferencing	Metered Video	metered.ca	https://metered.ca	Freemium	WebRTC video SDK
+WEB BROWSERS	u Video Conferencing	OpenVidu	openvidu.io	https://openvidu.io	Free/OSS	Open-source WebRTC platform
+WEB BROWSERS	u Video Conferencing	LiveKit	livekit.io	https://livekit.io	Free/OSS	Open-source real-time video/audio
+WEB BROWSERS	u Video Conferencing	Gather.town	gather.town	https://gather.town	Freemium	Virtual office with spatial video
+WEB BROWSERS	u Video Conferencing	Teamflow	teamflowhq.com	https://teamflowhq.com	Freemium	Virtual office platform
+WEB BROWSERS	u Email Clients	Gmail	gmail.com	https://gmail.com	Free	Google's web-based email service
+WEB BROWSERS	u Email Clients	Microsoft Outlook	outlook.microsoft.com	https://outlook.microsoft.com	Freemium	Microsoft's email and calendar
+WEB BROWSERS	u Email Clients	Apple Mail	apple.com	https://apple.com	Free	Default macOS/iOS email client
+WEB BROWSERS	u Email Clients	Thunderbird	thunderbird.net	https://thunderbird.net	Free/OSS	Mozilla's cross-platform email client
+WEB BROWSERS	u Email Clients	ProtonMail	proton.me	https://proton.me	Freemium	End-to-end encrypted email
+WEB BROWSERS	u Email Clients	Tutanota	tuta.com	https://tuta.com	Freemium	Encrypted email with calendar
+WEB BROWSERS	u Email Clients	Hey	hey.com	https://hey.com	Paid	Opinionated email by Basecamp
+WEB BROWSERS	u Email Clients	Fastmail	fastmail.com	https://fastmail.com	Paid	Privacy-focused email service
+WEB BROWSERS	u Email Clients	Zoho Mail	zoho.com/mail	https://zoho.com/mail	Freemium	Business email by Zoho
+WEB BROWSERS	u Email Clients	Superhuman	superhuman.com	https://superhuman.com	Paid	AI-powered fast email client
+WEB BROWSERS	u Email Clients	Spark	sparkmailapp.com	https://sparkmailapp.com	Freemium	Smart email client by Readdle
+WEB BROWSERS	u Email Clients	Airmail	airmailapp.com	https://airmailapp.com	Paid	Powerful email client for Apple devices
+WEB BROWSERS	u Email Clients	Newton Mail	newtonhq.com	https://newtonhq.com	Paid	Cross-platform email with read receipts
+WEB BROWSERS	u Email Clients	Missive	missiveapp.com	https://missiveapp.com	Freemium	Team email and chat inbox
+WEB BROWSERS	u Email Clients	Front	front.com	https://front.com	Paid	Shared team inbox platform
+WEB BROWSERS	u Email Clients	Helpscout	helpscout.com	https://helpscout.com	Paid	Shared inbox for customer support
+WEB BROWSERS	u Email Clients	Postmark	postmarkapp.com	https://postmarkapp.com	Paid	Transactional email delivery
+WEB BROWSERS	u Email Clients	SendGrid	sendgrid.com	https://sendgrid.com	Freemium	Email delivery platform by Twilio
+WEB BROWSERS	u Email Clients	Mailgun	mailgun.com	https://mailgun.com	Freemium	Developer-first email API
+WEB BROWSERS	u Email Clients	Amazon SES	aws.amazon.com/ses	https://aws.amazon.com/ses	Freemium	AWS email sending service
+WEB BROWSERS	u Email Clients	Mailchimp	mailchimp.com	https://mailchimp.com	Freemium	Email marketing platform
+WEB BROWSERS	u Email Clients	ActiveCampaign	activecampaign.com	https://activecampaign.com	Paid	Email marketing and automation
+WEB BROWSERS	u Email Clients	ConvertKit	convertkit.com	https://convertkit.com	Freemium	Email platform for creators
+WEB BROWSERS	u Email Clients	Klaviyo	klaviyo.com	https://klaviyo.com	Freemium	Email marketing for ecommerce
+WEB BROWSERS	u Email Clients	Brevo (Sendinblue)	brevo.com	https://brevo.com	Freemium	Email and SMS marketing
+WEB BROWSERS	u Email Clients	Constant Contact	constantcontact.com	https://constantcontact.com	Paid	Email marketing for small business
+WEB BROWSERS	u Email Clients	Campaign Monitor	campaignmonitor.com	https://campaignmonitor.com	Paid	Email marketing platform
+WEB BROWSERS	u Email Clients	Drip	drip.com	https://drip.com	Paid	Ecommerce email marketing
+WEB BROWSERS	u Email Clients	Moosend	moosend.com	https://moosend.com	Freemium	Email marketing and automation
+WEB BROWSERS	u Email Clients	MailerLite	mailerlite.com	https://mailerlite.com	Freemium	Simple email marketing platform
+WEB BROWSERS	u Project Management	Jira	atlassian.com/jira	https://atlassian.com/jira	Freemium	Issue and project tracking by Atlassian
+WEB BROWSERS	u Project Management	Linear	linear.app	https://linear.app	Freemium	Fast, keyboard-first issue tracker
+WEB BROWSERS	u Project Management	Asana	asana.com	https://asana.com	Freemium	Work and project management
+WEB BROWSERS	u Project Management	Trello	trello.com	https://trello.com	Freemium	Kanban-style project boards by Atlassian
+WEB BROWSERS	u Project Management	Monday.com	monday.com	https://monday.com	Freemium	Visual project and work management OS
+WEB BROWSERS	u Project Management	Notion	notion.so	https://notion.so	Freemium	All-in-one wiki, notes, and projects
+WEB BROWSERS	u Project Management	ClickUp	clickup.com	https://clickup.com	Freemium	All-in-one productivity platform
+WEB BROWSERS	u Project Management	Basecamp	basecamp.com	https://basecamp.com	Paid	Project management and team communication
+WEB BROWSERS	u Project Management	Wrike	wrike.com	https://wrike.com	Freemium	Work management platform
+WEB BROWSERS	u Project Management	Smartsheet	smartsheet.com	https://smartsheet.com	Paid	Spreadsheet-based project management
+WEB BROWSERS	u Project Management	Airtable	airtable.com	https://airtable.com	Freemium	Spreadsheet meets database platform
+WEB BROWSERS	u Project Management	Coda	coda.io	https://coda.io	Freemium	Doc that works like an app
+WEB BROWSERS	u Project Management	Height	height.app	https://height.app	Freemium	Collaborative project management tool
+WEB BROWSERS	u Project Management	Plane	plane.so	https://plane.so	Free/OSS	Open-source Jira alternative
+WEB BROWSERS	u Project Management	GitLab Issues	gitlab.com	https://gitlab.com	Freemium	Issue tracking within GitLab
+WEB BROWSERS	u Project Management	GitHub Projects	github.com/features/project-management	https://github.com/features/project-management	Free	Project boards in GitHub
+WEB BROWSERS	u Project Management	YouTrack	jetbrains.com/youtrack	https://jetbrains.com/youtrack	Freemium	Issue tracking by JetBrains
+WEB BROWSERS	u Project Management	Shortcut (Clubhouse)	shortcut.com	https://shortcut.com	Freemium	Project management for software teams
+WEB BROWSERS	u Project Management	Pivotal Tracker	pivotaltracker.com	https://pivotaltracker.com	Paid	Agile project management
+WEB BROWSERS	u Project Management	Taiga	taiga.io	https://taiga.io	Free/OSS	Open-source agile project management
+WEB BROWSERS	u Project Management	OpenProject	openproject.org	https://openproject.org	Free/OSS	Open-source project management
+WEB BROWSERS	u Project Management	Redmine	redmine.org	https://redmine.org	Free/OSS	Open-source project management
+WEB BROWSERS	u Project Management	ProjectLibre	projectlibre.com	https://projectlibre.com	Free/OSS	Open-source MS Project alternative
+WEB BROWSERS	u Project Management	GanttProject	ganttproject.biz	https://ganttproject.biz	Free/OSS	Free Gantt chart software
+WEB BROWSERS	u Project Management	Taskade	taskade.com	https://taskade.com	Freemium	AI-powered task lists and mind maps
+WEB BROWSERS	u Project Management	Teamwork	teamwork.com	https://teamwork.com	Freemium	Project management for client work
+WEB BROWSERS	u Project Management	Hive	hive.com	https://hive.com	Freemium	AI-powered project management
+WEB BROWSERS	u Project Management	Nifty	niftypm.com	https://niftypm.com	Freemium	Project management with milestones
+WEB BROWSERS	u Project Management	Zoho Projects	zoho.com/projects	https://zoho.com/projects	Freemium	Project management by Zoho
+WEB BROWSERS	u Project Management	ProofHub	proofhub.com	https://proofhub.com	Paid	All-in-one project management
+WEB BROWSERS	u Note-Taking	Obsidian	obsidian.md	https://obsidian.md	Freemium	Markdown-based knowledge graph
+WEB BROWSERS	u Note-Taking	Roam Research	roamresearch.com	https://roamresearch.com	Paid	Networked thought note-taking tool
+WEB BROWSERS	u Note-Taking	Logseq	logseq.com	https://logseq.com	Free/OSS	Open-source outliner and knowledge base
+WEB BROWSERS	u Note-Taking	OneNote	onenote.com	https://onenote.com	Free	Microsoft's digital notebook
+WEB BROWSERS	u Note-Taking	Evernote	evernote.com	https://evernote.com	Freemium	Note-taking and organizing
+WEB BROWSERS	u Note-Taking	Bear	bear.app	https://bear.app	Freemium	Beautiful writing app for Mac/iOS
+WEB BROWSERS	u Note-Taking	Apple Notes	apple.com/notes	https://apple.com/notes	Free	Built-in macOS/iOS notes app
+WEB BROWSERS	u Note-Taking	Google Keep	keep.google.com	https://keep.google.com	Free	Quick notes and reminders
+WEB BROWSERS	u Note-Taking	Joplin	joplinapp.org	https://joplinapp.org	Free/OSS	Open-source note-taking with sync
+WEB BROWSERS	u Note-Taking	Standard Notes	standardnotes.com	https://standardnotes.com	Freemium	Encrypted notes, long-term focused
+WEB BROWSERS	u Note-Taking	Simplenote	simplenote.com	https://simplenote.com	Free	Simple, synced notes across devices
+WEB BROWSERS	u Note-Taking	Zettlr	zettlr.com	https://zettlr.com	Free/OSS	Markdown editor for researchers
+WEB BROWSERS	u Note-Taking	Typora	typora.io	https://typora.io	Paid	Minimal distraction-free Markdown editor
+WEB BROWSERS	u Note-Taking	iA Writer	ia.net/writer	https://ia.net/writer	Paid	Focused writing environment
+WEB BROWSERS	u Note-Taking	Craft	craft.do	https://craft.do	Freemium	Beautiful native docs app for Apple
+WEB BROWSERS	u Note-Taking	Notion AI	notion.so/product/ai	https://notion.so/product/ai	Paid add-on	AI writing inside Notion
+WEB BROWSERS	u Note-Taking	Mem	mem.ai	https://mem.ai	Freemium	AI-first workspace for notes
+WEB BROWSERS	u Note-Taking	Capacities	capacities.io	https://capacities.io	Freemium	Object-based note-taking
+WEB BROWSERS	u Note-Taking	Tana	tana.inc	https://tana.inc	Free (beta)	Supertag-based knowledge management
+WEB BROWSERS	u Note-Taking	Anytype	anytype.io	https://anytype.io	Free/OSS	Local-first open-source knowledge tool
+WEB BROWSERS	u Note-Taking	Supernotes	supernotes.app	https://supernotes.app	Freemium	Card-based collaborative notes
+WEB BROWSERS	u Note-Taking	Reflect	reflect.app	https://reflect.app	Paid	Fast networked note-taking
+WEB BROWSERS	u Note-Taking	Appflowy	appflowy.io	https://appflowy.io	Free/OSS	Open-source Notion alternative
+WEB BROWSERS	u Note-Taking	Siyuan Notes	b3log.org/siyuan	https://b3log.org/siyuan	Free/OSS	Local-first personal knowledge base
+WEB BROWSERS	u Note-Taking	RemNote	remnote.com	https://remnote.com	Freemium	Notes with spaced repetition built-in
+WEB BROWSERS	u Note-Taking	Foam	foambubble.github.io	https://foambubble.github.io	Free/OSS	VS Code extension for personal wiki
+WEB BROWSERS	u Note-Taking	Dendron	dendron.so	https://dendron.so	Free/OSS	Developer-focused hierarchical notes
+WEB BROWSERS	u Note-Taking	Confluence	atlassian.com/confluence	https://atlassian.com/confluence	Freemium	Team wiki by Atlassian
+WEB BROWSERS	u Note-Taking	Nuclino	nuclino.com	https://nuclino.com	Freemium	Lightweight team wiki and docs
+WEB BROWSERS	u Note-Taking	Slite	slite.com	https://slite.com	Freemium	Async docs and knowledge base
+WEB BROWSERS	u Note-Taking	Tettra	tettra.com	https://tettra.com	Freemium	Internal knowledge management
+WEB BROWSERS	u Note-Taking	BookStack	bookstackapp.com	https://bookstackapp.com	Free/OSS	Open-source documentation platform
+WEB BROWSERS	u Note-Taking	Wiki.js	js.wiki	https://js.wiki	Free/OSS	Open-source wiki with markdown
+WEB BROWSERS	u Note-Taking	MediaWiki	mediawiki.org	https://mediawiki.org	Free/OSS	Software powering Wikipedia
+WEB BROWSERS	u Note-Taking	DokuWiki	dokuwiki.org	https://dokuwiki.org	Free/OSS	Simple file-based wiki
+WEB BROWSERS	u Whiteboard	Miro	miro.com	https://miro.com	Freemium	Online collaborative whiteboard
+WEB BROWSERS	u Whiteboard	FigJam	figma.com/figjam	https://figma.com/figjam	Freemium	Figma's online whiteboard
+WEB BROWSERS	u Whiteboard	Mural	mural.co	https://mural.co	Freemium	Digital workspace for visual collaboration
+WEB BROWSERS	u Whiteboard	Excalidraw	excalidraw.com	https://excalidraw.com	Free/OSS	Virtual whiteboard with hand-drawn feel
+WEB BROWSERS	u Whiteboard	Lucidchart	lucidchart.com	https://lucidchart.com	Freemium	Web-based diagramming tool
+WEB BROWSERS	u Whiteboard	draw.io	diagrams.net	https://diagrams.net	Free/OSS	Open-source diagramming
+WEB BROWSERS	u Whiteboard	Whimsical	whimsical.com	https://whimsical.com	Freemium	Flowcharts, wireframes, and mind maps
+WEB BROWSERS	u Whiteboard	Creately	creately.com	https://creately.com	Freemium	Visual collaboration platform
+WEB BROWSERS	u Whiteboard	Cacoo	nulab.com/cacoo	https://nulab.com/cacoo	Freemium	Online diagramming by Nulab
+WEB BROWSERS	u Whiteboard	OmniGraffle	omnigroup.com/omnigraffle	https://omnigroup.com/omnigraffle	Paid	Professional diagramming for Mac
+WEB BROWSERS	u Whiteboard	Microsoft Visio	microsoft.com/visio	https://microsoft.com/visio	Paid	Professional diagramming by Microsoft
+WEB BROWSERS	u Whiteboard	Balsamiq	balsamiq.com	https://balsamiq.com	Paid	Low-fidelity wireframing tool
+WEB BROWSERS	u Whiteboard	Overflow	overflow.io	https://overflow.io	Freemium	User flow design tool
+WEB BROWSERS	u Whiteboard	Plectica	plectica.com	https://plectica.com	Freemium	System mapping platform
+WEB BROWSERS	u Whiteboard	Scapple	literatureandlatte.com/scapple	https://literatureandlatte.com/scapple	Paid	Freeform idea mapping
+WEB BROWSERS	u Whiteboard	MindMeister	mindmeister.com	https://mindmeister.com	Freemium	Online mind mapping
+WEB BROWSERS	u Whiteboard	XMind	xmind.net	https://xmind.net	Freemium	Mind mapping and brainstorming
+WEB BROWSERS	u Whiteboard	FreeMind	freemind.sourceforge.io	https://freemind.sourceforge.io	Free/OSS	Open-source mind mapping
+WEB BROWSERS	u Whiteboard	Coggle	coggle.it	https://coggle.it	Freemium	Simple collaborative mind maps
+WEB BROWSERS	u Whiteboard	MindNode	mindnode.com	https://mindnode.com	Paid	Mind mapping for Apple devices
+WEB BROWSERS	u UI/UX Design	Figma	figma.com	https://figma.com	Freemium	Collaborative interface design tool
+WEB BROWSERS	u UI/UX Design	Adobe XD	adobe.com/xd	https://adobe.com/xd	Free/Paid	UI/UX design by Adobe
+WEB BROWSERS	u UI/UX Design	Sketch	sketch.com	https://sketch.com	Paid	Vector UI design for macOS
+WEB BROWSERS	u UI/UX Design	InVision	invisionapp.com	https://invisionapp.com	Freemium	Prototyping and collaboration
+WEB BROWSERS	u UI/UX Design	Zeplin	zeplin.io	https://zeplin.io	Freemium	Design handoff tool
+WEB BROWSERS	u UI/UX Design	Marvel	marvelapp.com	https://marvelapp.com	Freemium	Design and prototype tool
+WEB BROWSERS	u UI/UX Design	Framer	framer.com	https://framer.com	Freemium	Interactive design and prototyping
+WEB BROWSERS	u UI/UX Design	Axure RP	axure.com	https://axure.com	Paid	Advanced prototyping tool
+WEB BROWSERS	u UI/UX Design	Proto.io	proto.io	https://proto.io	Paid	Mobile prototype builder
+WEB BROWSERS	u UI/UX Design	UXPin	uxpin.com	https://uxpin.com	Paid	Design and prototype platform
+WEB BROWSERS	u UI/UX Design	Mockplus	mockplus.com	https://mockplus.com	Freemium	Rapid prototyping tool
+WEB BROWSERS	u UI/UX Design	Justinmind	justinmind.com	https://justinmind.com	Freemium	All-in-one prototyping tool
+WEB BROWSERS	u UI/UX Design	Origami Studio	origami.design	https://origami.design	Free	Meta's prototyping tool
+WEB BROWSERS	u UI/UX Design	Principle	principleformac.com	https://principleformac.com	Paid	Animated prototyping for Mac
+WEB BROWSERS	u UI/UX Design	Flinto	flinto.com	https://flinto.com	Paid	Prototyping tool for Mac
+WEB BROWSERS	u UI/UX Design	Adobe Illustrator	adobe.com/illustrator	https://adobe.com/illustrator	Paid	Industry-standard vector graphics
+WEB BROWSERS	u UI/UX Design	Affinity Designer	affinity.serif.com/designer	https://affinity.serif.com/designer	Paid	Professional vector design
+WEB BROWSERS	u UI/UX Design	CorelDRAW	coreldraw.com	https://coreldraw.com	Paid	Vector illustration and design
+WEB BROWSERS	u UI/UX Design	Inkscape	inkscape.org	https://inkscape.org	Free/OSS	Open-source vector graphics editor
+WEB BROWSERS	u UI/UX Design	Vectr	vectr.com	https://vectr.com	Free	Simple free vector graphics editor
+WEB BROWSERS	u Image Editing	Adobe Photoshop	adobe.com/photoshop	https://adobe.com/photoshop	Paid	Industry-standard photo editing
+WEB BROWSERS	u Image Editing	GIMP	gimp.org	https://gimp.org	Free/OSS	Open-source image manipulation
+WEB BROWSERS	u Image Editing	Pixelmator Pro	pixelmator.com/pro	https://pixelmator.com/pro	Paid	Professional image editor for Mac
+WEB BROWSERS	u Image Editing	Affinity Photo	affinity.serif.com/photo	https://affinity.serif.com/photo	Paid	Professional photo editing
+WEB BROWSERS	u Image Editing	Lightroom	adobe.com/lightroom	https://adobe.com/lightroom	Paid	Photo management and editing
+WEB BROWSERS	u Image Editing	Capture One	captureone.com	https://captureone.com	Paid	Professional photo editing software
+WEB BROWSERS	u Image Editing	Darktable	darktable.org	https://darktable.org	Free/OSS	Open-source Lightroom alternative
+WEB BROWSERS	u Image Editing	RawTherapee	rawtherapee.com	https://rawtherapee.com	Free/OSS	RAW image processing
+WEB BROWSERS	u Image Editing	Luminar Neo	skylum.com/luminar	https://skylum.com/luminar	Paid	AI-powered photo editor
+WEB BROWSERS	u Image Editing	ON1 Photo RAW	on1.com	https://on1.com	Paid	Photo editing and management
+WEB BROWSERS	u Image Editing	Canva	canva.com	https://canva.com	Freemium	Online graphic design platform
+WEB BROWSERS	u Image Editing	Adobe Express	adobe.com/express	https://adobe.com/express	Freemium	Quick design for social media
+WEB BROWSERS	u Image Editing	Crello (VistaCreate)	create.vista.com	https://create.vista.com	Freemium	Graphic design tool
+WEB BROWSERS	u Image Editing	Snappa	snappa.com	https://snappa.com	Freemium	Online graphic design
+WEB BROWSERS	u Image Editing	PicMonkey	picmonkey.com	https://picmonkey.com	Freemium	Photo editing and design
+WEB BROWSERS	u Image Editing	BeFunky	befunky.com	https://befunky.com	Freemium	Photo editor and collage maker
+WEB BROWSERS	u Image Editing	Fotor	fotor.com	https://fotor.com	Freemium	Online photo editor
+WEB BROWSERS	u Image Editing	Remove.bg	remove.bg	https://remove.bg	Freemium	AI background removal
+WEB BROWSERS	u Image Editing	Cleanup.pictures	cleanup.pictures	https://cleanup.pictures	Freemium	AI-powered object removal
+WEB BROWSERS	u Image Editing	Upscayl	upscayl.org	https://upscayl.org	Free/OSS	AI image upscaling tool
+WEB BROWSERS	u Image Editing	Topaz Photo AI	topazlabs.com/topaz-photo-ai	https://topazlabs.com/topaz-photo-ai	Paid	AI photo enhancement
+WEB BROWSERS	u Image Editing	Luminar AI	skylum.com/luminar-ai	https://skylum.com/luminar-ai	Paid	AI image editing
+WEB BROWSERS	u Image Editing	Photoroom	photoroom.com	https://photoroom.com	Freemium	AI product photo editor
+WEB BROWSERS	u Image Editing	Clipdrop	clipdrop.co	https://clipdrop.co	Freemium	AI-powered creative tools
+WEB BROWSERS	u Image Editing	Photopea	photopea.com	https://photopea.com	Free	Free online Photoshop alternative
+WEB BROWSERS	u Image Editing	Polarr	polarr.com	https://polarr.com	Freemium	AI-powered photo editor
+WEB BROWSERS	u Image Editing	VSCO	vsco.co	https://vsco.co	Freemium	Photo editing and community
+WEB BROWSERS	u Image Editing	Snapseed	snapseed.online	https://snapseed.online	Free	Google's mobile photo editor
+WEB BROWSERS	u Image Editing	Pixlr	pixlr.com	https://pixlr.com	Freemium	Online photo editing suite
+WEB BROWSERS	u Image Editing	PaintShop Pro	paintshoppro.com	https://paintshoppro.com	Paid	Photo editing by Corel
+WEB BROWSERS	u Video Editing	Adobe Premiere Pro	adobe.com/premiere	https://adobe.com/premiere	Paid	Professional video editing by Adobe
+WEB BROWSERS	u Video Editing	Final Cut Pro	apple.com/final-cut-pro	https://apple.com/final-cut-pro	Paid	Professional video editing for Mac
+WEB BROWSERS	u Video Editing	DaVinci Resolve	blackmagicdesign.com/davinci	https://blackmagicdesign.com/davinci	Free/Paid	Color grading and video editing
+WEB BROWSERS	u Video Editing	Avid Media Composer	avid.com	https://avid.com	Paid	Industry-standard post-production
+WEB BROWSERS	u Video Editing	iMovie	apple.com/imovie	https://apple.com/imovie	Free	Simple video editing for Apple
+WEB BROWSERS	u Video Editing	Kdenlive	kdenlive.org	https://kdenlive.org	Free/OSS	Open-source non-linear video editor
+WEB BROWSERS	u Video Editing	OpenShot	openshot.org	https://openshot.org	Free/OSS	Open-source video editor
+WEB BROWSERS	u Video Editing	Shotcut	shotcut.org	https://shotcut.org	Free/OSS	Free cross-platform video editor
+WEB BROWSERS	u Video Editing	Vegas Pro	vegascreativesoftware.com	https://vegascreativesoftware.com	Paid	Professional video/audio editing
+WEB BROWSERS	u Video Editing	HitFilm Express	fxhome.com/hitfilm	https://fxhome.com/hitfilm	Free/Paid	VFX compositing and editing
+WEB BROWSERS	u Video Editing	Filmora	filmora.wondershare.com	https://filmora.wondershare.com	Freemium	Easy video editing by Wondershare
+WEB BROWSERS	u Video Editing	PowerDirector	cyberlink.com/powerdirector	https://cyberlink.com/powerdirector	Freemium	Video editing by CyberLink
+WEB BROWSERS	u Video Editing	Camtasia	techsmith.com/camtasia	https://techsmith.com/camtasia	Paid	Screen recording and video editing
+WEB BROWSERS	u Video Editing	ScreenFlow	telestream.net/screenflow	https://telestream.net/screenflow	Paid	Screen recording for macOS
+WEB BROWSERS	u Video Editing	Loom	loom.com	https://loom.com	Freemium	Quick async video recording
+WEB BROWSERS	u Video Editing	Riverside.fm	riverside.fm	https://riverside.fm	Freemium	Remote podcast/video recording
+WEB BROWSERS	u Video Editing	Descript	descript.com	https://descript.com	Freemium	Text-based video editing with AI
+WEB BROWSERS	u Video Editing	Captions	captions.ai	https://captions.ai	Freemium	AI-powered captions and video editing
+WEB BROWSERS	u Video Editing	CapCut	capcut.com	https://capcut.com	Free	TikTok's free video editing app
+WEB BROWSERS	u Video Editing	InShot	inshot.com	https://inshot.com	Freemium	Mobile video editor
+WEB BROWSERS	u Video Editing	VLLO	vllo.app	https://vllo.app	Freemium	Mobile video editor
+WEB BROWSERS	u Video Editing	KineMaster	kinemaster.com	https://kinemaster.com	Freemium	Professional mobile video editing
+WEB BROWSERS	u Video Editing	Splice	splice.com	https://splice.com	Freemium	Simple mobile video editor
+WEB BROWSERS	u Video Editing	Adobe Premiere Rush	adobe.com/rush	https://adobe.com/rush	Freemium	Mobile-first video editing by Adobe
+WEB BROWSERS	u Video Editing	VN Video Editor	apps.apple.com/app/vn-video-editor	https://apps.apple.com/app/vn-video-editor	Free	Simple versatile video editor
+WEB BROWSERS	u Video Editing	Runway ML	runwayml.com	https://runwayml.com	Freemium	AI-powered video generation and editing
+WEB BROWSERS	u Video Editing	Synthesia	synthesia.io	https://synthesia.io	Paid	AI video generation from text
+WEB BROWSERS	u Video Editing	HeyGen	heygen.com	https://heygen.com	Freemium	AI video with avatars
+WEB BROWSERS	u Video Editing	Pictory	pictory.ai	https://pictory.ai	Paid	AI video creation from long-form content
+WEB BROWSERS	u 3D & VFX	Blender	blender.org	https://blender.org	Free/OSS	Open-source 3D creation suite
+WEB BROWSERS	u 3D & VFX	Maya	autodesk.com/maya	https://autodesk.com/maya	Paid	3D animation and VFX by Autodesk
+WEB BROWSERS	u 3D & VFX	3ds Max	autodesk.com/3dsmax	https://autodesk.com/3dsmax	Paid	3D modeling and rendering by Autodesk
+WEB BROWSERS	u 3D & VFX	Cinema 4D	maxon.net/cinema-4d	https://maxon.net/cinema-4d	Paid	Professional 3D animation by Maxon
+WEB BROWSERS	u 3D & VFX	Houdini	sidefx.com	https://sidefx.com	Freemium	VFX and procedural 3D by SideFX
+WEB BROWSERS	u 3D & VFX	ZBrush	maxon.net/zbrush	https://maxon.net/zbrush	Paid	Digital sculpting tool
+WEB BROWSERS	u 3D & VFX	Mudbox	autodesk.com/mudbox	https://autodesk.com/mudbox	Paid	3D sculpting by Autodesk
+WEB BROWSERS	u 3D & VFX	Substance Painter	adobe.com/substance3d	https://adobe.com/substance3d	Paid	3D texture painting by Adobe
+WEB BROWSERS	u 3D & VFX	Marvelous Designer	marvelousdesigner.com	https://marvelousdesigner.com	Paid	3D clothing simulation
+WEB BROWSERS	u 3D & VFX	SpeedTree	speedtree.com	https://speedtree.com	Paid	Procedural 3D vegetation modeling
+WEB BROWSERS	u 3D & VFX	Modo	foundry.com/products/modo	https://foundry.com/products/modo	Paid	3D modeling and rendering
+WEB BROWSERS	u 3D & VFX	LightWave 3D	lightwave3d.com	https://lightwave3d.com	Paid	3D modeling, animation, rendering
+WEB BROWSERS	u 3D & VFX	Keyshot	keyshot.com	https://keyshot.com	Paid	Real-time 3D rendering and animation
+WEB BROWSERS	u 3D & VFX	V-Ray	chaosgroup.com/vray	https://chaosgroup.com/vray	Paid	Professional rendering software
+WEB BROWSERS	u 3D & VFX	Arnold	autodesk.com/arnold	https://autodesk.com/arnold	Paid	CPU/GPU renderer by Autodesk
+WEB BROWSERS	u 3D & VFX	Unreal Engine	unrealengine.com	https://unrealengine.com	Free (rev share)	Real-time 3D creation platform
+WEB BROWSERS	u 3D & VFX	Unity	unity.com	https://unity.com	Freemium	Cross-platform game engine
+WEB BROWSERS	u 3D & VFX	Godot	godotengine.org	https://godotengine.org	Free/OSS	Open-source game engine
+WEB BROWSERS	u 3D & VFX	Adobe After Effects	adobe.com/after-effects	https://adobe.com/after-effects	Paid	Motion graphics and VFX
+WEB BROWSERS	u 3D & VFX	Nuke	foundry.com/products/nuke	https://foundry.com/products/nuke	Paid	Compositing software by Foundry
+WEB BROWSERS	u 3D & VFX	Natron	natron.fr	https://natron.fr	Free/OSS	Open-source compositing application
+WEB BROWSERS	u 3D & VFX	Fusion (DaVinci)	blackmagicdesign.com/products/davinciresolve/fusion	https://blackmagicdesign.com/products/davinciresolve/fusion	Free/Paid	Node-based VFX compositing
+WEB BROWSERS	u 3D & VFX	Mocha Pro	borisfx.com/mocha-pro	https://borisfx.com/mocha-pro	Paid	Planar tracking and VFX
+WEB BROWSERS	u 3D & VFX	Particle Illusion	borisfx.com/particle-illusion	https://borisfx.com/particle-illusion	Paid	Particle effects generator
+WEB BROWSERS	u 3D & VFX	Adobe Animate	adobe.com/animate	https://adobe.com/animate	Paid	Animation for web and interactive content
+WEB BROWSERS	u 3D & VFX	Toon Boom Harmony	toonboom.com/harmony	https://toonboom.com/harmony	Paid	Professional 2D animation
+WEB BROWSERS	u 3D & VFX	OpenToonz	opentoonz.github.io	https://opentoonz.github.io	Free/OSS	Open-source 2D animation
+WEB BROWSERS	u 3D & VFX	Pencil2D	pencil2d.org	https://pencil2d.org	Free/OSS	Open-source 2D hand-drawn animation
+WEB BROWSERS	u 3D & VFX	Synfig Studio	synfig.org	https://synfig.org	Free/OSS	Open-source 2D vector animation
+WEB BROWSERS	u 3D & VFX	Rive	rive.app	https://rive.app	Freemium	Interactive animation for apps and games
+WEB BROWSERS	u Audio Production	Ableton Live	ableton.com	https://ableton.com	Paid	DAW for music production and performance
+WEB BROWSERS	u Audio Production	Logic Pro	apple.com/logic-pro	https://apple.com/logic-pro	Paid	Professional DAW by Apple
+WEB BROWSERS	u Audio Production	FL Studio	image-line.com	https://image-line.com	Paid	Popular DAW, lifetime free updates
+WEB BROWSERS	u Audio Production	Pro Tools	avid.com/pro-tools	https://avid.com/pro-tools	Paid	Industry-standard recording DAW
+WEB BROWSERS	u Audio Production	GarageBand	apple.com/garageband	https://apple.com/garageband	Free	Beginner-friendly DAW by Apple
+WEB BROWSERS	u Audio Production	Cubase	steinberg.net/cubase	https://steinberg.net/cubase	Paid	Professional music production by Steinberg
+WEB BROWSERS	u Audio Production	Reaper	reaper.fm	https://reaper.fm	Paid	Affordable, lightweight DAW
+WEB BROWSERS	u Audio Production	Studio One	presonus.com/products/studio-one	https://presonus.com/products/studio-one	Paid	Music production by PreSonus
+WEB BROWSERS	u Audio Production	Bitwig Studio	bitwig.com	https://bitwig.com	Paid	Modern DAW with modular workflow
+WEB BROWSERS	u Audio Production	Reason	reasonstudios.com	https://reasonstudios.com	Paid	Rack-based music production
+WEB BROWSERS	u Audio Production	Cakewalk by BandLab	bandlab.com/cakewalk	https://bandlab.com/cakewalk	Free	Free professional DAW for Windows
+WEB BROWSERS	u Audio Production	LMMS	lmms.io	https://lmms.io	Free/OSS	Open-source music production
+WEB BROWSERS	u Audio Production	Ardour	ardour.org	https://ardour.org	Free/OSS	Open-source DAW for recording and editing
+WEB BROWSERS	u Audio Production	Audacity	audacityteam.org	https://audacityteam.org	Free/OSS	Free audio editor and recorder
+WEB BROWSERS	u Audio Production	Ocenaudio	ocenaudio.com	https://ocenaudio.com	Free	Easy cross-platform audio editor
+WEB BROWSERS	u Audio Production	Adobe Audition	adobe.com/audition	https://adobe.com/audition	Paid	Professional audio workstation by Adobe
+WEB BROWSERS	u Audio Production	Izotope RX	izotope.com/rx	https://izotope.com/rx	Paid	Audio repair and restoration suite
+WEB BROWSERS	u Audio Production	Izotope Ozone	izotope.com/ozone	https://izotope.com/ozone	Paid	AI-powered mastering plugin
+WEB BROWSERS	u Audio Production	Waves Audio	waves.com	https://waves.com	Paid	Pro audio plugins
+WEB BROWSERS	u Audio Production	Looperman	looperman.com	https://looperman.com	Free/Freemium	Royalty-free samples and loops
+WEB BROWSERS	u Audio Production	Soundsnap	soundsnap.com	https://soundsnap.com	Paid	Professional sound effects library
+WEB BROWSERS	u Audio Production	Freesound	freesound.org	https://freesound.org	Free	Collaborative sound database
+WEB BROWSERS	u Audio Production	EarMaster	earmaster.com	https://earmaster.com	Paid	Ear training and sight singing
+WEB BROWSERS	u Audio Production	Suno AI	suno.com	https://suno.com	Freemium	AI music generation from text
+WEB BROWSERS	u Audio Production	Udio	udio.com	https://udio.com	Freemium	AI music creation platform
+WEB BROWSERS	u Audio Production	Mubert	mubert.com	https://mubert.com	Freemium	AI-generated royalty-free music
+WEB BROWSERS	u Audio Production	AIVA	aiva.ai	https://aiva.ai	Freemium	AI music composition
+WEB BROWSERS	u Audio Production	Soundraw	soundraw.io	https://soundraw.io	Freemium	AI music generator for creators
+WEB BROWSERS	u Audio Production	Boomy	boomy.com	https://boomy.com	Freemium	AI music creation platform
+WEB BROWSERS	u Fonts & Typography	Google Fonts	fonts.google.com	https://fonts.google.com	Free	Free web fonts by Google
+WEB BROWSERS	u Fonts & Typography	Adobe Fonts	fonts.adobe.com	https://fonts.adobe.com	Paid (CC)	Font subscription by Adobe
+WEB BROWSERS	u Fonts & Typography	Font Squirrel	fontsquirrel.com	https://fontsquirrel.com	Free	Free commercial-use fonts
+WEB BROWSERS	u Fonts & Typography	DaFont	dafont.com	https://dafont.com	Free	Free downloadable fonts
+WEB BROWSERS	u Fonts & Typography	1001 Fonts	1001fonts.com	https://1001fonts.com	Free	Free font download site
+WEB BROWSERS	u Fonts & Typography	Fontshare	fontshare.com	https://fontshare.com	Free	Quality fonts from Indian Type Foundry
+WEB BROWSERS	u Fonts & Typography	Klim Type Foundry	klim.co.nz	https://klim.co.nz	Paid	Independent type foundry NZ
+WEB BROWSERS	u Fonts & Typography	Hoefler&Co;	typography.com	https://typography.com	Paid	Premium typography fonts
+WEB BROWSERS	u Fonts & Typography	MyFonts	myfonts.com	https://myfonts.com	Paid	Large font marketplace
+WEB BROWSERS	u Fonts & Typography	Bunny Fonts	fonts.bunny.net	https://fonts.bunny.net	Free	Privacy-first font CDN
+WEB BROWSERS	u Fonts & Typography	FontSource	fontsource.org	https://fontsource.org	Free/OSS	Self-host open-source fonts
+WEB BROWSERS	u Fonts & Typography	Glyphs	glyphsapp.com	https://glyphsapp.com	Paid	Font editor for macOS
+WEB BROWSERS	u Fonts & Typography	FontForge	fontforge.org	https://fontforge.org	Free/OSS	Open-source font editor
+WEB BROWSERS	u Fonts & Typography	BirdFont	birdfont.org	https://birdfont.org	Free/OSS	Font editor with SVG support
+WEB BROWSERS	u Office Suites	Microsoft 365	microsoft.com/microsoft-365	https://microsoft.com/microsoft-365	Paid/Freemium	Word, Excel, PowerPoint, etc.
+WEB BROWSERS	u Office Suites	Google Workspace	workspace.google.com	https://workspace.google.com	Freemium	Docs, Sheets, Slides, Drive
+WEB BROWSERS	u Office Suites	LibreOffice	libreoffice.org	https://libreoffice.org	Free/OSS	Open-source office suite
+WEB BROWSERS	u Office Suites	Apple iWork	apple.com/iwork	https://apple.com/iwork	Free	Pages, Numbers, Keynote
+WEB BROWSERS	u Office Suites	OnlyOffice	onlyoffice.com	https://onlyoffice.com	Free/OSS	Open-source office suite
+WEB BROWSERS	u Office Suites	WPS Office	wps.com	https://wps.com	Freemium	Feature-rich office suite
+WEB BROWSERS	u Office Suites	OpenOffice	openoffice.org	https://openoffice.org	Free/OSS	Apache OpenOffice suite
+WEB BROWSERS	u Office Suites	Zoho Docs	zoho.com/docs	https://zoho.com/docs	Freemium	Online office suite by Zoho
+WEB BROWSERS	u Office Suites	Cryptpad	cryptpad.fr	https://cryptpad.fr	Free/OSS	Privacy-preserving online office
+WEB BROWSERS	u Office Suites	Calligra Suite	calligra.org	https://calligra.org	Free/OSS	KDE office suite
+WEB BROWSERS	u Office Suites	SoftMaker Office	softmaker.com/softmaker-office	https://softmaker.com/softmaker-office	Paid	Lightweight office suite
+WEB BROWSERS	u Office Suites	Polaris Office	polarisoffice.com	https://polarisoffice.com	Freemium	Cross-platform office suite
+WEB BROWSERS	u Office Suites	OfficeSuite	officesuite.com	https://officesuite.com	Freemium	Mobile and desktop office
+WEB BROWSERS	u Office Suites	Collabora Online	collaboraoffice.com	https://collaboraoffice.com	Freemium	Cloud-based LibreOffice
+WEB BROWSERS	u Office Suites	Hancom Office	hancom.com	https://hancom.com	Paid	Korean office productivity suite
+WEB BROWSERS	u Task & To-Do	Todoist	todoist.com	https://todoist.com	Freemium	Task manager for individuals and teams
+WEB BROWSERS	u Task & To-Do	Things 3	culturedcode.com/things	https://culturedcode.com/things	Paid	Beautiful task manager for Apple
+WEB BROWSERS	u Task & To-Do	OmniFocus	omnigroup.com/omnifocus	https://omnigroup.com/omnifocus	Paid	Powerful GTD task manager for Apple
+WEB BROWSERS	u Task & To-Do	Microsoft To Do	todo.microsoft.com	https://todo.microsoft.com	Free	Simple task manager by Microsoft
+WEB BROWSERS	u Task & To-Do	Tick Tick	ticktick.com	https://ticktick.com	Freemium	Task manager with calendar integration
+WEB BROWSERS	u Task & To-Do	Any.do	any.do	https://any.do	Freemium	Task manager and calendar
+WEB BROWSERS	u Task & To-Do	Remember The Milk	rememberthemilk.com	https://rememberthemilk.com	Freemium	Classic task management service
+WEB BROWSERS	u Task & To-Do	Habitica	habitica.com	https://habitica.com	Free/OSS	Gamified habit and task tracker
+WEB BROWSERS	u Task & To-Do	Notion Tasks	notion.so	https://notion.so	Freemium	Task management inside Notion
+WEB BROWSERS	u Task & To-Do	Asana (personal)	asana.com	https://asana.com	Freemium	Task management for individuals
+WEB BROWSERS	u Task & To-Do	Focusmate	focusmate.com	https://focusmate.com	Freemium	Accountability coworking sessions
+WEB BROWSERS	u Task & To-Do	BeeDone	beedone.com	https://beedone.com	Freemium	Gamified to-do list app
+WEB BROWSERS	u Task & To-Do	Amazing Marvin	amazingmarvin.com	https://amazingmarvin.com	Paid	Customizable task manager
+WEB BROWSERS	u Task & To-Do	Sunsama	sunsama.com	https://sunsama.com	Paid	Daily planner for professionals
+WEB BROWSERS	u Task & To-Do	Akiflow	akiflow.com	https://akiflow.com	Paid	Time blocking task management
+WEB BROWSERS	u Task & To-Do	Routine	routine.co	https://routine.co	Freemium	Calendar and task integration
+WEB BROWSERS	u Task & To-Do	Motion	usemotion.com	https://usemotion.com	Paid	AI automatic scheduling
+WEB BROWSERS	u Task & To-Do	Reclaim.ai	reclaim.ai	https://reclaim.ai	Freemium	AI calendar and task scheduling
+WEB BROWSERS	u Task & To-Do	Structured	structured.app	https://structured.app	Freemium	Visual day planner
+WEB BROWSERS	u Task & To-Do	Timo	timoapp.com	https://timoapp.com	Free	Simple time tracker and Pomodoro
+WEB BROWSERS	u Calendar	Google Calendar	calendar.google.com	https://calendar.google.com	Free	Cloud calendar by Google
+WEB BROWSERS	u Calendar	Apple Calendar	apple.com/ios/calendar	https://apple.com/ios/calendar	Free	Native macOS/iOS calendar
+WEB BROWSERS	u Calendar	Microsoft Outlook Calendar	outlook.microsoft.com	https://outlook.microsoft.com	Freemium	Calendar in Outlook
+WEB BROWSERS	u Calendar	Fantastical	flexibits.com/fantastical	https://flexibits.com/fantastical	Paid	Natural language calendar for Apple
+WEB BROWSERS	u Calendar	Calendly	calendly.com	https://calendly.com	Freemium	Scheduling automation tool
+WEB BROWSERS	u Calendar	Cal.com	cal.com	https://cal.com	Free/OSS	Open-source Calendly alternative
+WEB BROWSERS	u Calendar	Acuity Scheduling	acuityscheduling.com	https://acuityscheduling.com	Paid	Appointment scheduling
+WEB BROWSERS	u Calendar	Doodle	doodle.com	https://doodle.com	Freemium	Group scheduling polls
+WEB BROWSERS	u Calendar	When2meet	when2meet.com	https://when2meet.com	Free	Simple group availability tool
+WEB BROWSERS	u Calendar	Cron	cron.com	https://cron.com	Free	Next-gen calendar for macOS
+WEB BROWSERS	u Calendar	Vimcal	vimcal.com	https://vimcal.com	Paid	Speed-focused calendar app
+WEB BROWSERS	u Calendar	Savvy Cal	savvycal.com	https://savvycal.com	Paid	Flexible scheduling tool
+WEB BROWSERS	u Calendar	Meetsync	meetsync.it	https://meetsync.it	Free	Smart meeting scheduler
+WEB BROWSERS	u Calendar	HubSpot Meetings	hubspot.com/products/meetings	https://hubspot.com/products/meetings	Free	Meeting scheduling in HubSpot
+WEB BROWSERS	u Calendar	Zcal	zcal.co	https://zcal.co	Free	Minimal beautiful scheduling
+WEB BROWSERS	u Calendar	Bookwhen	bookwhen.com	https://bookwhen.com	Freemium	Event booking platform
+WEB BROWSERS	u Calendar	Setmore	setmore.com	https://setmore.com	Freemium	Online appointment scheduling
+WEB BROWSERS	u Calendar	SimplyBook.me	simplybook.me	https://simplybook.me	Freemium	Online booking system
+WEB BROWSERS	u Time Tracking	Toggl Track	toggl.com/track	https://toggl.com/track	Freemium	Simple time tracking
+WEB BROWSERS	u Time Tracking	Harvest	getharvest.com	https://getharvest.com	Freemium	Time tracking and invoicing
+WEB BROWSERS	u Time Tracking	Clockify	clockify.me	https://clockify.me	Free	Free time tracker for teams
+WEB BROWSERS	u Time Tracking	RescueTime	rescuetime.com	https://rescuetime.com	Freemium	Automatic time tracking and focus
+WEB BROWSERS	u Time Tracking	Timely	timelyapp.com	https://timelyapp.com	Paid	AI-powered time tracking
+WEB BROWSERS	u Time Tracking	Hubstaff	hubstaff.com	https://hubstaff.com	Paid	Time tracking with screenshots
+WEB BROWSERS	u Time Tracking	Time Doctor	timedoctor.com	https://timedoctor.com	Paid	Employee time tracking
+WEB BROWSERS	u Time Tracking	DeskTime	desktime.com	https://desktime.com	Freemium	Automatic time tracking
+WEB BROWSERS	u Time Tracking	Everhour	everhour.com	https://everhour.com	Freemium	Time tracking with project management
+WEB BROWSERS	u Time Tracking	Paymo	paymoapp.com	https://paymoapp.com	Freemium	Time tracking and invoicing
+WEB BROWSERS	u Time Tracking	TMetric	tmetric.com	https://tmetric.com	Freemium	Time tracking for teams
+WEB BROWSERS	u Time Tracking	Timing	timingapp.com	https://timingapp.com	Paid	Automatic time tracking for Mac
+WEB BROWSERS	u Time Tracking	ManicTime	manictime.com	https://manictime.com	Freemium	Desktop time tracker
+WEB BROWSERS	u Time Tracking	Time Tracker by eBillity	ebillity.com	https://ebillity.com	Paid	Time tracking and billing
+WEB BROWSERS	u Time Tracking	Worksnaps	worksnaps.net	https://worksnaps.net	Paid	Time tracking with screenshots
+WEB BROWSERS	u Time Tracking	Forest	forestapp.cc	https://forestapp.cc	Freemium	Focus app, plant trees while working
+WEB BROWSERS	u Time Tracking	Be Focused	xwavesoft.com/be-focused-pro	https://xwavesoft.com/be-focused-pro	Freemium	Pomodoro timer for Apple
+WEB BROWSERS	u Time Tracking	Focus@Will	focusatwill.com	https://focusatwill.com	Paid	Neuroscience-based focus music
+WEB BROWSERS	u Time Tracking	Flow	flowapp.com	https://flowapp.com	Paid	Pomodoro-based focus app for Mac
+WEB BROWSERS	u Time Tracking	Serene	sereneapp.com	https://sereneapp.com	Paid	Daily planning and focus tool
+WEB BROWSERS	u Password Managers	1Password	1password.com	https://1password.com	Paid	Premium password manager for teams
+WEB BROWSERS	u Password Managers	Bitwarden	bitwarden.com	https://bitwarden.com	Free/OSS	Open-source password manager
+WEB BROWSERS	u Password Managers	Dashlane	dashlane.com	https://dashlane.com	Freemium	Password manager with VPN
+WEB BROWSERS	u Password Managers	LastPass	lastpass.com	https://lastpass.com	Freemium	Popular password manager
+WEB BROWSERS	u Password Managers	Keeper	keepersecurity.com	https://keepersecurity.com	Paid	Zero-knowledge password vault
+WEB BROWSERS	u Password Managers	NordPass	nordpass.com	https://nordpass.com	Freemium	Password manager by Nord
+WEB BROWSERS	u Password Managers	RoboForm	roboform.com	https://roboform.com	Freemium	Password manager and form filler
+WEB BROWSERS	u Password Managers	Enpass	enpass.io	https://enpass.io	Freemium	Cross-platform password manager
+WEB BROWSERS	u Password Managers	KeePass	keepass.info	https://keepass.info	Free/OSS	Open-source local password manager
+WEB BROWSERS	u Password Managers	KeePassXC	keepassxc.org	https://keepassxc.org	Free/OSS	KeePass cross-platform fork
+WEB BROWSERS	u Password Managers	Passbolt	passbolt.com	https://passbolt.com	Free/OSS	Open-source team password manager
+WEB BROWSERS	u Password Managers	Vaultwarden	github.com/dani-garcia/vaultwarden	https://github.com/dani-garcia/vaultwarden	Free/OSS	Self-hosted Bitwarden server
+WEB BROWSERS	u Password Managers	Apple Passwords	apple.com/ios	https://apple.com/ios	Free	Built-in password manager for Apple
+WEB BROWSERS	u Password Managers	Google Password Manager	passwords.google.com	https://passwords.google.com	Free	Built-in browser password manager
+WEB BROWSERS	u Password Managers	Sticky Password	stickypassword.com	https://stickypassword.com	Freemium	Password manager with USB sync
+WEB BROWSERS	u File Management	Google Drive	drive.google.com	https://drive.google.com	Freemium	15GB free cloud storage by Google
+WEB BROWSERS	u File Management	Dropbox	dropbox.com	https://dropbox.com	Freemium	File sync and cloud storage
+WEB BROWSERS	u File Management	OneDrive	onedrive.microsoft.com	https://onedrive.microsoft.com	Freemium	Microsoft cloud storage
+WEB BROWSERS	u File Management	iCloud Drive	apple.com/icloud	https://apple.com/icloud	Freemium	5GB free storage by Apple
+WEB BROWSERS	u File Management	Box	box.com	https://box.com	Freemium	Enterprise cloud content management
+WEB BROWSERS	u File Management	pCloud	pcloud.com	https://pcloud.com	Freemium	Cloud storage with lifetime plans
+WEB BROWSERS	u File Management	MEGA	mega.nz	https://mega.nz	Freemium	20GB free encrypted cloud storage
+WEB BROWSERS	u File Management	Sync.com	sync.com	https://sync.com	Freemium	End-to-end encrypted file sync
+WEB BROWSERS	u File Management	Tresorit	tresorit.com	https://tresorit.com	Paid	Swiss-based encrypted cloud storage
+WEB BROWSERS	u File Management	Nextcloud	nextcloud.com	https://nextcloud.com	Free/OSS	Self-hosted cloud platform
+WEB BROWSERS	u File Management	Seafile	seafile.com	https://seafile.com	Free/OSS	Open-source file sync
+WEB BROWSERS	u File Management	Syncthing	syncthing.net	https://syncthing.net	Free/OSS	P2P file synchronization
+WEB BROWSERS	u File Management	rsync	rsync.samba.org	https://rsync.samba.org	Free/OSS	Efficient file transfer utility
+WEB BROWSERS	u File Management	FileZilla	filezilla-project.org	https://filezilla-project.org	Free/OSS	FTP client and server
+WEB BROWSERS	u File Management	WinSCP	winscp.net	https://winscp.net	Free/OSS	Windows SFTP and FTP client
+WEB BROWSERS	u File Management	Cyberduck	cyberduck.io	https://cyberduck.io	Free/OSS	Cross-platform FTP/cloud browser
+WEB BROWSERS	u File Management	Mountain Duck	mountainduck.io	https://mountainduck.io	Paid	Mount cloud storage as disk
+WEB BROWSERS	u File Management	ExpanDrive	expandrive.com	https://expandrive.com	Paid	Cloud storage as network drive
+WEB BROWSERS	u File Management	Arq Backup	arqbackup.com	https://arqbackup.com	Paid	Local backup to cloud
+WEB BROWSERS	u File Management	Backblaze	backblaze.com	https://backblaze.com	Paid	Unlimited cloud backup
+WEB BROWSERS	u File Management	Acronis True Image	acronis.com	https://acronis.com	Paid	Backup and recovery solution
+WEB BROWSERS	u File Management	Carbon Copy Cloner	bombich.com	https://bombich.com	Paid	Mac backup and cloning
+WEB BROWSERS	u File Management	Time Machine	apple.com/timemachine	https://apple.com/timemachine	Free	Built-in macOS backup
+WEB BROWSERS	u File Management	Macrium Reflect	macrium.com/reflect	https://macrium.com/reflect	Free/Paid	Disk imaging and backup
+WEB BROWSERS	u File Management	Veeam	veeam.com	https://veeam.com	Free/Paid	Enterprise backup and recovery
+WEB BROWSERS	u File Management	Restic	restic.net	https://restic.net	Free/OSS	Fast, encrypted backup program
+WEB BROWSERS	u File Management	Rclone	rclone.org	https://rclone.org	Free/OSS	Cloud storage command-line sync
+WEB BROWSERS	u File Management	Duplicati	duplicati.com	https://duplicati.com	Free/OSS	Free backup software with encryption
+WEB BROWSERS	u File Management	BorgBackup	borgbackup.org	https://borgbackup.org	Free/OSS	Deduplicating backup program
+WEB BROWSERS	u File Management	Bacula	bacula.org	https://bacula.org	Free/OSS	Enterprise backup system
+WEB BROWSERS	u VPN Services	NordVPN	nordvpn.com	https://nordvpn.com	Paid	Popular VPN with 5000+ servers
+WEB BROWSERS	u VPN Services	ExpressVPN	expressvpn.com	https://expressvpn.com	Paid	Fast premium VPN service
+WEB BROWSERS	u VPN Services	Surfshark	surfshark.com	https://surfshark.com	Paid	Budget VPN with unlimited devices
+WEB BROWSERS	u VPN Services	ProtonVPN	protonvpn.com	https://protonvpn.com	Freemium	Privacy-first VPN by Proton
+WEB BROWSERS	u VPN Services	Mullvad	mullvad.net	https://mullvad.net	Paid	Anonymous VPN, accepts cash
+WEB BROWSERS	u VPN Services	Windscribe	windscribe.com	https://windscribe.com	Freemium	10GB/mo free VPN
+WEB BROWSERS	u VPN Services	TunnelBear	tunnelbear.com	https://tunnelbear.com	Freemium	User-friendly VPN
+WEB BROWSERS	u VPN Services	Private Internet Access	privateinternetaccess.com	https://privateinternetaccess.com	Paid	Open-source VPN
+WEB BROWSERS	u VPN Services	CyberGhost	cyberghost.com	https://cyberghost.com	Paid	Romania-based VPN with streaming
+WEB BROWSERS	u VPN Services	IPVanish	ipvanish.com	https://ipvanish.com	Paid	US-based VPN with SOCKS5 proxy
+WEB BROWSERS	u VPN Services	Hide.me	hide.me	https://hide.me	Freemium	No-log VPN service
+WEB BROWSERS	u VPN Services	Hotspot Shield	hotspotshield.com	https://hotspotshield.com	Freemium	Fast VPN with Catapult Hydra
+WEB BROWSERS	u VPN Services	OpenVPN	openvpn.net	https://openvpn.net	Free/OSS	Open-source VPN protocol and software
+WEB BROWSERS	u VPN Services	WireGuard	wireguard.com	https://wireguard.com	Free/OSS	Modern, fast VPN protocol
+WEB BROWSERS	u VPN Services	Tailscale	tailscale.com	https://tailscale.com	Freemium	Zero-config WireGuard mesh VPN
+WEB BROWSERS	u VPN Services	ZeroTier	zerotier.com	https://zerotier.com	Freemium	Virtual Ethernet networking
+WEB BROWSERS	u VPN Services	Nebula (Slack)	github.com/slackhq/nebula	https://github.com/slackhq/nebula	Free/OSS	Open-source overlay network
+WEB BROWSERS	u VPN Services	Algo VPN	github.com/trailofbits/algo	https://github.com/trailofbits/algo	Free/OSS	Self-hosted WireGuard/IKEv2 VPN
+WEB BROWSERS	u VPN Services	Outline VPN	getoutline.org	https://getoutline.org	Free/OSS	Shadowsocks-based VPN by Jigsaw
+WEB BROWSERS	u VPN Services	Psiphon	psiphon.ca	https://psiphon.ca	Free	Censorship circumvention VPN
+WEB BROWSERS	u Antivirus	Windows Defender	microsoft.com/windows-defender	https://microsoft.com/windows-defender	Free	Built-in Windows antivirus
+WEB BROWSERS	u Antivirus	Malwarebytes	malwarebytes.com	https://malwarebytes.com	Freemium	Anti-malware for consumers
+WEB BROWSERS	u Antivirus	Norton 360	norton.com	https://norton.com	Paid	Comprehensive security suite
+WEB BROWSERS	u Antivirus	McAfee Total Protection	mcafee.com	https://mcafee.com	Paid	Antivirus by McAfee
+WEB BROWSERS	u Antivirus	Bitdefender	bitdefender.com	https://bitdefender.com	Freemium	Award-winning antivirus
+WEB BROWSERS	u Antivirus	Kaspersky	kaspersky.com	https://kaspersky.com	Freemium	Russian antivirus software
+WEB BROWSERS	u Antivirus	ESET	eset.com	https://eset.com	Paid	Slovak antivirus and security
+WEB BROWSERS	u Antivirus	Avast	avast.com	https://avast.com	Freemium	Popular antivirus suite
+WEB BROWSERS	u Antivirus	AVG Antivirus	avg.com	https://avg.com	Free/Paid	Antivirus owned by Avast
+WEB BROWSERS	u Antivirus	Avira	avira.com	https://avira.com	Freemium	German antivirus software
+WEB BROWSERS	u Antivirus	Sophos	sophos.com	https://sophos.com	Freemium	Enterprise endpoint security
+WEB BROWSERS	u Antivirus	CrowdStrike Falcon	crowdstrike.com	https://crowdstrike.com	Paid	Cloud-native endpoint security
+WEB BROWSERS	u Antivirus	SentinelOne	sentinelone.com	https://sentinelone.com	Paid	AI-powered endpoint protection
+WEB BROWSERS	u Antivirus	Carbon Black	carbonblack.com	https://carbonblack.com	Paid	VMware endpoint security
+WEB BROWSERS	u Antivirus	Trend Micro	trendmicro.com	https://trendmicro.com	Paid	Enterprise security solutions
+WEB BROWSERS	u Antivirus	F-Secure	f-secure.com	https://f-secure.com	Paid	Finnish cybersecurity company
+WEB BROWSERS	u Antivirus	Cylance (BlackBerry)	blackberry.com/cylance	https://blackberry.com/cylance	Paid	AI-based endpoint security
+WEB BROWSERS	u Antivirus	Cortex XDR	paloaltonetworks.com/cortex/cortex-xdr	https://paloaltonetworks.com/cortex/cortex-xdr	Paid	Palo Alto extended detection
+WEB BROWSERS	u Antivirus	Huntress	huntress.com	https://huntress.com	Paid	MDR for SMBs
+WEB BROWSERS	u Antivirus	Webroot	webroot.com	https://webroot.com	Paid	Cloud-based antivirus
+WEB BROWSERS	u Penetration Testing	Kali Linux	kali.org	https://kali.org	Free/OSS	Penetration testing Linux distro
+WEB BROWSERS	u Penetration Testing	Parrot OS	parrotsec.org	https://parrotsec.org	Free/OSS	Security-focused Linux distro
+WEB BROWSERS	u Penetration Testing	Metasploit	metasploit.com	https://metasploit.com	Free/Paid	Penetration testing framework
+WEB BROWSERS	u Penetration Testing	Burp Suite	portswigger.net/burp	https://portswigger.net/burp	Freemium	Web security testing platform
+WEB BROWSERS	u Penetration Testing	Nmap	nmap.org	https://nmap.org	Free/OSS	Network discovery and security auditing
+WEB BROWSERS	u Penetration Testing	Wireshark	wireshark.org	https://wireshark.org	Free/OSS	Network protocol analyzer
+WEB BROWSERS	u Penetration Testing	John the Ripper	openwall.com/john	https://openwall.com/john	Free/OSS	Password cracking tool
+WEB BROWSERS	u Penetration Testing	Hashcat	hashcat.net	https://hashcat.net	Free/OSS	Advanced password recovery
+WEB BROWSERS	u Penetration Testing	Aircrack-ng	aircrack-ng.org	https://aircrack-ng.org	Free/OSS	Wi-Fi security auditing
+WEB BROWSERS	u Penetration Testing	Hydra	github.com/vanhauser-thc/thc-hydra	https://github.com/vanhauser-thc/thc-hydra	Free/OSS	Network login cracker
+WEB BROWSERS	u Penetration Testing	sqlmap	sqlmap.org	https://sqlmap.org	Free/OSS	Automatic SQL injection tool
+WEB BROWSERS	u Penetration Testing	OWASP ZAP	zaproxy.org	https://zaproxy.org	Free/OSS	Web application security scanner
+WEB BROWSERS	u Penetration Testing	Nikto	cirt.net/nikto2	https://cirt.net/nikto2	Free/OSS	Web server scanner
+WEB BROWSERS	u Penetration Testing	Shodan	shodan.io	https://shodan.io	Freemium	Internet device search engine
+WEB BROWSERS	u Penetration Testing	Censys	censys.io	https://censys.io	Freemium	Internet asset discovery
+WEB BROWSERS	u Penetration Testing	theHarvester	github.com/laramies/theHarvester	https://github.com/laramies/theHarvester	Free/OSS	OSINT gathering tool
+WEB BROWSERS	u Penetration Testing	Maltego	maltego.com	https://maltego.com	Freemium	OSINT and link analysis
+WEB BROWSERS	u Penetration Testing	SpiderFoot	spiderfoot.net	https://spiderfoot.net	Free/OSS	Automated OSINT tool
+WEB BROWSERS	u Penetration Testing	Recon-ng	github.com/lanmaster53/recon-ng	https://github.com/lanmaster53/recon-ng	Free/OSS	Web reconnaissance framework
+WEB BROWSERS	u Penetration Testing	Social-Engineer Toolkit	github.com/trustedsec/social-engineer-toolkit	https://github.com/trustedsec/social-engineer-toolkit	Free/OSS	Social engineering framework
+WEB BROWSERS	u Penetration Testing	Gobuster	github.com/OJ/gobuster	https://github.com/OJ/gobuster	Free/OSS	Directory and DNS brute-forcer
+WEB BROWSERS	u Penetration Testing	ffuf	github.com/ffuf/ffuf	https://github.com/ffuf/ffuf	Free/OSS	Fast web fuzzer
+WEB BROWSERS	u Penetration Testing	Nuclei	projectdiscovery.io/nuclei	https://projectdiscovery.io/nuclei	Free/OSS	Vulnerability scanner
+WEB BROWSERS	u Penetration Testing	Amass	github.com/owasp-amass/amass	https://github.com/owasp-amass/amass	Free/OSS	Attack surface mapping
+WEB BROWSERS	u Penetration Testing	Subfinder	projectdiscovery.io/subfinder	https://projectdiscovery.io/subfinder	Free/OSS	Subdomain discovery tool
+WEB BROWSERS	u Penetration Testing	httpx	projectdiscovery.io/httpx	https://projectdiscovery.io/httpx	Free/OSS	HTTP toolkit for probing
+WEB BROWSERS	u Penetration Testing	ghauri	github.com/r0oth3x49/ghauri	https://github.com/r0oth3x49/ghauri	Free/OSS	Advanced SQL injection tool
+WEB BROWSERS	u Penetration Testing	Nessus	tenable.com/products/nessus	https://tenable.com/products/nessus	Free/Paid	Vulnerability scanner by Tenable
+WEB BROWSERS	u Penetration Testing	OpenVAS	openvas.org	https://openvas.org	Free/OSS	Open vulnerability assessment system
+WEB BROWSERS	u Penetration Testing	Qualys	qualys.com	https://qualys.com	Paid	Cloud-based vulnerability management
+WEB BROWSERS	u Firewall	pfSense	pfsense.org	https://pfsense.org	Free/OSS	Open-source firewall/router
+WEB BROWSERS	u Firewall	OPNsense	opnsense.org	https://opnsense.org	Free/OSS	Open-source firewall platform
+WEB BROWSERS	u Firewall	Sophos XG Firewall	sophos.com/xg-firewall	https://sophos.com/xg-firewall	Freemium	Next-gen firewall
+WEB BROWSERS	u Firewall	Cisco ASA	cisco.com/asa	https://cisco.com/asa	Paid	Adaptive security appliance
+WEB BROWSERS	u Firewall	Palo Alto Networks NGFW	paloaltonetworks.com	https://paloaltonetworks.com	Paid	Next-gen firewall by Palo Alto
+WEB BROWSERS	u Firewall	Fortinet FortiGate	fortinet.com/fortigate	https://fortinet.com/fortigate	Paid	Enterprise firewall appliance
+WEB BROWSERS	u Firewall	Snort	snort.org	https://snort.org	Free/OSS	Open-source intrusion detection
+WEB BROWSERS	u Firewall	Suricata	suricata.io	https://suricata.io	Free/OSS	High-performance IDS/IPS
+WEB BROWSERS	u Firewall	Zeek (Bro)	zeek.org	https://zeek.org	Free/OSS	Network analysis framework
+WEB BROWSERS	u Firewall	Fail2ban	fail2ban.org	https://fail2ban.org	Free/OSS	Intrusion prevention system
+WEB BROWSERS	u Firewall	Pi-hole	pi-hole.net	https://pi-hole.net	Free/OSS	Network-wide ad blocking DNS
+WEB BROWSERS	u Firewall	AdGuard Home	adguard.com/adguard-home.html	https://adguard.com/adguard-home.html	Free/OSS	DNS ad blocker
+WEB BROWSERS	u Firewall	Cloudflare Gateway	cloudflare.com/zero-trust/gateway	https://cloudflare.com/zero-trust/gateway	Freemium	DNS filtering service
+WEB BROWSERS	u Firewall	NextDNS	nextdns.io	https://nextdns.io	Freemium	Privacy DNS with filtering
+WEB BROWSERS	u Firewall	Little Snitch	obdev.at/little-snitch	https://obdev.at/little-snitch	Paid	macOS outbound firewall
+WEB BROWSERS	u Firewall	Lulu	objective-see.org/products/lulu.html	https://objective-see.org/products/lulu.html	Free/OSS	Free macOS firewall
+WEB BROWSERS	u Firewall	GlassWire	glasswire.com	https://glasswire.com	Freemium	Network monitor and firewall
+WEB BROWSERS	u Firewall	Portmaster	safing.io	https://safing.io	Free/OSS	Application firewall for Windows
+WEB BROWSERS	u Encryption	VeraCrypt	veracrypt.fr	https://veracrypt.fr	Free/OSS	Disk encryption software
+WEB BROWSERS	u Encryption	BitLocker	microsoft.com/bitlocker	https://microsoft.com/bitlocker	Free (Win)	Windows built-in disk encryption
+WEB BROWSERS	u Encryption	FileVault	apple.com/filevault	https://apple.com/filevault	Free	macOS disk encryption
+WEB BROWSERS	u Encryption	GPG (GnuPG)	gnupg.org	https://gnupg.org	Free/OSS	OpenPGP encryption standard
+WEB BROWSERS	u Encryption	age	age-encryption.org	https://age-encryption.org	Free/OSS	Simple modern file encryption
+WEB BROWSERS	u Encryption	Signal	signal.org	https://signal.org	Free/OSS	Encrypted messaging and calls
+WEB BROWSERS	u Encryption	Wickr	wickr.com	https://wickr.com	Freemium	Secure enterprise messaging
+WEB BROWSERS	u Encryption	Threema	threema.ch	https://threema.ch	Paid	Privacy-first messaging app
+WEB BROWSERS	u Encryption	Session	getsession.org	https://getsession.org	Free/OSS	Decentralized encrypted messenger
+WEB BROWSERS	u Encryption	Briar	briarproject.org	https://briarproject.org	Free/OSS	P2P encrypted messenger
+WEB BROWSERS	u Encryption	SimpleX Chat	simplex.chat	https://simplex.chat	Free/OSS	No user IDs encrypted chat
+WEB BROWSERS	u Encryption	Cryptomator	cryptomator.org	https://cryptomator.org	Free/OSS	Encrypts files in cloud storage
+WEB BROWSERS	u Encryption	BoxCryptor	boxcryptor.com	https://boxcryptor.com	Freemium	End-to-end cloud file encryption
+WEB BROWSERS	u Encryption	Kleopatra	kde.org/applications/utilities/org.kde.kleopatra	https://kde.org/applications/utilities/org.kde.kleopatra	Free/OSS	Certificate manager for GPG
+WEB BROWSERS	u Encryption	OpenSSL	openssl.org	https://openssl.org	Free/OSS	TLS/SSL toolkit
+WEB BROWSERS	u Encryption	Tor Browser	torproject.org	https://torproject.org	Free/OSS	Anonymity browser
+WEB BROWSERS	u Encryption	I2P	geti2p.net	https://geti2p.net	Free/OSS	Anonymous peer-to-peer network
+WEB BROWSERS	u Encryption	Tails OS	tails.boum.org	https://tails.boum.org	Free/OSS	Live OS leaving no trace
+WEB BROWSERS	u Encryption	Whonix	whonix.org	https://whonix.org	Free/OSS	Desktop OS designed for Tor
+WEB BROWSERS	u Encryption	Qubes OS	qubes-os.org	https://qubes-os.org	Free/OSS	Compartmentalization-based security OS
+WEB BROWSERS	u AI Coding Assistants	GitHub Copilot	github.com/copilot	https://github.com/copilot	Paid	AI pair programmer by GitHub/OpenAI
+WEB BROWSERS	u AI Coding Assistants	Cursor	cursor.sh	https://cursor.sh	Freemium	AI-first code editor
+WEB BROWSERS	u AI Coding Assistants	Tabnine	tabnine.com	https://tabnine.com	Freemium	AI code completion
+WEB BROWSERS	u AI Coding Assistants	Codeium	codeium.com	https://codeium.com	Free	Free AI coding assistant
+WEB BROWSERS	u AI Coding Assistants	Amazon CodeWhisperer	aws.amazon.com/codewhisperer	https://aws.amazon.com/codewhisperer	Free/Paid	AI coding by AWS
+WEB BROWSERS	u AI Coding Assistants	Google Gemini Code Assist	cloud.google.com/products/gemini/code-assist	https://cloud.google.com/products/gemini/code-assist	Freemium	AI code help by Google
+WEB BROWSERS	u AI Coding Assistants	Replit AI (Ghostwriter)	replit.com	https://replit.com	Freemium	AI coding in Replit IDE
+WEB BROWSERS	u AI Coding Assistants	Sourcegraph Cody	sourcegraph.com/cody	https://sourcegraph.com/cody	Freemium	AI code assistant with codebase context
+WEB BROWSERS	u AI Coding Assistants	Continue	continue.dev	https://continue.dev	Free/OSS	Open-source AI coding assistant extension
+WEB BROWSERS	u AI Coding Assistants	Claude (Anthropic)	claude.ai	https://claude.ai	Freemium	Anthropic's AI for coding
+WEB BROWSERS	u AI Coding Assistants	ChatGPT (coding)	chatgpt.com	https://chatgpt.com	Freemium	OpenAI ChatGPT for code
+WEB BROWSERS	u AI Coding Assistants	Phind	phind.com	https://phind.com	Free	AI search for developers
+WEB BROWSERS	u AI Coding Assistants	Perplexity for Devs	perplexity.ai	https://perplexity.ai	Freemium	AI search and coding help
+WEB BROWSERS	u AI Coding Assistants	Pieces for Developers	pieces.app	https://pieces.app	Freemium	AI snippet manager for devs
+WEB BROWSERS	u AI Coding Assistants	Mintlify Writer	mintlify.com/writer	https://mintlify.com/writer	Freemium	AI documentation writer
+WEB BROWSERS	u AI Coding Assistants	Swimm	swimm.io	https://swimm.io	Freemium	AI-powered code documentation
+WEB BROWSERS	u AI Coding Assistants	Bito AI	bito.ai	https://bito.ai	Freemium	AI code review and generation
+WEB BROWSERS	u AI Coding Assistants	CodeGPT	codegpt.co	https://codegpt.co	Freemium	GPT-powered coding extension
+WEB BROWSERS	u AI Coding Assistants	Blackbox AI	blackbox.ai	https://blackbox.ai	Free	AI coding assistant
+WEB BROWSERS	u AI Coding Assistants	AskCodi	askcodi.com	https://askcodi.com	Freemium	AI coding assistant
+WEB BROWSERS	u AI Coding Assistants	Mutable AI	mutable.ai	https://mutable.ai	Freemium	AI-accelerated software development
+WEB BROWSERS	u AI Coding Assistants	Aider	aider.chat	https://aider.chat	Free/OSS	AI pair programming in terminal
+WEB BROWSERS	u AI Coding Assistants	Claude Code	claude.ai/code	https://claude.ai/code	Paid	Anthropic's agentic coding CLI
+WEB BROWSERS	u AI Coding Assistants	Devin	cognition.ai	https://cognition.ai	Paid	Fully autonomous AI software engineer
+WEB BROWSERS	u AI Coding Assistants	Bolt.new	bolt.new	https://bolt.new	Freemium	AI full-stack web dev in browser
+WEB BROWSERS	u AI Coding Assistants	v0 by Vercel	v0.dev	https://v0.dev	Freemium	AI UI generation by Vercel
+WEB BROWSERS	u AI Coding Assistants	Lovable	lovable.dev	https://lovable.dev	Freemium	AI full-stack app builder
+WEB BROWSERS	u AI Coding Assistants	Replit Agent	replit.com/agent	https://replit.com/agent	Freemium	AI agent that builds apps
+WEB BROWSERS	u AI Coding Assistants	Windsurf (Codeium)	codeium.com/windsurf	https://codeium.com/windsurf	Freemium	AI-first code editor
+WEB BROWSERS	u AI Coding Assistants	Zed	zed.dev	https://zed.dev	Free/OSS	High-performance multiplayer editor with AI
+WEB BROWSERS	u IDEs & Editors	JetBrains IntelliJ IDEA	jetbrains.com/idea	https://jetbrains.com/idea	Freemium	Java/Kotlin IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains PyCharm	jetbrains.com/pycharm	https://jetbrains.com/pycharm	Freemium	Python IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains WebStorm	jetbrains.com/webstorm	https://jetbrains.com/webstorm	Paid	JavaScript IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains GoLand	jetbrains.com/goland	https://jetbrains.com/goland	Paid	Go IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains Rider	jetbrains.com/rider	https://jetbrains.com/rider	Paid	.NET IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains CLion	jetbrains.com/clion	https://jetbrains.com/clion	Paid	C/C++ IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains DataGrip	jetbrains.com/datagrip	https://jetbrains.com/datagrip	Paid	Database IDE
+WEB BROWSERS	u IDEs & Editors	JetBrains RubyMine	jetbrains.com/rubymine	https://jetbrains.com/rubymine	Paid	Ruby and Rails IDE
+WEB BROWSERS	u IDEs & Editors	Eclipse IDE	eclipse.org	https://eclipse.org	Free/OSS	Open-source Java IDE
+WEB BROWSERS	u IDEs & Editors	NetBeans	netbeans.apache.org	https://netbeans.apache.org	Free/OSS	Apache NetBeans IDE
+WEB BROWSERS	u IDEs & Editors	Android Studio	developer.android.com/studio	https://developer.android.com/studio	Free	Official Android IDE by Google
+WEB BROWSERS	u IDEs & Editors	Xcode	developer.apple.com/xcode	https://developer.apple.com/xcode	Free	Apple's iOS/macOS IDE
+WEB BROWSERS	u IDEs & Editors	Visual Studio	visualstudio.microsoft.com	https://visualstudio.microsoft.com	Freemium	Full-featured IDE by Microsoft
+WEB BROWSERS	u IDEs & Editors	CodeBlocks	codeblocks.org	https://codeblocks.org	Free/OSS	C/C++ IDE
+WEB BROWSERS	u IDEs & Editors	Dev-C++	sourceforge.net/projects/orwelldevcpp	https://sourceforge.net/projects/orwelldevcpp	Free/OSS	Lightweight C/C++ IDE
+WEB BROWSERS	u IDEs & Editors	Geany	geany.org	https://geany.org	Free/OSS	Lightweight IDE
+WEB BROWSERS	u IDEs & Editors	Kate	kate-editor.org	https://kate-editor.org	Free/OSS	KDE advanced text editor
+WEB BROWSERS	u IDEs & Editors	Emacs	gnu.org/software/emacs	https://gnu.org/software/emacs	Free/OSS	Extensible self-documenting editor
+WEB BROWSERS	u IDEs & Editors	Helix	helix-editor.com	https://helix-editor.com	Free/OSS	Post-modern text editor
+WEB BROWSERS	u IDEs & Editors	Lapce	lapce.dev	https://lapce.dev	Free/OSS	Lightning-fast code editor in Rust
+WEB BROWSERS	u IDEs & Editors	Nova (Panic)	nova.app	https://nova.app	Paid	Native macOS code editor
+WEB BROWSERS	u IDEs & Editors	BBEdit	barebones.com/bbedit	https://barebones.com/bbedit	Paid	Professional text editor for Mac
+WEB BROWSERS	u IDEs & Editors	TextMate	macromates.com	https://macromates.com	Free/OSS	macOS text editor
+WEB BROWSERS	u IDEs & Editors	Komodo IDE	komodoide.com	https://komodoide.com	Paid	Dynamic language IDE
+WEB BROWSERS	u IDEs & Editors	Cloud9 (AWS)	aws.amazon.com/cloud9	https://aws.amazon.com/cloud9	Paid	Cloud IDE by AWS
+WEB BROWSERS	u IDEs & Editors	Gitpod	gitpod.io	https://gitpod.io	Freemium	Cloud development environments
+WEB BROWSERS	u IDEs & Editors	GitHub Codespaces	github.com/codespaces	https://github.com/codespaces	Freemium	Cloud dev environments
+WEB BROWSERS	u IDEs & Editors	Replit	replit.com	https://replit.com	Freemium	Browser-based collaborative IDE
+WEB BROWSERS	u IDEs & Editors	StackBlitz	stackblitz.com	https://stackblitz.com	Freemium	Online IDE for web projects
+WEB BROWSERS	u IDEs & Editors	CodeSandbox	codesandbox.io	https://codesandbox.io	Freemium	Online code editor for web
+WEB BROWSERS	u IDEs & Editors	Glitch	glitch.com	https://glitch.com	Free	Collaborative coding platform
+WEB BROWSERS	u IDEs & Editors	JSFiddle	jsfiddle.net	https://jsfiddle.net	Free	Online JS/HTML/CSS playground
+WEB BROWSERS	u IDEs & Editors	CodePen	codepen.io	https://codepen.io	Freemium	Front-end code playground
+WEB BROWSERS	u IDEs & Editors	PlayCode	playcode.io	https://playcode.io	Freemium	Online JavaScript playground
+WEB BROWSERS	u DevOps & Infra	Ansible	ansible.com	https://ansible.com	Free/OSS	IT automation and configuration management
+WEB BROWSERS	u DevOps & Infra	Chef	chef.io	https://chef.io	Free/OSS	Infrastructure automation
+WEB BROWSERS	u DevOps & Infra	Puppet	puppet.com	https://puppet.com	Free/OSS	Configuration management tool
+WEB BROWSERS	u DevOps & Infra	SaltStack	saltproject.io	https://saltproject.io	Free/OSS	Infrastructure automation
+WEB BROWSERS	u DevOps & Infra	Vagrant	vagrantup.com	https://vagrantup.com	Free/OSS	Development environment management
+WEB BROWSERS	u DevOps & Infra	Packer	packer.io	https://packer.io	Free/OSS	Machine image builder by HashiCorp
+WEB BROWSERS	u DevOps & Infra	Vault	vaultproject.io	https://vaultproject.io	Free/OSS	Secrets management by HashiCorp
+WEB BROWSERS	u DevOps & Infra	Consul	consul.io	https://consul.io	Free/OSS	Service mesh and discovery
+WEB BROWSERS	u DevOps & Infra	Nomad	nomadproject.io	https://nomadproject.io	Free/OSS	Workload orchestration by HashiCorp
+WEB BROWSERS	u DevOps & Infra	Istio	istio.io	https://istio.io	Free/OSS	Service mesh for Kubernetes
+WEB BROWSERS	u DevOps & Infra	Linkerd	linkerd.io	https://linkerd.io	Free/OSS	Ultralight service mesh
+WEB BROWSERS	u DevOps & Infra	ArgoCD	argoproj.github.io/cd	https://argoproj.github.io/cd	Free/OSS	GitOps CD for Kubernetes
+WEB BROWSERS	u DevOps & Infra	FluxCD	fluxcd.io	https://fluxcd.io	Free/OSS	GitOps tool for Kubernetes
+WEB BROWSERS	u DevOps & Infra	Tekton	tekton.dev	https://tekton.dev	Free/OSS	Kubernetes-native CI/CD pipelines
+WEB BROWSERS	u DevOps & Infra	Spinnaker	spinnaker.io	https://spinnaker.io	Free/OSS	Multi-cloud CD platform
+WEB BROWSERS	u DevOps & Infra	Crossplane	crossplane.io	https://crossplane.io	Free/OSS	Cloud infrastructure as code
+WEB BROWSERS	u DevOps & Infra	OpenTofu	opentofu.org	https://opentofu.org	Free/OSS	Open-source Terraform fork
+WEB BROWSERS	u DevOps & Infra	Pulumi	pulumi.com	https://pulumi.com	Freemium	Infrastructure as code in real languages
+WEB BROWSERS	u DevOps & Infra	CDK8s	cdk8s.io	https://cdk8s.io	Free/OSS	Kubernetes manifests in code
+WEB BROWSERS	u DevOps & Infra	Skaffold	skaffold.dev	https://skaffold.dev	Free/OSS	Local Kubernetes development
+WEB BROWSERS	u DevOps & Infra	Tilt	tilt.dev	https://tilt.dev	Free/OSS	Dev environment for microservices
+WEB BROWSERS	u DevOps & Infra	Telepresence	telepresence.io	https://telepresence.io	Free/OSS	Remote Kubernetes development
+WEB BROWSERS	u DevOps & Infra	Okteto	okteto.com	https://okteto.com	Freemium	Dev environments for Kubernetes
+WEB BROWSERS	u DevOps & Infra	Nix	nixos.org	https://nixos.org	Free/OSS	Reproducible package manager and OS
+WEB BROWSERS	u DevOps & Infra	NixOS	nixos.org	https://nixos.org	Free/OSS	Declarative Linux distribution
+WEB BROWSERS	u DevOps & Infra	Guix	guix.gnu.org	https://guix.gnu.org	Free/OSS	GNU package manager and OS
+WEB BROWSERS	u DevOps & Infra	Flake8	flake8.pycqa.org	https://flake8.pycqa.org	Free/OSS	Python style checker
+WEB BROWSERS	u DevOps & Infra	Black	black.readthedocs.io	https://black.readthedocs.io	Free/OSS	Python code formatter
+WEB BROWSERS	u DevOps & Infra	isort	pycqa.github.io/isort	https://pycqa.github.io/isort	Free/OSS	Python import sorter
+WEB BROWSERS	u DevOps & Infra	mypy	mypy-lang.org	https://mypy-lang.org	Free/OSS	Python static type checker
+WEB BROWSERS	u Message Queues	Apache Kafka	kafka.apache.org	https://kafka.apache.org	Free/OSS	Distributed event streaming platform
+WEB BROWSERS	u Message Queues	RabbitMQ	rabbitmq.com	https://rabbitmq.com	Free/OSS	Open-source message broker
+WEB BROWSERS	u Message Queues	Redis Streams	redis.io	https://redis.io	Free/OSS	Stream data type in Redis
+WEB BROWSERS	u Message Queues	NATS	nats.io	https://nats.io	Free/OSS	High-performance messaging system
+WEB BROWSERS	u Message Queues	Apache Pulsar	pulsar.apache.org	https://pulsar.apache.org	Free/OSS	Cloud-native messaging streaming
+WEB BROWSERS	u Message Queues	Amazon SQS	aws.amazon.com/sqs	https://aws.amazon.com/sqs	Freemium	Managed message queuing service
+WEB BROWSERS	u Message Queues	Amazon SNS	aws.amazon.com/sns	https://aws.amazon.com/sns	Freemium	Pub/sub messaging by AWS
+WEB BROWSERS	u Message Queues	Google Cloud Pub/Sub	cloud.google.com/pubsub	https://cloud.google.com/pubsub	Freemium	Managed pub/sub by GCP
+WEB BROWSERS	u Message Queues	Azure Service Bus	azure.microsoft.com/service-bus	https://azure.microsoft.com/service-bus	Freemium	Enterprise messaging by Azure
+WEB BROWSERS	u Message Queues	Confluent Platform	confluent.io	https://confluent.io	Freemium	Enterprise Kafka platform
+WEB BROWSERS	u Message Queues	Redpanda	redpanda.com	https://redpanda.com	Free/OSS	Kafka-compatible C++ streaming
+WEB BROWSERS	u Message Queues	Upstash Kafka	upstash.com/kafka	https://upstash.com/kafka	Freemium	Serverless Kafka
+WEB BROWSERS	u Message Queues	Upstash QStash	upstash.com/qstash	https://upstash.com/qstash	Freemium	Serverless message queue
+WEB BROWSERS	u Message Queues	Inngest	inngest.com	https://inngest.com	Freemium	Event-driven durable functions
+WEB BROWSERS	u Message Queues	Trigger.dev	trigger.dev	https://trigger.dev	Freemium	Background jobs for developers
+WEB BROWSERS	u Message Queues	BullMQ	bullmq.io	https://bullmq.io	Free/OSS	Node.js queue library based on Redis
+WEB BROWSERS	u Message Queues	Celery	celeryproject.org	https://celeryproject.org	Free/OSS	Python distributed task queue
+WEB BROWSERS	u Message Queues	Sidekiq	sidekiq.org	https://sidekiq.org	Free/OSS	Ruby background job processing
+WEB BROWSERS	u Message Queues	Resque	github.com/resque/resque	https://github.com/resque/resque	Free/OSS	Redis-backed Ruby jobs
+WEB BROWSERS	u Message Queues	Faktory	contribsys.com/faktory	https://contribsys.com/faktory	Free/OSS	Language-agnostic background jobs
+WEB BROWSERS	u Caching	Redis	redis.io	https://redis.io	Free/OSS	In-memory data structure store
+WEB BROWSERS	u Caching	Memcached	memcached.org	https://memcached.org	Free/OSS	High-performance caching system
+WEB BROWSERS	u Caching	Varnish Cache	varnish-cache.org	https://varnish-cache.org	Free/OSS	HTTP accelerator for dynamic websites
+WEB BROWSERS	u Caching	Nginx (proxy/cache)	nginx.org	https://nginx.org	Free/OSS	Web server, reverse proxy and cache
+WEB BROWSERS	u Caching	Hazelcast	hazelcast.com	https://hazelcast.com	Freemium	In-memory data grid
+WEB BROWSERS	u Caching	Apache Ignite	ignite.apache.org	https://ignite.apache.org	Free/OSS	Distributed in-memory computing
+WEB BROWSERS	u Caching	Ehcache	ehcache.org	https://ehcache.org	Free/OSS	Java distributed cache
+WEB BROWSERS	u Caching	Infinispan	infinispan.org	https://infinispan.org	Free/OSS	Distributed in-memory key-value store
+WEB BROWSERS	u Caching	Dragonfly	dragonflydb.io	https://dragonflydb.io	Free/OSS	Redis-compatible, multithreaded
+WEB BROWSERS	u Caching	KeyDB	keydb.dev	https://keydb.dev	Free/OSS	Multi-threaded Redis fork
+WEB BROWSERS	u Caching	Garnet (Microsoft)	github.com/microsoft/garnet	https://github.com/microsoft/garnet	Free/OSS	Remote cache by Microsoft
+WEB BROWSERS	u Caching	Cloudflare KV	cloudflare.com/kv	https://cloudflare.com/kv	Freemium	Edge key-value storage
+WEB BROWSERS	u Caching	Upstash Redis	upstash.com	https://upstash.com	Freemium	Serverless Redis
+WEB BROWSERS	u Caching	Amazon ElastiCache	aws.amazon.com/elasticache	https://aws.amazon.com/elasticache	Paid	Managed Redis/Memcached
+WEB BROWSERS	u Caching	Google Cloud Memorystore	cloud.google.com/memorystore	https://cloud.google.com/memorystore	Paid	Managed Redis on GCP
+WEB BROWSERS	u Search Engines	Elasticsearch	elastic.co/elasticsearch	https://elastic.co/elasticsearch	Free/OSS	Distributed search and analytics
+WEB BROWSERS	u Search Engines	OpenSearch	opensearch.org	https://opensearch.org	Free/OSS	Open-source Elasticsearch fork
+WEB BROWSERS	u Search Engines	Apache Solr	solr.apache.org	https://solr.apache.org	Free/OSS	Open-source enterprise search
+WEB BROWSERS	u Search Engines	Typesense	typesense.org	https://typesense.org	Free/OSS	Typo-tolerant search engine
+WEB BROWSERS	u Search Engines	Meilisearch	meilisearch.com	https://meilisearch.com	Free/OSS	Fast developer-first search
+WEB BROWSERS	u Search Engines	Algolia	algolia.com	https://algolia.com	Freemium	Search-as-a-service platform
+WEB BROWSERS	u Search Engines	Sphinx Search	sphinxsearch.com	https://sphinxsearch.com	Free/OSS	Full-text search engine
+WEB BROWSERS	u Search Engines	Manticore Search	manticoresearch.com	https://manticoresearch.com	Free/OSS	Sphinx fork, faster
+WEB BROWSERS	u Search Engines	ZincSearch	zincsearch.com	https://zincsearch.com	Free/OSS	Lightweight Elasticsearch alternative
+WEB BROWSERS	u Search Engines	Quickwit	quickwit.io	https://quickwit.io	Free/OSS	Cloud-native search for logs
+WEB BROWSERS	u Search Engines	Qdrant	qdrant.tech	https://qdrant.tech	Free/OSS	Vector similarity search
+WEB BROWSERS	u Search Engines	Weaviate	weaviate.io	https://weaviate.io	Free/OSS	Vector database
+WEB BROWSERS	u Search Engines	Vespa	vespa.ai	https://vespa.ai	Free/OSS	Big data serving engine by Yahoo
+WEB BROWSERS	u Search Engines	Xapian	xapian.org	https://xapian.org	Free/OSS	Probabilistic search library
+WEB BROWSERS	u Search Engines	Tantivy	github.com/quickwit-oss/tantivy	https://github.com/quickwit-oss/tantivy	Free/OSS	Full-text search library in Rust
+WEB BROWSERS	u Search Engines	LanceDB	lancedb.com	https://lancedb.com	Free/OSS	Vector database for ML workloads
+WEB BROWSERS	u Search Engines	Chroma	trychroma.com	https://trychroma.com	Free/OSS	Open-source embedding database
+WEB BROWSERS	u Search Engines	Marqo	marqo.ai	https://marqo.ai	Free/OSS	Tensor search engine
+WEB BROWSERS	u Search Engines	FaunaDB	fauna.com	https://fauna.com	Freemium	Distributed document-relational DB
+WEB BROWSERS	u Search Engines	Couchbase	couchbase.com	https://couchbase.com	Freemium	Distributed multi-model database
+WEB BROWSERS	u Search Engines	Apache Cassandra	cassandra.apache.org	https://cassandra.apache.org	Free/OSS	Scalable NoSQL database
+WEB BROWSERS	u Search Engines	ScyllaDB	scylladb.com	https://scylladb.com	Free/OSS	Cassandra-compatible C++ database
+WEB BROWSERS	u Search Engines	HBase	hbase.apache.org	https://hbase.apache.org	Free/OSS	Non-relational distributed database
+WEB BROWSERS	u Search Engines	Amazon DynamoDB	aws.amazon.com/dynamodb	https://aws.amazon.com/dynamodb	Freemium	Managed NoSQL by AWS
+WEB BROWSERS	u Search Engines	Google Firestore	firebase.google.com/firestore	https://firebase.google.com/firestore	Freemium	Serverless NoSQL by Google
+WEB BROWSERS	u Search Engines	Realm (MongoDB)	realm.io	https://realm.io	Free/OSS	Mobile-first database
+WEB BROWSERS	u Search Engines	PocketBase	pocketbase.io	https://pocketbase.io	Free/OSS	Open-source backend in one file
+WEB BROWSERS	u Search Engines	SurrealDB	surrealdb.com	https://surrealdb.com	Free/OSS	Multi-model database
+WEB BROWSERS	u Search Engines	EdgeDB	edgedb.com	https://edgedb.com	Free/OSS	Graph-relational database
+WEB BROWSERS	u Search Engines	TigerBeetle	tigerbeetle.com	https://tigerbeetle.com	Free/OSS	High-performance financial database
+WEB BROWSERS	u API Development	Swagger (OpenAPI)	swagger.io	https://swagger.io	Free/OSS	API design and documentation
+WEB BROWSERS	u API Development	Postman	postman.com	https://postman.com	Freemium	API development platform
+WEB BROWSERS	u API Development	Insomnia	insomnia.rest	https://insomnia.rest	Free/OSS	API design and testing
+WEB BROWSERS	u API Development	HTTPie	httpie.io	https://httpie.io	Free/OSS	Human-friendly HTTP client
+WEB BROWSERS	u API Development	Bruno	usebruno.com	https://usebruno.com	Free/OSS	Offline API client
+WEB BROWSERS	u API Development	Paw (RapidAPI)	paw.cloud	https://paw.cloud	Paid	API tool for Mac
+WEB BROWSERS	u API Development	API Blueprint	apiblueprint.org	https://apiblueprint.org	Free/OSS	Markdown API documentation
+WEB BROWSERS	u API Development	RAML	raml.org	https://raml.org	Free/OSS	RESTful API modeling language
+WEB BROWSERS	u API Development	GraphQL Playground	github.com/graphql/graphql-playground	https://github.com/graphql/graphql-playground	Free/OSS	GraphQL IDE
+WEB BROWSERS	u API Development	GraphiQL	github.com/graphql/graphiql	https://github.com/graphql/graphiql	Free/OSS	In-browser GraphQL IDE
+WEB BROWSERS	u API Development	Hasura	hasura.io	https://hasura.io	Freemium	Instant GraphQL on your database
+WEB BROWSERS	u API Development	Postgraphile	graphile.org/postgraphile	https://graphile.org/postgraphile	Free/OSS	GraphQL API from PostgreSQL
+WEB BROWSERS	u API Development	Apollo Studio	studio.apollographql.com	https://studio.apollographql.com	Freemium	GraphQL management platform
+WEB BROWSERS	u API Development	Kong Gateway	konghq.com/products/kong-gateway	https://konghq.com/products/kong-gateway	Free/OSS	Open-source API gateway
+WEB BROWSERS	u API Development	Tyk	tyk.io	https://tyk.io	Free/OSS	Open-source API gateway
+WEB BROWSERS	u API Development	AWS API Gateway	aws.amazon.com/api-gateway	https://aws.amazon.com/api-gateway	Freemium	Managed API gateway by AWS
+WEB BROWSERS	u API Development	Azure API Management	azure.microsoft.com/api-management	https://azure.microsoft.com/api-management	Freemium	API management by Azure
+WEB BROWSERS	u API Development	Apigee	cloud.google.com/apigee	https://cloud.google.com/apigee	Paid	API management by Google
+WEB BROWSERS	u API Development	Mulesoft Anypoint	mulesoft.com	https://mulesoft.com	Paid	Enterprise API integration
+WEB BROWSERS	u API Development	readme.io	readme.com	https://readme.com	Paid	Developer documentation portal
+WEB BROWSERS	u API Development	Stoplight	stoplight.io	https://stoplight.io	Freemium	API design and documentation
+WEB BROWSERS	u API Development	Apidog	apidog.com	https://apidog.com	Freemium	All-in-one API tool
+WEB BROWSERS	u API Development	Mockoon	mockoon.com	https://mockoon.com	Free/OSS	API mock server
+WEB BROWSERS	u API Development	WireMock	wiremock.org	https://wiremock.org	Free/OSS	Mock HTTP server
+WEB BROWSERS	u API Development	Prism (Stoplight)	stoplight.io/open-source/prism	https://stoplight.io/open-source/prism	Free/OSS	HTTP mock server from OpenAPI
+WEB BROWSERS	u API Development	json-server	github.com/typicode/json-server	https://github.com/typicode/json-server	Free/OSS	Fake REST API from JSON
+WEB BROWSERS	u API Development	Hoppscotch	hoppscotch.io	https://hoppscotch.io	Free/OSS	Open-source API development
+WEB BROWSERS	u API Development	RapidAPI Hub	rapidapi.com	https://rapidapi.com	Freemium	API marketplace
+WEB BROWSERS	u API Development	Zapier Webhooks	zapier.com/apps/webhooks	https://zapier.com/apps/webhooks	Freemium	Webhook automation
+WEB BROWSERS	u API Development	Webhook.site	webhook.site	https://webhook.site	Free	Test webhooks and HTTP requests
+WEB BROWSERS	u Testing & QA	Selenium	selenium.dev	https://selenium.dev	Free/OSS	Browser automation framework
+WEB BROWSERS	u Testing & QA	WebdriverIO	webdriver.io	https://webdriver.io	Free/OSS	Node.js browser automation
+WEB BROWSERS	u Testing & QA	Puppeteer	pptr.dev	https://pptr.dev	Free/OSS	Headless Chrome/Firefox automation
+WEB BROWSERS	u Testing & QA	Playwright	playwright.dev	https://playwright.dev	Free/OSS	Cross-browser automation by Microsoft
+WEB BROWSERS	u Testing & QA	Cypress	cypress.io	https://cypress.io	Free/OSS	End-to-end testing framework
+WEB BROWSERS	u Testing & QA	TestCafe	testcafe.io	https://testcafe.io	Free/OSS	Cross-browser automated testing
+WEB BROWSERS	u Testing & QA	Nightwatch.js	nightwatchjs.org	https://nightwatchjs.org	Free/OSS	End-to-end testing framework
+WEB BROWSERS	u Testing & QA	Appium	appium.io	https://appium.io	Free/OSS	Mobile app automation
+WEB BROWSERS	u Testing & QA	Detox	wix.github.io/Detox	https://wix.github.io/Detox	Free/OSS	Gray-box mobile E2E testing
+WEB BROWSERS	u Testing & QA	Espresso	developer.android.com/training/testing/espresso	https://developer.android.com/training/testing/espresso	Free/OSS	Android UI testing
+WEB BROWSERS	u Testing & QA	XCTest	developer.apple.com/documentation/xctest	https://developer.apple.com/documentation/xctest	Free	Apple's testing framework
+WEB BROWSERS	u Testing & QA	Jest	jestjs.io	https://jestjs.io	Free/OSS	JavaScript testing framework
+WEB BROWSERS	u Testing & QA	Vitest	vitest.dev	https://vitest.dev	Free/OSS	Vite-native testing framework
+WEB BROWSERS	u Testing & QA	Mocha	mochajs.org	https://mochajs.org	Free/OSS	JavaScript test framework
+WEB BROWSERS	u Testing & QA	Jasmine	jasmine.github.io	https://jasmine.github.io	Free/OSS	BDD testing framework
+WEB BROWSERS	u Testing & QA	AVA	github.com/avajs/ava	https://github.com/avajs/ava	Free/OSS	Concurrent test runner
+WEB BROWSERS	u Testing & QA	pytest	pytest.org	https://pytest.org	Free/OSS	Python testing framework
+WEB BROWSERS	u Testing & QA	unittest (Python)	docs.python.org/unittest	https://docs.python.org/unittest	Free/OSS	Python built-in test framework
+WEB BROWSERS	u Testing & QA	nose2	docs.nose2.io	https://docs.nose2.io	Free/OSS	Python test runner
+WEB BROWSERS	u Testing & QA	JUnit	junit.org	https://junit.org	Free/OSS	Java testing framework
+WEB BROWSERS	u Testing & QA	TestNG	testng.org	https://testng.org	Free/OSS	Java testing framework
+WEB BROWSERS	u Testing & QA	Cucumber	cucumber.io	https://cucumber.io	Free/OSS	BDD testing framework
+WEB BROWSERS	u Testing & QA	SpecFlow	specflow.org	https://specflow.org	Free/OSS	.NET BDD framework
+WEB BROWSERS	u Testing & QA	Ginkgo	onsi.github.io/ginkgo	https://onsi.github.io/ginkgo	Free/OSS	Go BDD testing framework
+WEB BROWSERS	u Testing & QA	RSpec	rspec.info	https://rspec.info	Free/OSS	BDD testing for Ruby
+WEB BROWSERS	u Testing & QA	Karate	karatelabs.github.io/karate	https://karatelabs.github.io/karate	Free/OSS	API testing with BDD
+WEB BROWSERS	u Testing & QA	k6	k6.io	https://k6.io	Free/OSS	Load testing tool for developers
+WEB BROWSERS	u Testing & QA	Locust	locust.io	https://locust.io	Free/OSS	Python-based load testing
+WEB BROWSERS	u Testing & QA	Artillery	artillery.io	https://artillery.io	Free/OSS	Cloud-native load testing
+WEB BROWSERS	u Testing & QA	Gatling	gatling.io	https://gatling.io	Free/OSS	High-performance load testing
+WEB BROWSERS	u Testing & QA	Apache JMeter	jmeter.apache.org	https://jmeter.apache.org	Free/OSS	Java load testing tool
+WEB BROWSERS	u Testing & QA	Vegeta	github.com/tsenart/vegeta	https://github.com/tsenart/vegeta	Free/OSS	HTTP load testing tool
+WEB BROWSERS	u Testing & QA	wrk	github.com/wg/wrk	https://github.com/wg/wrk	Free/OSS	HTTP benchmarking tool
+WEB BROWSERS	u Testing & QA	Autocannon	github.com/mcollina/autocannon	https://github.com/mcollina/autocannon	Free/OSS	Node.js HTTP benchmarking
+WEB BROWSERS	u Testing & QA	BrowserStack	browserstack.com	https://browserstack.com	Paid	Cloud testing platform
+WEB BROWSERS	u Testing & QA	Sauce Labs	saucelabs.com	https://saucelabs.com	Paid	Cloud testing platform
+WEB BROWSERS	u Testing & QA	LambdaTest	lambdatest.com	https://lambdatest.com	Freemium	Cross-browser cloud testing
+WEB BROWSERS	u Testing & QA	Percy (BrowserStack)	percy.io	https://percy.io	Freemium	Visual regression testing
+WEB BROWSERS	u Testing & QA	Chromatic	chromatic.com	https://chromatic.com	Freemium	Visual testing for Storybook
+WEB BROWSERS	u Testing & QA	Applitools	applitools.com	https://applitools.com	Freemium	AI-powered visual testing
+WEB BROWSERS	u Static Analysis	SonarQube	sonarqube.org	https://sonarqube.org	Free/OSS	Code quality and security analysis
+WEB BROWSERS	u Static Analysis	SonarCloud	sonarcloud.io	https://sonarcloud.io	Freemium	Cloud-based code analysis
+WEB BROWSERS	u Static Analysis	CodeClimate	codeclimate.com	https://codeclimate.com	Freemium	Automated code review
+WEB BROWSERS	u Static Analysis	DeepSource	deepsource.io	https://deepsource.io	Freemium	Static analysis for 12 languages
+WEB BROWSERS	u Static Analysis	Snyk	snyk.io	https://snyk.io	Freemium	Security scanning for code and deps
+WEB BROWSERS	u Static Analysis	Checkmarx	checkmarx.com	https://checkmarx.com	Paid	Enterprise SAST/DAST platform
+WEB BROWSERS	u Static Analysis	Veracode	veracode.com	https://veracode.com	Paid	Application security platform
+WEB BROWSERS	u Static Analysis	Semgrep	semgrep.dev	https://semgrep.dev	Freemium	Fast lightweight static analysis
+WEB BROWSERS	u Static Analysis	OWASP Dependency-Check	owasp.org/www-project-dependency-check	https://owasp.org/www-project-dependency-check	Free/OSS	Dependency vulnerability scanner
+WEB BROWSERS	u Static Analysis	Bandit	bandit.readthedocs.io	https://bandit.readthedocs.io	Free/OSS	Python security linter
+WEB BROWSERS	u Static Analysis	Brakeman	brakemanscanner.org	https://brakemanscanner.org	Free/OSS	Ruby on Rails security scanner
+WEB BROWSERS	u Static Analysis	GoSec	github.com/securego/gosec	https://github.com/securego/gosec	Free/OSS	Go security checker
+WEB BROWSERS	u Static Analysis	ESLint Security Plugin	npmjs.com/package/eslint-plugin-security	https://npmjs.com/package/eslint-plugin-security	Free/OSS	JS security linting
+WEB BROWSERS	u Static Analysis	Trivy	trivy.dev	https://trivy.dev	Free/OSS	Container and code vulnerability scanner
+WEB BROWSERS	u Static Analysis	Grype	github.com/anchore/grype	https://github.com/anchore/grype	Free/OSS	Vulnerability scanner for containers
+WEB BROWSERS	u Static Analysis	Syft	github.com/anchore/syft	https://github.com/anchore/syft	Free/OSS	SBOM generator
+WEB BROWSERS	u Static Analysis	Dependabot	github.com/dependabot	https://github.com/dependabot	Free	Automated dependency updates
+WEB BROWSERS	u Static Analysis	Renovate	renovatebot.com	https://renovatebot.com	Free/OSS	Automated dependency updates
+WEB BROWSERS	u Static Analysis	FOSSA	fossa.com	https://fossa.com	Freemium	License compliance and security
+WEB BROWSERS	u Static Analysis	Licensee	licensee.github.io	https://licensee.github.io	Free/OSS	Detect project open-source license
+WEB BROWSERS	u Documentation Tools	Docusaurus	docusaurus.io	https://docusaurus.io	Free/OSS	React-powered documentation websites
+WEB BROWSERS	u Documentation Tools	MkDocs	mkdocs.org	https://mkdocs.org	Free/OSS	Python static site from Markdown
+WEB BROWSERS	u Documentation Tools	GitBook	gitbook.com	https://gitbook.com	Freemium	Beautiful documentation platform
+WEB BROWSERS	u Documentation Tools	Sphinx	sphinx-doc.org	https://sphinx-doc.org	Free/OSS	Python documentation generator
+WEB BROWSERS	u Documentation Tools	Read the Docs	readthedocs.org	https://readthedocs.org	Free/OSS	Hosting for software docs
+WEB BROWSERS	u Documentation Tools	Mintlify	mintlify.com	https://mintlify.com	Freemium	Beautiful API documentation
+WEB BROWSERS	u Documentation Tools	Starlight (Astro)	starlight.astro.build	https://starlight.astro.build	Free/OSS	Documentation theme for Astro
+WEB BROWSERS	u Documentation Tools	Nextra	nextra.site	https://nextra.site	Free/OSS	Next.js documentation framework
+WEB BROWSERS	u Documentation Tools	VitePress	vitepress.dev	https://vitepress.dev	Free/OSS	Vite-powered static site generator
+WEB BROWSERS	u Documentation Tools	Docsify	docsify.js.org	https://docsify.js.org	Free/OSS	Markdown docs without build step
+WEB BROWSERS	u Documentation Tools	Docus	docus.dev	https://docus.dev	Free/OSS	Nuxt-based documentation framework
+WEB BROWSERS	u Documentation Tools	Storybook	storybook.js.org	https://storybook.js.org	Free/OSS	UI component documentation
+WEB BROWSERS	u Documentation Tools	Swagger UI	swagger.io/tools/swagger-ui	https://swagger.io/tools/swagger-ui	Free/OSS	Interactive API documentation
+WEB BROWSERS	u Documentation Tools	Redoc	redoc.ly	https://redoc.ly	Free/OSS	OpenAPI documentation generator
+WEB BROWSERS	u Documentation Tools	Scalar	scalar.com	https://scalar.com	Free/OSS	Beautiful API documentation
+WEB BROWSERS	u Documentation Tools	Zudoku	zuplo.com/docs/zudoku	https://zuplo.com/docs/zudoku	Free/OSS	API documentation built on React
+WEB BROWSERS	u Documentation Tools	Archbee	archbee.com	https://archbee.com	Freemium	Developer-focused documentation
+WEB BROWSERS	u Documentation Tools	Outline	getoutline.com	https://getoutline.com	Free/OSS	Team knowledge base and wiki
+WEB BROWSERS	u Documentation Tools	Notion (docs)	notion.so	https://notion.so	Freemium	Docs and wikis in Notion
+WEB BROWSERS	u Documentation Tools	Confluence	atlassian.com/confluence	https://atlassian.com/confluence	Freemium	Team documentation by Atlassian
+WEB BROWSERS	u AI Assistants	ChatGPT	chatgpt.com	https://chatgpt.com	Freemium	OpenAI's conversational AI
+WEB BROWSERS	u AI Assistants	Claude	claude.ai	https://claude.ai	Freemium	Anthropic's AI assistant
+WEB BROWSERS	u AI Assistants	Google Gemini	gemini.google.com	https://gemini.google.com	Freemium	Google's multimodal AI
+WEB BROWSERS	u AI Assistants	Microsoft Copilot	copilot.microsoft.com	https://copilot.microsoft.com	Freemium	Microsoft's AI with Bing search
+WEB BROWSERS	u AI Assistants	Meta AI	meta.ai	https://meta.ai	Free	Meta's AI assistant
+WEB BROWSERS	u AI Assistants	Perplexity AI	perplexity.ai	https://perplexity.ai	Freemium	AI-powered search engine
+WEB BROWSERS	u AI Assistants	Mistral Le Chat	chat.mistral.ai	https://chat.mistral.ai	Free	Mistral's chat interface
+WEB BROWSERS	u AI Assistants	Grok (xAI)	grok.com	https://grok.com	Freemium	Elon Musk's AI by xAI
+WEB BROWSERS	u AI Assistants	Pi AI	heypi.com	https://heypi.com	Free	Personal AI companion by Inflection
+WEB BROWSERS	u AI Assistants	You.com	you.com	https://you.com	Freemium	AI-integrated search engine
+WEB BROWSERS	u AI Assistants	Poe	poe.com	https://poe.com	Freemium	Multi-model AI chat by Quora
+WEB BROWSERS	u AI Assistants	HuggingChat	huggingface.co/chat	https://huggingface.co/chat	Free	Open-source chatbots by HuggingFace
+WEB BROWSERS	u AI Assistants	Cohere Coral	cohere.com/coral	https://cohere.com/coral	Paid	Enterprise AI assistant
+WEB BROWSERS	u AI Assistants	Kagi Assistant	kagi.com/assistant	https://kagi.com/assistant	Paid	Privacy-first AI assistant
+WEB BROWSERS	u AI Assistants	Phind	phind.com	https://phind.com	Free	AI search for developers
+WEB BROWSERS	u AI Assistants	Aria (Opera)	opera.com/features/aria	https://opera.com/features/aria	Free	Built-in AI in Opera browser
+WEB BROWSERS	u AI Assistants	Monica AI	monica.im	https://monica.im	Freemium	AI assistant browser extension
+WEB BROWSERS	u AI Assistants	Merlin AI	getmerlin.in	https://getmerlin.in	Freemium	Browser AI assistant
+WEB BROWSERS	u AI Assistants	Chatsonic	writesonic.com/chat	https://writesonic.com/chat	Freemium	AI chatbot with web access
+WEB BROWSERS	u AI Assistants	Jasper Chat	jasper.ai	https://jasper.ai	Paid	AI writing and chat
+WEB BROWSERS	u AI Assistants	Character.ai	character.ai	https://character.ai	Freemium	AI character roleplay
+WEB BROWSERS	u AI Assistants	Replika	replika.com	https://replika.com	Freemium	AI companion chatbot
+WEB BROWSERS	u AI Assistants	Inflection Pi	inflection.ai	https://inflection.ai	Free	Personal AI assistant
+WEB BROWSERS	u AI Assistants	OpenAI Playground	platform.openai.com/playground	https://platform.openai.com/playground	Freemium	OpenAI API playground
+WEB BROWSERS	u AI Assistants	Together AI Playground	api.together.ai/playground	https://api.together.ai/playground	Freemium	Open-source model playground
+WEB BROWSERS	u AI Image Gen	Midjourney	midjourney.com	https://midjourney.com	Paid	Popular AI art generation via Discord
+WEB BROWSERS	u AI Image Gen	DALL-E 3 (OpenAI)	openai.com/dall-e-3	https://openai.com/dall-e-3	Paid	Image generation by OpenAI
+WEB BROWSERS	u AI Image Gen	Stable Diffusion (SDXL)	stability.ai	https://stability.ai	Free/OSS	Open-source image generation
+WEB BROWSERS	u AI Image Gen	Adobe Firefly	firefly.adobe.com	https://firefly.adobe.com	Freemium	AI image generation by Adobe
+WEB BROWSERS	u AI Image Gen	Canva AI Image	canva.com/ai-image-generator	https://canva.com/ai-image-generator	Freemium	Image generation in Canva
+WEB BROWSERS	u AI Image Gen	Leonardo AI	leonardo.ai	https://leonardo.ai	Freemium	AI image generation for creators
+WEB BROWSERS	u AI Image Gen	Ideogram	ideogram.ai	https://ideogram.ai	Freemium	AI image gen with good text rendering
+WEB BROWSERS	u AI Image Gen	Playground AI	playground.com	https://playground.com	Freemium	AI image creation platform
+WEB BROWSERS	u AI Image Gen	NightCafe Creator	nightcafe.studio	https://nightcafe.studio	Freemium	AI art generator
+WEB BROWSERS	u AI Image Gen	Artbreeder	artbreeder.com	https://artbreeder.com	Freemium	Blend and create AI images
+WEB BROWSERS	u AI Image Gen	Dream by WOMBO	dream.ai	https://dream.ai	Freemium	Mobile AI art generator
+WEB BROWSERS	u AI Image Gen	StarryAI	starryai.com	https://starryai.com	Freemium	AI art generation app
+WEB BROWSERS	u AI Image Gen	Craiyon	craiyon.com	https://craiyon.com	Free	Free AI image generator
+WEB BROWSERS	u AI Image Gen	Bing Image Creator	bing.com/images/create	https://bing.com/images/create	Free	DALL-E powered by Microsoft Bing
+WEB BROWSERS	u AI Image Gen	Google ImageFX	aitestkitchen.withgoogle.com/tools/image-fx	https://aitestkitchen.withgoogle.com/tools/image-fx	Free	AI image generation by Google
+WEB BROWSERS	u AI Image Gen	Recraft	recraft.ai	https://recraft.ai	Freemium	AI design tool for vectors and icons
+WEB BROWSERS	u AI Image Gen	Flux (Black Forest Labs)	blackforestlabs.ai	https://blackforestlabs.ai	Freemium	Open-weight image generation model
+WEB BROWSERS	u AI Image Gen	Invoke AI	invoke.ai	https://invoke.ai	Free/OSS	Local open-source image generation
+WEB BROWSERS	u AI Image Gen	ComfyUI	comfyui.org	https://comfyui.org	Free/OSS	Node-based Stable Diffusion UI
+WEB BROWSERS	u AI Image Gen	Automatic1111 (SD WebUI)	github.com/AUTOMATIC1111/stable-diffusion-webui	https://github.com/AUTOMATIC1111/stable-diffusion-webui	Free/OSS	Popular SD web interface
+WEB BROWSERS	u AI Image Gen	Seaart AI	seaart.ai	https://seaart.ai	Freemium	AI art generator
+WEB BROWSERS	u AI Image Gen	PicLumen	piclumen.com	https://piclumen.com	Freemium	AI image generation platform
+WEB BROWSERS	u AI Image Gen	Adobe Generative Fill	adobe.com/photoshop/generative-fill	https://adobe.com/photoshop/generative-fill	Paid	AI inpainting in Photoshop
+WEB BROWSERS	u AI Image Gen	Genie (Luma AI)	lumalabs.ai/genie	https://lumalabs.ai/genie	Freemium	3D asset generation from text
+WEB BROWSERS	u AI Image Gen	Scenario	scenario.com	https://scenario.com	Freemium	AI art for game development
+WEB BROWSERS	u AI Video Gen	Runway Gen-3	runwayml.com	https://runwayml.com	Freemium	AI video generation by Runway
+WEB BROWSERS	u AI Video Gen	Sora (OpenAI)	openai.com/sora	https://openai.com/sora	Paid	Text-to-video by OpenAI
+WEB BROWSERS	u AI Video Gen	Google Veo 2	deepmind.google/technologies/veo	https://deepmind.google/technologies/veo	Limited	Google's video generation model
+WEB BROWSERS	u AI Video Gen	Kling AI	klingai.com	https://klingai.com	Freemium	Chinese AI video generation
+WEB BROWSERS	u AI Video Gen	Hailuo AI (MiniMax)	hailuoai.com	https://hailuoai.com	Freemium	AI video generation by MiniMax
+WEB BROWSERS	u AI Video Gen	Luma Dream Machine	lumalabs.ai/dream-machine	https://lumalabs.ai/dream-machine	Freemium	High-quality AI video
+WEB BROWSERS	u AI Video Gen	Pika Labs	pika.art	https://pika.art	Freemium	AI video creation from images/text
+WEB BROWSERS	u AI Video Gen	Stability Video Diffusion	stability.ai	https://stability.ai	Free/OSS	Open-source video diffusion
+WEB BROWSERS	u AI Video Gen	CogVideoX	github.com/THUDM/CogVideo	https://github.com/THUDM/CogVideo	Free/OSS	Open-source video generation
+WEB BROWSERS	u AI Video Gen	Mochi 1 (Genmo)	genmo.ai	https://genmo.ai	Freemium	Open-source video generation
+WEB BROWSERS	u AI Video Gen	Haiper AI	haiper.ai	https://haiper.ai	Freemium	AI video generation platform
+WEB BROWSERS	u AI Video Gen	HeyGen	heygen.com	https://heygen.com	Freemium	AI video with avatars
+WEB BROWSERS	u AI Video Gen	Synthesia	synthesia.io	https://synthesia.io	Paid	AI video generation from text
+WEB BROWSERS	u AI Video Gen	D-ID	d-id.com	https://d-id.com	Freemium	AI talking portraits
+WEB BROWSERS	u AI Video Gen	Colossyan	colossyan.com	https://colossyan.com	Paid	AI video for workplace learning
+WEB BROWSERS	u AI Video Gen	InVideo AI	invideo.ai	https://invideo.ai	Freemium	AI-powered video maker
+WEB BROWSERS	u AI Video Gen	Pictory AI	pictory.ai	https://pictory.ai	Paid	Convert scripts to video with AI
+WEB BROWSERS	u AI Video Gen	Elai.io	elai.io	https://elai.io	Paid	AI video generation with avatars
+WEB BROWSERS	u AI Video Gen	Typeframes	typeframes.com	https://typeframes.com	Freemium	AI product video creation
+WEB BROWSERS	u AI Video Gen	Captions AI	captions.ai	https://captions.ai	Freemium	AI video editing and captions
+WEB BROWSERS	u AI Writing & Content	Jasper AI	jasper.ai	https://jasper.ai	Paid	AI writing for marketing teams
+WEB BROWSERS	u AI Writing & Content	Copy.ai	copy.ai	https://copy.ai	Freemium	AI copywriting tool
+WEB BROWSERS	u AI Writing & Content	Writesonic	writesonic.com	https://writesonic.com	Freemium	AI content generation
+WEB BROWSERS	u AI Writing & Content	Rytr	rytr.me	https://rytr.me	Freemium	AI writing assistant
+WEB BROWSERS	u AI Writing & Content	Anyword	anyword.com	https://anyword.com	Paid	Predictive AI copywriting
+WEB BROWSERS	u AI Writing & Content	Hypotenuse AI	hypotenuse.ai	https://hypotenuse.ai	Paid	AI for ecommerce content
+WEB BROWSERS	u AI Writing & Content	Scalenut	scalenut.com	https://scalenut.com	Paid	AI SEO and content platform
+WEB BROWSERS	u AI Writing & Content	Frase	frase.io	https://frase.io	Paid	AI content optimization
+WEB BROWSERS	u AI Writing & Content	Surfer SEO	surferseo.com	https://surferseo.com	Paid	AI content and SEO optimization
+WEB BROWSERS	u AI Writing & Content	Grammarly	grammarly.com	https://grammarly.com	Freemium	AI grammar and writing assistant
+WEB BROWSERS	u AI Writing & Content	ProWritingAid	prowritingaid.com	https://prowritingaid.com	Freemium	Writing style improvement
+WEB BROWSERS	u AI Writing & Content	Hemingway Editor	hemingwayapp.com	https://hemingwayapp.com	Free/Paid	Readability improvement tool
+WEB BROWSERS	u AI Writing & Content	QuillBot	quillbot.com	https://quillbot.com	Freemium	AI paraphrasing and summarization
+WEB BROWSERS	u AI Writing & Content	Wordtune	wordtune.com	https://wordtune.com	Freemium	AI writing rewriting tool
+WEB BROWSERS	u AI Writing & Content	Paragraph AI	paragraphai.com	https://paragraphai.com	Freemium	AI writing assistant
+WEB BROWSERS	u AI Writing & Content	Notion AI	notion.so/product/ai	https://notion.so/product/ai	Paid add-on	AI writing inside Notion
+WEB BROWSERS	u AI Writing & Content	Google Duet AI (Workspace)	workspace.google.com/duet-ai	https://workspace.google.com/duet-ai	Paid add-on	AI in Google Workspace
+WEB BROWSERS	u AI Writing & Content	Microsoft 365 Copilot	microsoft.com/microsoft-365/copilot	https://microsoft.com/microsoft-365/copilot	Paid	AI in Office 365
+WEB BROWSERS	u AI Writing & Content	AI Writer	ai-writer.com	https://ai-writer.com	Paid	Research-based AI article writing
+WEB BROWSERS	u AI Writing & Content	Longshot AI	longshot.ai	https://longshot.ai	Paid	AI content for blogs and SEO
+WEB BROWSERS	u AI Writing & Content	Compose AI	compose.ai	https://compose.ai	Free	AI autocompletion Chrome extension
+WEB BROWSERS	u AI Writing & Content	GhostWriter (Replit)	replit.com/site/ghostwriter	https://replit.com/site/ghostwriter	Freemium	AI writing in Replit
+WEB BROWSERS	u AI Writing & Content	Sudowrite	sudowrite.com	https://sudowrite.com	Paid	AI creative fiction writing
+WEB BROWSERS	u AI Writing & Content	NovelAI	novelai.net	https://novelai.net	Paid	AI-assisted storytelling and writing
+WEB BROWSERS	u AI Agents & Automation	AutoGPT	agpt.co	https://agpt.co	Free/OSS	Autonomous GPT-4 agent
+WEB BROWSERS	u AI Agents & Automation	BabyAGI	github.com/yoheinakajima/babyagi	https://github.com/yoheinakajima/babyagi	Free/OSS	AI task management agent
+WEB BROWSERS	u AI Agents & Automation	AgentGPT	agentgpt.reworkd.ai	https://agentgpt.reworkd.ai	Free/OSS	Browser-based autonomous agent
+WEB BROWSERS	u AI Agents & Automation	SuperAGI	superagi.com	https://superagi.com	Free/OSS	Open-source autonomous AI framework
+WEB BROWSERS	u AI Agents & Automation	CrewAI	crewai.com	https://crewai.com	Free/OSS	Multi-agent orchestration framework
+WEB BROWSERS	u AI Agents & Automation	AutoGen (Microsoft)	microsoft.github.io/autogen	https://microsoft.github.io/autogen	Free/OSS	Multi-agent framework by Microsoft
+WEB BROWSERS	u AI Agents & Automation	LangChain Agents	langchain.com/agents	https://langchain.com/agents	Free/OSS	Agent framework by LangChain
+WEB BROWSERS	u AI Agents & Automation	LangGraph	langchain-ai.github.io/langgraph	https://langchain-ai.github.io/langgraph	Free/OSS	Stateful agent workflows
+WEB BROWSERS	u AI Agents & Automation	Haystack Agents	haystack.deepset.ai/agents	https://haystack.deepset.ai/agents	Free/OSS	Agent pipelines by deepset
+WEB BROWSERS	u AI Agents & Automation	DSPy	dspy.ai	https://dspy.ai	Free/OSS	Programming language for LLM pipelines
+WEB BROWSERS	u AI Agents & Automation	Semantic Kernel Agents	learn.microsoft.com/semantic-kernel/agents	https://learn.microsoft.com/semantic-kernel/agents	Free/OSS	AI agents by Microsoft
+WEB BROWSERS	u AI Agents & Automation	Phidata	phidata.com	https://phidata.com	Free/OSS	AI agent platform
+WEB BROWSERS	u AI Agents & Automation	Swarm (OpenAI)	github.com/openai/swarm	https://github.com/openai/swarm	Free/OSS	Multi-agent orchestration by OpenAI
+WEB BROWSERS	u AI Agents & Automation	n8n	n8n.io	https://n8n.io	Free/OSS	Workflow automation with AI
+WEB BROWSERS	u AI Agents & Automation	Make (Integromat)	make.com	https://make.com	Freemium	Visual workflow automation
+WEB BROWSERS	u AI Agents & Automation	Zapier	zapier.com	https://zapier.com	Freemium	No-code automation platform
+WEB BROWSERS	u AI Agents & Automation	Zapier AI	zapier.com/ai	https://zapier.com/ai	Freemium	AI-powered automation
+WEB BROWSERS	u AI Agents & Automation	Activepieces	activepieces.com	https://activepieces.com	Free/OSS	Open-source Zapier alternative
+WEB BROWSERS	u AI Agents & Automation	Pabbly Connect	pabbly.com/connect	https://pabbly.com/connect	Paid	Workflow automation tool
+WEB BROWSERS	u AI Agents & Automation	Pipedream	pipedream.com	https://pipedream.com	Freemium	Integration platform for developers
+WEB BROWSERS	u AI Agents & Automation	Flowise	flowiseai.com	https://flowiseai.com	Free/OSS	Low-code AI workflow builder
+WEB BROWSERS	u AI Agents & Automation	Langflow	langflow.org	https://langflow.org	Free/OSS	Visual LangChain builder
+WEB BROWSERS	u AI Agents & Automation	Rivet	rivet.ironcladapp.com	https://rivet.ironcladapp.com	Free/OSS	Visual AI programming environment
+WEB BROWSERS	u AI Agents & Automation	PromptFlow (Azure)	azure.microsoft.com/promptflow	https://azure.microsoft.com/promptflow	Free/OSS	LLM app development tool
+WEB BROWSERS	u AI Agents & Automation	Dify	dify.ai	https://dify.ai	Free/OSS	LLM app development platform
+WEB BROWSERS	u AI Agents & Automation	Botpress	botpress.com	https://botpress.com	Free/OSS	Open-source chatbot platform
+WEB BROWSERS	u AI Agents & Automation	Rasa	rasa.com	https://rasa.com	Free/OSS	Open-source conversational AI
+WEB BROWSERS	u AI Agents & Automation	Voiceflow	voiceflow.com	https://voiceflow.com	Freemium	Conversational AI design platform
+WEB BROWSERS	u AI Agents & Automation	Relevance AI	relevanceai.com	https://relevanceai.com	Freemium	AI agent and tool builder
+WEB BROWSERS	u AI Agents & Automation	Stack AI	stack-ai.com	https://stack-ai.com	Freemium	No-code AI workflow builder
+WEB BROWSERS	u LLM Hosting	Ollama	ollama.com	https://ollama.com	Free/OSS	Run LLMs locally on your machine
+WEB BROWSERS	u LLM Hosting	LM Studio	lmstudio.ai	https://lmstudio.ai	Free	GUI for local LLMs
+WEB BROWSERS	u LLM Hosting	GPT4All	gpt4all.io	https://gpt4all.io	Free/OSS	Local LLM runner
+WEB BROWSERS	u LLM Hosting	Jan.ai	jan.ai	https://jan.ai	Free/OSS	Open-source local AI assistant
+WEB BROWSERS	u LLM Hosting	Open WebUI (Ollama UI)	openwebui.com	https://openwebui.com	Free/OSS	Web UI for Ollama
+WEB BROWSERS	u LLM Hosting	Hugging Face Hub	huggingface.co	https://huggingface.co	Freemium	Model hub and spaces
+WEB BROWSERS	u LLM Hosting	Replicate	replicate.com	https://replicate.com	Freemium	Run ML models in the cloud
+WEB BROWSERS	u LLM Hosting	Modal	modal.com	https://modal.com	Freemium	Serverless ML compute
+WEB BROWSERS	u LLM Hosting	Baseten	baseten.co	https://baseten.co	Paid	ML model serving platform
+WEB BROWSERS	u LLM Hosting	Together AI	together.ai	https://together.ai	Freemium	Cloud inference for open models
+WEB BROWSERS	u LLM Hosting	Fireworks AI	fireworks.ai	https://fireworks.ai	Freemium	Fast inference for open-source LLMs
+WEB BROWSERS	u LLM Hosting	Groq	groq.com	https://groq.com	Freemium	LPU-powered ultra-fast inference
+WEB BROWSERS	u LLM Hosting	Cerebras	cerebras.ai	https://cerebras.ai	Freemium	WSE-powered inference
+WEB BROWSERS	u LLM Hosting	Perplexity API	docs.perplexity.ai	https://docs.perplexity.ai	Paid	Online LLM API with web access
+WEB BROWSERS	u LLM Hosting	Mistral API	mistral.ai	https://mistral.ai	Freemium	Mistral models API
+WEB BROWSERS	u LLM Hosting	Cohere API	cohere.com	https://cohere.com	Freemium	Enterprise NLP API
+WEB BROWSERS	u LLM Hosting	Anyscale Endpoints	anyscale.com	https://anyscale.com	Freemium	Ray-based LLM serving
+WEB BROWSERS	u LLM Hosting	Xinference	github.com/xorbitsai/inference	https://github.com/xorbitsai/inference	Free/OSS	Open-source model serving
+WEB BROWSERS	u LLM Hosting	Text Generation WebUI	github.com/oobabooga/text-generation-webui	https://github.com/oobabooga/text-generation-webui	Free/OSS	Gradio WebUI for LLMs
+WEB BROWSERS	u LLM Hosting	vLLM	vllm.ai	https://vllm.ai	Free/OSS	High-throughput LLM serving
+WEB BROWSERS	u LLM Hosting	TGI (Hugging Face)	huggingface.co/docs/text-generation-inference	https://huggingface.co/docs/text-generation-inference	Free/OSS	HF text generation inference
+WEB BROWSERS	u LLM Hosting	Ray Serve	docs.ray.io/en/latest/serve	https://docs.ray.io/en/latest/serve	Free/OSS	Scalable ML serving by Ray
+WEB BROWSERS	u LLM Hosting	BentoML	bentoml.com	https://bentoml.com	Free/OSS	ML model serving framework
+WEB BROWSERS	u LLM Hosting	Triton Inference Server	developer.nvidia.com/triton-inference-server	https://developer.nvidia.com/triton-inference-server	Free/OSS	NVIDIA's ML inference server
+WEB BROWSERS	u LLM Hosting	TorchServe	pytorch.org/serve	https://pytorch.org/serve	Free/OSS	PyTorch model serving
+WEB BROWSERS	u LLM Hosting	Axolotl	github.com/OpenAccess-AI-Collective/axolotl	https://github.com/OpenAccess-AI-Collective/axolotl	Free/OSS	LLM fine-tuning framework
+WEB BROWSERS	u LLM Hosting	Unsloth	unsloth.ai	https://unsloth.ai	Free/OSS	Fast LLM fine-tuning
+WEB BROWSERS	u LLM Hosting	LLaMA Factory	github.com/hiyouga/LLaMA-Factory	https://github.com/hiyouga/LLaMA-Factory	Free/OSS	Easy fine-tuning for LLMs
+WEB BROWSERS	u LLM Hosting	Ludwig	ludwig.ai	https://ludwig.ai	Free/OSS	Low-code ML framework
+WEB BROWSERS	u LLM Hosting	FastChat	github.com/lm-sys/FastChat	https://github.com/lm-sys/FastChat	Free/OSS	LLM serving and training
+WEB BROWSERS	u Mobile Dev	React Native	reactnative.dev	https://reactnative.dev	Free/OSS	Cross-platform mobile with React
+WEB BROWSERS	u Mobile Dev	Flutter	flutter.dev	https://flutter.dev	Free/OSS	Google's UI toolkit for mobile
+WEB BROWSERS	u Mobile Dev	Ionic	ionicframework.com	https://ionicframework.com	Free/OSS	Web technologies for mobile apps
+WEB BROWSERS	u Mobile Dev	Expo	expo.dev	https://expo.dev	Freemium	Platform for React Native apps
+WEB BROWSERS	u Mobile Dev	Capacitor	capacitorjs.com	https://capacitorjs.com	Free/OSS	Native runtime for web apps
+WEB BROWSERS	u Mobile Dev	NativeScript	nativescript.org	https://nativescript.org	Free/OSS	Native apps with JavaScript
+WEB BROWSERS	u Mobile Dev	Xamarin	dotnet.microsoft.com/xamarin	https://dotnet.microsoft.com/xamarin	Free/OSS	.NET cross-platform mobile
+WEB BROWSERS	u Mobile Dev	MAUI	dotnet.microsoft.com/maui	https://dotnet.microsoft.com/maui	Free/OSS	Multi-platform app UI by Microsoft
+WEB BROWSERS	u Mobile Dev	Kotlin Multiplatform	kotlinlang.org/multiplatform	https://kotlinlang.org/multiplatform	Free/OSS	Kotlin for iOS and Android
+WEB BROWSERS	u Mobile Dev	Compose Multiplatform	jetbrains.com/lp/compose-multiplatform	https://jetbrains.com/lp/compose-multiplatform	Free/OSS	JetBrains cross-platform UI
+WEB BROWSERS	u Mobile Dev	Framework7	framework7.io	https://framework7.io	Free/OSS	HTML framework for mobile apps
+WEB BROWSERS	u Mobile Dev	Cordova	cordova.apache.org	https://cordova.apache.org	Free/OSS	Apache HTML mobile framework
+WEB BROWSERS	u Mobile Dev	Tauri (mobile)	tauri.app	https://tauri.app	Free/OSS	Rust desktop and mobile apps
+WEB BROWSERS	u Mobile Dev	Quasar Framework	quasar.dev	https://quasar.dev	Free/OSS	Vue.js for all platforms
+WEB BROWSERS	u Backend (BaaS)	Firebase	firebase.google.com	https://firebase.google.com	Freemium	Google's BaaS platform
+WEB BROWSERS	u Backend (BaaS)	Supabase	supabase.com	https://supabase.com	Freemium	Open-source Firebase alternative
+WEB BROWSERS	u Backend (BaaS)	Appwrite	appwrite.io	https://appwrite.io	Free/OSS	Open-source BaaS
+WEB BROWSERS	u Backend (BaaS)	Parse Platform	parseplatform.org	https://parseplatform.org	Free/OSS	Open-source BaaS
+WEB BROWSERS	u Backend (BaaS)	AWS Amplify	aws.amazon.com/amplify	https://aws.amazon.com/amplify	Freemium	AWS BaaS for mobile/web
+WEB BROWSERS	u Backend (BaaS)	Back4App	back4app.com	https://back4app.com	Freemium	Cloud BaaS based on Parse
+WEB BROWSERS	u Backend (BaaS)	Backendless	backendless.com	https://backendless.com	Freemium	No-code/low-code BaaS
+WEB BROWSERS	u Backend (BaaS)	Nhost	nhost.io	https://nhost.io	Freemium	Open-source BaaS with GraphQL
+WEB BROWSERS	u Backend (BaaS)	Hasura Cloud	hasura.io/cloud	https://hasura.io/cloud	Freemium	GraphQL BaaS
+WEB BROWSERS	u Backend (BaaS)	Convex	convex.dev	https://convex.dev	Freemium	Reactive serverless database
+WEB BROWSERS	u Backend (BaaS)	Pocketbase	pocketbase.io	https://pocketbase.io	Free/OSS	One-file open-source BaaS
+WEB BROWSERS	u Backend (BaaS)	Xano	xano.com	https://xano.com	Freemium	No-code backend builder
+WEB BROWSERS	u Backend (BaaS)	Directus	directus.io	https://directus.io	Free/OSS	Open-source data platform
+WEB BROWSERS	u Backend (BaaS)	Strapi	strapi.io	https://strapi.io	Free/OSS	Open-source headless CMS/BaaS
+WEB BROWSERS	u Backend (BaaS)	Payload CMS	payloadcms.com	https://payloadcms.com	Free/OSS	Code-first headless CMS
+WEB BROWSERS	u App Distribution	Apple App Store Connect	appstoreconnect.apple.com	https://appstoreconnect.apple.com	Free	iOS app distribution
+WEB BROWSERS	u App Distribution	Google Play Console	play.google.com/console	https://play.google.com/console	Free	Android app distribution
+WEB BROWSERS	u App Distribution	TestFlight	developer.apple.com/testflight	https://developer.apple.com/testflight	Free	iOS beta testing by Apple
+WEB BROWSERS	u App Distribution	Firebase App Distribution	firebase.google.com/app-distribution	https://firebase.google.com/app-distribution	Free	Mobile beta testing
+WEB BROWSERS	u App Distribution	Diawi	diawi.com	https://diawi.com	Freemium	Mobile app distribution tool
+WEB BROWSERS	u App Distribution	Crashlytics	firebase.google.com/crashlytics	https://firebase.google.com/crashlytics	Free	Mobile crash reporting
+WEB BROWSERS	u App Distribution	Sentry Mobile	sentry.io	https://sentry.io	Freemium	Error tracking for mobile
+WEB BROWSERS	u App Distribution	Instabug	instabug.com	https://instabug.com	Freemium	Bug reporting in mobile apps
+WEB BROWSERS	u App Distribution	Shake SDK	shakebugs.com	https://shakebugs.com	Freemium	Bug reporting SDK
+WEB BROWSERS	u App Distribution	AppsFlyer	appsflyer.com	https://appsflyer.com	Paid	Mobile attribution and analytics
+WEB BROWSERS	u App Distribution	Adjust	adjust.com	https://adjust.com	Paid	Mobile analytics and attribution
+WEB BROWSERS	u App Distribution	Branch	branch.io	https://branch.io	Freemium	Deep linking and attribution
+WEB BROWSERS	u App Distribution	Mixpanel	mixpanel.com	https://mixpanel.com	Freemium	Product analytics platform
+WEB BROWSERS	u App Distribution	Amplitude	amplitude.com	https://amplitude.com	Freemium	Product analytics and insights
+WEB BROWSERS	u App Distribution	Firebase Analytics	firebase.google.com/analytics	https://firebase.google.com/analytics	Free	Mobile analytics by Google
+WEB BROWSERS	u App Distribution	CleverTap	clevertap.com	https://clevertap.com	Paid	Mobile engagement platform
+WEB BROWSERS	u App Distribution	OneSignal	onesignal.com	https://onesignal.com	Freemium	Push notifications service
+WEB BROWSERS	u App Distribution	Airship	airship.com	https://airship.com	Paid	Mobile engagement platform
+WEB BROWSERS	u App Distribution	Braze	braze.com	https://braze.com	Paid	Customer engagement platform
+WEB BROWSERS	u Game Engines	Unity	unity.com	https://unity.com	Freemium	Most popular cross-platform engine
+WEB BROWSERS	u Game Engines	Unreal Engine 5	unrealengine.com	https://unrealengine.com	Free (rev share)	AAA game engine by Epic
+WEB BROWSERS	u Game Engines	Godot Engine	godotengine.org	https://godotengine.org	Free/OSS	Open-source 2D/3D engine
+WEB BROWSERS	u Game Engines	GameMaker	gamemaker.io	https://gamemaker.io	Freemium	2D game engine by YoYo Games
+WEB BROWSERS	u Game Engines	Pygame	pygame.org	https://pygame.org	Free/OSS	Python library for games
+WEB BROWSERS	u Game Engines	Phaser	phaser.io	https://phaser.io	Free/OSS	2D HTML5 game framework
+WEB BROWSERS	u Game Engines	Construct 3	construct.net	https://construct.net	Freemium	No-code game builder
