@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, ExternalLink, Heart } from 'lucide-react';
 
 const FooterSection = memo(() => {
   return (
-    <footer className="relative w-full bg-[#0A0A0F] border-t border-white/5">
+    <footer className="relative w-full bg-base dark:bg-void border-t border-zinc-200 dark:border-white/5">
       {/* Gradient line at top */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7C3AED]/40 to-transparent" />
 
@@ -13,24 +13,24 @@ const FooterSection = memo(() => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <span className="font-display text-xl font-bold text-white tracking-tight">
+              <span className="font-display text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
                 Tool Guide
               </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-[#7C3AED]/15 text-[#A78BFA] border border-[#7C3AED]/20">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
                 by Rajora.ai
               </span>
             </Link>
-            <p className="text-[#71717A] text-sm leading-relaxed max-w-sm mt-3">
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed max-w-sm mt-3 font-body">
               The most comprehensive AI & developer tools discovery platform.
               Curated, verified, and always free to explore.
             </p>
-            <p className="mt-4 text-xs text-[#71717A] font-mono">
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-500 font-mono">
               Tool Guide is a{' '}
               <a
                 href="https://rajora.live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#A78BFA] hover:text-[#7C3AED] transition-colors"
+                className="text-violet-600 dark:text-violet-400 hover:text-violet-500 transition-colors"
               >
                 Rajora.ai
               </a>

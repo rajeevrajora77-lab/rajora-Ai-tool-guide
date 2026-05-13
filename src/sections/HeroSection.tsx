@@ -136,15 +136,15 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-grid-premium opacity-30" />
-        <div className="absolute inset-0 hero-glow" />
+        <div className="absolute inset-0 bg-grid-premium opacity-[var(--glow-opacity)]" />
+        <div className="absolute inset-0 hero-glow opacity-[var(--glow-opacity)]" />
       </div>
 
       <div className="section-padding relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center text-center">
         {/* Animated Badge */}
         <div className="animate-item inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 mb-8 backdrop-blur-md">
           <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-violet-400">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
             Curated Intelligence • 2026 Edition
           </span>
         </div>
@@ -152,16 +152,16 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         {/* Main Title */}
         <h1 
           ref={headlineRef}
-          className="animate-item text-5xl md:text-8xl font-display font-bold tracking-tight text-white mb-8 leading-[0.9]"
+          className="animate-item text-5xl md:text-8xl font-display font-bold tracking-tight text-zinc-900 dark:text-white mb-8 leading-[0.9]"
         >
           Discover the future of{" "}
           <span className="text-gradient-purple">AI Tools</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="animate-item text-lg md:text-xl text-zinc-400 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="animate-item text-lg md:text-xl text-zinc-600 dark:text-zinc-400 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
           Join 10k+ developers exploring the world's most comprehensive 
-          directory of AI tools, curated by <span className="text-white font-medium">Rajora.ai</span>. 
+          directory of AI tools, curated by <span className="text-zinc-900 dark:text-white font-medium">Rajora.ai</span>. 
           Built for the next generation of builders.
         </p>
 
@@ -172,14 +172,14 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         >
           <button
             onClick={scrollToDirectory}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-void font-bold hover:bg-zinc-200 transition-all shadow-[0_0_40px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-void font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-xl flex items-center justify-center gap-2 group"
           >
             Explore Directory
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={scrollToWorkflow}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold hover:bg-zinc-200 dark:hover:bg-white/10 transition-all flex items-center justify-center gap-2"
           >
             Submit a Tool
           </button>
@@ -188,7 +188,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         {/* Featured Stats */}
         <div
           ref={microcopyRef}
-          className="animate-item mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-5xl border-t border-white/5 pt-12"
+          className="animate-item mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-5xl border-t border-zinc-200 dark:border-white/5 pt-12"
         >
           {[
             { label: "Curated Tools", value: "150+" },
@@ -197,7 +197,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             { label: "Premium Access", value: "Free" },
           ].map((stat, i) => (
             <div key={i} className="text-center group cursor-default">
-              <p className="text-3xl font-display font-bold text-white mb-1 group-hover:text-violet-400 transition-colors">{stat.value}</p>
+              <p className="text-3xl font-display font-bold text-zinc-900 dark:text-white mb-1 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">{stat.value}</p>
               <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500">{stat.label}</p>
             </div>
           ))}

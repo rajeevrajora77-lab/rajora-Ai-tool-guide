@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X, ExternalLink, Sun, Moon, Monitor } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../hooks/useTheme';
 
 const navLinks = [
   { label: 'Tool Guide', path: '/tool-guide' },
@@ -13,7 +14,23 @@ const navLinks = [
 const Navigation = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
   const location = useLocation();
+
+  const cycleTheme = () => {
+    const themes: ('light' | 'dark' | 'system')[] = ['light', 'dark', 'system'];
+    const currentIndex = themes.indexOf(theme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    setTheme(themes[nextIndex]);
+  };
+
+  const ThemeIcon = () => {
+    switch (theme) {
+      case 'light': return <Sun size={18} />;
+      case 'dark': return <Moon size={18} />;
+      default: return <Monitor size={18} />;
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +53,7 @@ const Navigation = memo(() => {
       <nav
         className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 h-16 flex items-center ${
           isScrolled
-            ? 'bg-void/70 backdrop-blur-xl border-b border-white/5'
+            ? 'bg-void/70 backdrop-blur-xl border-b border-white/5 dark:border-white/5 shadow-sm dark:shadow-none'
             : 'bg-transparent'
         }`}
       >
@@ -47,10 +64,10 @@ const Navigation = memo(() => {
             className="flex items-center gap-2 group"
           >
             <div className="relative flex items-center">
-              <span className="font-display text-xl font-bold text-white tracking-tight group-hover:text-violet-400 transition-colors">
+              <span className="font-display text-xl font-bold text-zinc-900 dark:text-white tracking-tight group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 Rajora<span className="text-violet-500">.</span>ai
               </span>
-              <span className="ml-2 px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20">
+              <span className="ml-2 px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
                 Tool Guide
               </span>
             </div>
@@ -64,8 +81,8 @@ const Navigation = memo(() => {
                 to={link.path}
                 className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   location.pathname === link.path
-                    ? 'text-white'
-                    : 'text-zinc-400 hover:text-white hover:bg-white/5'
+                    ? 'text-zinc-900 dark:text-white'
+                    : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/5'
                 }`}
               >
                 {link.label}
@@ -79,31 +96,49 @@ const Navigation = memo(() => {
               </Link>
             ))}
 
-            <div className="w-px h-4 bg-white/10 mx-2" />
+            <div className="w-px h-4 bg-zinc-200 dark:bg-white/10 mx-2" />
 
             {/* Command Hint */}
-            <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-500 hover:text-zinc-300 hover:border-white/20 transition-all text-xs font-mono group">
-              <span className="group-hover:text-violet-400 transition-colors">Search</span>
+            <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:border-zinc-200 dark:hover:border-white/20 transition-all text-xs font-mono group">
+              <span className="group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Search</span>
               <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10">⌘K</span>
+            </button>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={cycleTheme}
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all group"
+              title={`Switch to ${theme === 'light' ? 'Dark' : theme === 'dark' ? 'System' : 'Light'} Mode`}
+            >
+              <div className="group-hover:scale-110 transition-transform">
+                <ThemeIcon />
+              </div>
             </button>
 
             {/* CTA */}
             <Link
               to="/tool-guide"
-              className="ml-4 px-5 py-2 rounded-lg bg-white text-void text-sm font-bold hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              className="ml-4 px-5 py-2 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-void text-sm font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-lg"
             >
               Explore
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="lg:hidden text-white hover:text-violet-400 transition-colors p-2"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {/* Mobile Menu Actions */}
+          <div className="flex lg:hidden items-center gap-3">
+            <button
+              onClick={cycleTheme}
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-400"
+            >
+              <ThemeIcon />
+            </button>
+            <button
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-lg bg-white/5 text-zinc-800 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 

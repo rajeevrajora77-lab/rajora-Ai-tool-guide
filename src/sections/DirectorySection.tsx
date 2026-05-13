@@ -160,9 +160,9 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                 placeholder="Search tools, categories, or tags..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-12 py-4 bg-surface/50 backdrop-blur-xl border border-white/5 rounded-xl text-white placeholder-zinc-500 focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 focus:outline-none transition-all"
+                className="w-full pl-12 pr-12 py-4 bg-surface/50 backdrop-blur-xl border border-zinc-200 dark:border-white/5 rounded-xl text-zinc-900 dark:text-white placeholder-zinc-500 focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 focus:outline-none transition-all"
               />
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-zinc-500">
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-[10px] font-mono text-zinc-500">
                 ⌘K
               </div>
             </div>
@@ -186,12 +186,12 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                 onClick={() => setSelectedLayer(layer.key)}
                 className={`px-4 py-2 rounded-lg font-body text-sm transition-all duration-300 border ${
                   selectedLayer === layer.key
-                    ? 'bg-white text-void border-white font-bold'
-                    : 'bg-white/5 text-zinc-400 hover:text-white border-white/5 hover:border-white/10'
+                    ? 'bg-zinc-900 dark:bg-white text-white dark:text-void border-zinc-900 dark:border-white font-bold'
+                    : 'bg-zinc-100 dark:bg-white/5 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white border-zinc-200 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/10'
                 }`}
               >
                 {layer.label}
-                <span className={`ml-2 text-[10px] ${selectedLayer === layer.key ? 'text-void/60' : 'text-zinc-600'}`}>
+                <span className={`ml-2 text-[10px] ${selectedLayer === layer.key ? 'text-zinc-300 dark:text-void/60' : 'text-zinc-400 dark:text-zinc-600'}`}>
                   {layer.count}
                 </span>
               </button>
@@ -211,7 +211,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               onClick={() => setSelectedTool(tool)}
-              className="tool-card group relative p-6 bg-surface/40 backdrop-blur-md rounded-2xl border border-white/5 hover:border-violet-500/30 cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+              className="tool-card group relative p-6 bg-surface/40 dark:bg-surface/40 backdrop-blur-md rounded-2xl border border-zinc-200 dark:border-white/5 hover:border-violet-500/30 cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
             >
               {/* Hover Glow Effect */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -229,16 +229,16 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   >
                     {tool.layer}
                   </span>
-                  <div className="p-2 rounded-lg bg-white/5 text-zinc-500 group-hover:text-white transition-colors">
+                  <div className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                     <ExternalLink size={14} />
                   </div>
                 </div>
 
                 {/* Tool info */}
-                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-violet-400 transition-colors">
+                <h3 className="text-xl font-display font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                   {tool.name}
                 </h3>
-                <p className="text-zinc-400 text-sm font-body line-clamp-2 mb-6 group-hover:text-zinc-300 transition-colors">
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm font-body line-clamp-2 mb-6 group-hover:text-zinc-800 dark:group-hover:text-zinc-300 transition-colors">
                   {tool.description}
                 </p>
 
@@ -247,13 +247,13 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   {tool.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-void/50 rounded text-zinc-500 text-[10px] uppercase tracking-wider font-mono"
+                      className="px-2 py-0.5 bg-zinc-100 dark:bg-void/50 rounded text-zinc-500 text-[10px] uppercase tracking-wider font-mono"
                     >
                       {tag}
                     </span>
                   ))}
                   {tool.tags.length > 3 && (
-                    <span className="text-[10px] text-zinc-600 font-mono">+{tool.tags.length - 3}</span>
+                    <span className="text-[10px] text-zinc-500 dark:text-zinc-600 font-mono">+{tool.tags.length - 3}</span>
                   )}
                 </div>
               </div>
@@ -298,7 +298,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-elevated rounded-3xl border border-white/10 shadow-2xl p-8 md:p-12 scrollbar-hide"
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-base dark:bg-elevated rounded-3xl border border-zinc-200 dark:border-white/10 shadow-2xl p-8 md:p-12 scrollbar-hide"
             >
               {/* Modal header */}
               <div className="flex items-start justify-between mb-8">
@@ -319,13 +319,13 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                       {selectedTool.layer} Layer
                     </span>
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-display font-bold text-white tracking-tight">
+                  <h3 className="text-3xl md:text-5xl font-display font-bold text-zinc-900 dark:text-white tracking-tight">
                     {selectedTool.name}
                   </h3>
                 </div>
                 <button
                   onClick={() => setSelectedTool(null)}
-                  className="p-2 rounded-full bg-white/5 text-zinc-500 hover:text-white transition-colors"
+                  className="p-2 rounded-full bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -334,8 +334,8 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-8">
                   {/* Description */}
-                  <div className="prose prose-invert max-w-none">
-                    <p className="text-xl text-zinc-300 leading-relaxed font-body">
+                  <div className="prose prose-zinc dark:prose-invert max-w-none">
+                    <p className="text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed font-body">
                       {selectedTool.description}
                     </p>
                   </div>
@@ -343,12 +343,12 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   {/* Free tier details */}
                   <div className="mt-8 p-6 bg-surface/50 rounded-2xl border border-violet-500/20 group">
                     <div className="flex items-center gap-2 mb-3">
-                      <Sparkles size={16} className="text-violet-400" />
-                      <h4 className="font-mono text-xs uppercase tracking-widest text-violet-400">
+                      <Sparkles size={16} className="text-violet-600 dark:text-violet-400" />
+                      <h4 className="font-mono text-xs uppercase tracking-widest text-violet-600 dark:text-violet-400">
                         Free Tier Details
                       </h4>
                     </div>
-                    <p className="text-white font-body leading-relaxed group-hover:text-violet-100 transition-colors">
+                    <p className="text-zinc-800 dark:text-white font-body leading-relaxed group-hover:text-violet-900 dark:group-hover:text-violet-100 transition-colors">
                       {selectedTool.freeTierDetails}
                     </p>
                   </div>
@@ -361,7 +361,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                       href={selectedTool.officialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-4 bg-white text-void font-bold rounded-xl hover:bg-zinc-200 transition-all shadow-lg"
+                      className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-900 dark:bg-white text-white dark:text-void font-bold rounded-xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-lg"
                     >
                       <ExternalLink size={18} />
                       Visit Website
@@ -371,7 +371,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                         href={selectedTool.documentationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all"
+                        className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold rounded-xl hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
                       >
                         <BookOpen size={18} />
                         Docs
@@ -382,7 +382,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                         href={selectedTool.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all"
+                        className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold rounded-xl hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
                       >
                         <Github size={18} />
                         Source
@@ -415,12 +415,12 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   <h4 className="font-mono text-[10px] uppercase tracking-widest text-zinc-500 mb-4">
                     Direct Integration
                   </h4>
-                  <div className="flex items-center justify-between gap-4 p-4 bg-void rounded-xl border border-white/5 font-mono text-sm text-zinc-300 group">
+                  <div className="flex items-center justify-between gap-4 p-4 bg-zinc-100 dark:bg-void rounded-xl border border-zinc-200 dark:border-white/5 font-mono text-sm text-zinc-700 dark:text-zinc-300 group">
                     <div className="flex items-center gap-3">
-                      <Terminal size={16} className="text-violet-500" />
-                      <code className="text-violet-400">{selectedTool.installCommand}</code>
+                      <Terminal size={16} className="text-violet-600 dark:text-violet-500" />
+                      <code className="text-violet-700 dark:text-violet-400">{selectedTool.installCommand}</code>
                     </div>
-                    <button className="opacity-0 group-hover:opacity-100 transition-opacity text-zinc-500 hover:text-white">
+                    <button className="opacity-0 group-hover:opacity-100 transition-opacity text-zinc-500 hover:text-zinc-900 dark:hover:text-white">
                       Copy
                     </button>
                   </div>

@@ -4,6 +4,52 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 4%;
+    
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 4%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+    
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 4%;
+    
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 5% 45%;
+    
+    --accent: 263 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 263 70% 50%;
+    --radius: 1rem;
+
+    /* Light Theme Premium Tokens */
+    --void: #FFFFFF;
+    --base: #F9FAFB;
+    --surface: #F3F4F6;
+    --elevated: #E5E7EB;
+    --overlay: #D1D5DB;
+    
+    --cyan-500: #0891B2;
+    --violet-600: #7C3AED;
+    --accent-neon: #7C3AED; /* Shift neon to violet in light mode for contrast */
+    
+    --tg-border: rgba(0, 0, 0, 0.05);
+    --tg-border-hover: rgba(124, 58, 237, 0.2);
+    --glow-opacity: 0.05;
+  }
+
+  .dark {
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
     
@@ -31,9 +77,8 @@
     --border: 240 6% 12%;
     --input: 240 6% 12%;
     --ring: 263 70% 50%;
-    --radius: 0.75rem;
 
-    /* Custom Premium Tokens */
+    /* Dark Theme Premium Tokens */
     --void: #030303;
     --base: #0A0A0B;
     --surface: #111112;
@@ -46,6 +91,7 @@
     
     --tg-border: rgba(255, 255, 255, 0.08);
     --tg-border-hover: rgba(124, 58, 237, 0.4);
+    --glow-opacity: 0.15;
   }
 }
 
