@@ -6,7 +6,7 @@ const FooterSection = memo(() => {
   return (
     <footer className="relative w-full bg-base dark:bg-void border-t border-zinc-200 dark:border-white/5">
       {/* Gradient line at top */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7C3AED]/40 to-transparent" />
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
 
       <div className="section-padding py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
@@ -103,7 +103,18 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-              Connect
+                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
+                >
+                  Rajora Dashboard <ExternalLink size={11} />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Community */}
+          <div>
+            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
+              Community
             </h4>
             <div className="flex items-center gap-3">
               <a
@@ -111,7 +122,7 @@ const FooterSection = memo(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="p-2 rounded-lg bg-white/5 text-[#71717A] hover:text-white hover:bg-white/10 transition-all"
+                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
               >
                 <Github size={16} />
               </a>
@@ -120,14 +131,14 @@ const FooterSection = memo(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2 rounded-lg bg-white/5 text-[#71717A] hover:text-white hover:bg-white/10 transition-all"
+                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
               >
                 <Linkedin size={16} />
               </a>
               <a
                 href="mailto:contact@rajora.live"
                 aria-label="Email"
-                className="p-2 rounded-lg bg-white/5 text-[#71717A] hover:text-white hover:bg-white/10 transition-all"
+                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
               >
                 <Mail size={16} />
               </a>
@@ -135,30 +146,20 @@ const FooterSection = memo(() => {
           </div>
         </div>
 
-        {/* Bottom Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/5">
-          <p className="text-[#52525B] text-xs mb-4 sm:mb-0">
-            © 2026 Tool Guide. A product by{' '}
-            <a
-              href="https://rajora.live"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#A78BFA] hover:text-[#7C3AED] transition-colors"
-            >
-              Rajora.ai
-            </a>
-            . All rights reserved.
-          </p>
-
-          <p className="text-[#52525B] text-xs flex items-center gap-1">
-            Made with <Heart size={12} className="text-[#7C3AED]" /> for developers
-          </p>
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-zinc-200 dark:border-white/5">
+          <div className="flex items-center gap-6 text-xs text-zinc-500">
+            <span>© 2026 Rajora.ai • Tool Guide</span>
+            <Link to="/privacy" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms</Link>
+          </div>
+          <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-mono">
+            Made with <Heart size={12} className="text-red-500 fill-red-500" /> by <span className="text-zinc-900 dark:text-zinc-300">Rajora Team</span>
+          </div>
         </div>
       </div>
     </footer>
   );
 });
-
-FooterSection.displayName = 'FooterSection';
 
 export default FooterSection;

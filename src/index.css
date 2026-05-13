@@ -122,7 +122,7 @@
   }
 
   .text-gradient-premium {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/60;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-600 dark:from-white dark:via-white/90 dark:to-white/60;
   }
 
   .text-gradient-purple {
@@ -138,14 +138,15 @@
   }
 
   .hero-glow {
-    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, rgba(3, 3, 3, 0) 70%);
+    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
   }
 
   .bg-grid-premium {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(currentColor 1px, transparent 1px),
+      linear-gradient(90deg, currentColor 1px, transparent 1px);
     background-size: 40px 40px;
+    @apply text-zinc-900/5 dark:text-white/5;
   }
 }
 
