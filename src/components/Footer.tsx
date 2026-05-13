@@ -40,32 +40,32 @@ const FooterSection = memo(() => {
 
           {/* Tool Guide Links */}
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-[#A1A1AA] mb-4">
+            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
               Tool Guide
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-[#71717A] hover:text-white transition-colors text-sm">
+                <Link to="/about" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/tool-guide" className="text-[#71717A] hover:text-white transition-colors text-sm">
+                <Link to="/tool-guide" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
                   Explore Tools
                 </Link>
               </li>
               <li>
-                <Link to="/categories" className="text-[#71717A] hover:text-white transition-colors text-sm">
+                <Link to="/categories" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
                   Categories
                 </Link>
               </li>
               <li>
-                <Link to="/feedback" className="text-[#71717A] hover:text-white transition-colors text-sm">
+                <Link to="/feedback" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
                   Feedback
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-[#71717A] hover:text-white transition-colors text-sm">
+                <Link to="/contact" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
                   Contact
                 </Link>
               </li>
@@ -74,7 +74,7 @@ const FooterSection = memo(() => {
 
           {/* Rajora.ai Ecosystem */}
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-[#A1A1AA] mb-4">
+            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
               Rajora.ai Ecosystem
             </h4>
             <ul className="space-y-3">
@@ -83,7 +83,7 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#71717A] hover:text-[#A78BFA] transition-colors text-sm"
+                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
                 >
                   Rajora.ai <ExternalLink size={11} />
                 </a>
@@ -93,7 +93,7 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#71717A] hover:text-[#A78BFA] transition-colors text-sm"
+                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
                 >
                   AION <ExternalLink size={11} />
                 </a>
@@ -103,38 +103,6 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#71717A] hover:text-[#A78BFA] transition-colors text-sm"
-                >
-                  Revive OS <ExternalLink size={11} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://rajora.live"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#71717A] hover:text-[#A78BFA] transition-colors text-sm"
-                >
-                  HopeSense AI <ExternalLink size={11} />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-[#A1A1AA] mb-4">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/privacy-policy" className="text-[#71717A] hover:text-white transition-colors text-sm">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-[#A1A1AA] mb-4 mt-8">
               Connect
             </h4>
             <div className="flex items-center gap-3">
