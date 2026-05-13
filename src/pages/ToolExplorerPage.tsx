@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useVirtualizer, type VirtualItem } from '@tanstack/react-virtual';
 import {
   Search, Filter, ExternalLink, X, Terminal, BookOpen, Github,
-  Layers
+  Layers, ArrowRight
 } from 'lucide-react';
 import { tools, layerInfo, type Tool } from '../data/tools';
 
@@ -39,37 +39,40 @@ function getCategoryColor(layer: string): string {
 const ToolCard = memo(({ tool }: { tool: Tool }) => (
   <Link
     to={`/tool/${tool.id}`}
-    className="group flex flex-col p-5 rounded-2xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all duration-300 h-full cursor-pointer"
+    className="group relative flex flex-col p-6 rounded-2xl bg-surface/50 border border-white/5 hover:border-violet-500/30 transition-all duration-500 h-full overflow-hidden"
   >
-    <div className="flex items-center justify-between mb-3">
+    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+    
+    <div className="relative z-10 flex items-center justify-between mb-4">
       <span
-        className="px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider"
+        className="px-2 py-0.5 rounded-full font-mono text-[9px] uppercase tracking-wider border"
         style={{
-          backgroundColor: `${getCategoryColor(tool.layer)}15`,
+          backgroundColor: `${getCategoryColor(tool.layer)}10`,
           color: getCategoryColor(tool.layer),
+          borderColor: `${getCategoryColor(tool.layer)}20`,
         }}
       >
         {tool.layer}
       </span>
-      <ExternalLink
+      <ArrowRight
         size={14}
-        className="text-[#52525B] opacity-0 group-hover:opacity-100 transition-opacity"
+        className="text-zinc-500 group-hover:text-white transform group-hover:translate-x-1 transition-all"
       />
     </div>
 
-    <h3 className="font-display font-semibold text-white text-base mb-1.5 group-hover:text-[#A78BFA] transition-colors">
+    <h3 className="relative z-10 font-display font-bold text-white text-lg mb-2 group-hover:text-violet-100 transition-colors">
       {tool.name}
     </h3>
 
-    <p className="text-xs text-[#71717A] line-clamp-2 leading-relaxed mb-3 flex-grow">
+    <p className="relative z-10 text-xs text-zinc-400 font-body line-clamp-2 leading-relaxed mb-4 flex-grow">
       {tool.description}
     </p>
 
-    <div className="flex flex-wrap gap-1 mt-auto">
+    <div className="relative z-10 flex flex-wrap gap-1.5 mt-auto">
       {tool.tags.slice(0, 3).map((tag) => (
         <span
           key={tag}
-          className="px-2 py-0.5 bg-white/5 rounded text-[#52525B] text-[10px] uppercase tracking-wide"
+          className="px-2 py-0.5 bg-white/5 rounded-md text-zinc-500 text-[9px] font-mono uppercase tracking-wider group-hover:text-zinc-300 transition-colors"
         >
           {tag}
         </span>

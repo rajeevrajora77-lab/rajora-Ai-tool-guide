@@ -76,36 +76,35 @@ const FooterSection = ({ className = '' }: FooterSectionProps) => {
   return (
     <footer
       ref={sectionRef}
-      className={`relative w-full bg-[#0B0C10] border-t border-[rgba(242,245,248,0.08)] ${className}`}
+      className={`relative w-full bg-void border-t border-white/5 ${className}`}
     >
-      <div ref={contentRef} className="px-[8vw] py-[6vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div ref={contentRef} className="section-padding py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Logo & Tagline */}
           <div className="lg:col-span-1">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="font-['Space_Grotesk'] text-2xl font-bold text-[#F2F5F8] hover:text-[#B6FF2E] transition-colors mb-4 block"
+              className="font-display text-2xl font-bold text-white mb-6 group transition-colors"
             >
-              Rajora<span className="text-[#B6FF2E]">.Ai</span>
+              Rajora<span className="text-violet-500 group-hover:text-violet-400 transition-colors">.</span>ai
             </button>
-            <p className="text-[#A7AFBA] text-sm leading-relaxed">
-              Build like it's 2026.
-              <br />
-              Your complete guide to 150+ free developer tools.
+            <p className="text-zinc-400 font-body text-sm leading-relaxed max-w-xs">
+              Empowering the next generation of builders with curated intelligence 
+              and premium developer resources.
             </p>
           </div>
 
-          {/* Layers */}
+          {/* Links Sections */}
           <div>
-            <h4 className="font-['IBM_Plex_Mono'] text-xs uppercase tracking-[0.12em] text-[#A7AFBA] mb-4">
-              Layers
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-zinc-500 mb-6">
+              Platform
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               {layerLinks.map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-[#F2F5F8]/80 hover:text-[#B6FF2E] transition-colors text-sm"
+                    className="text-zinc-400 hover:text-white transition-colors text-sm font-body"
                   >
                     {link.label}
                   </button>
@@ -114,17 +113,16 @@ const FooterSection = ({ className = '' }: FooterSectionProps) => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
-            <h4 className="font-['IBM_Plex_Mono'] text-xs uppercase tracking-[0.12em] text-[#A7AFBA] mb-4">
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-zinc-500 mb-6">
               Resources
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               {resourceLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-[#F2F5F8]/80 hover:text-[#B6FF2E] transition-colors text-sm"
+                    className="text-zinc-400 hover:text-white transition-colors text-sm font-body"
                   >
                     {link.label}
                   </a>
@@ -133,34 +131,40 @@ const FooterSection = ({ className = '' }: FooterSectionProps) => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h4 className="font-['IBM_Plex_Mono'] text-xs uppercase tracking-[0.12em] text-[#A7AFBA] mb-4">
-              Legal
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-zinc-500 mb-6">
+              Company
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               {legalLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-[#F2F5F8]/80 hover:text-[#B6FF2E] transition-colors text-sm"
+                    className="text-zinc-400 hover:text-white transition-colors text-sm font-body"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
+              <li>
+                <a href="/contact" className="text-zinc-400 hover:text-white transition-colors text-sm font-body">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-[rgba(242,245,248,0.08)]">
-          <p className="text-[#A7AFBA]/60 text-sm mb-4 sm:mb-0">
-            © 2026 Rajora.Ai. All rights reserved.
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-white/5">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-zinc-500 text-[10px] font-mono uppercase tracking-[0.2em]">
+            <span>© 2026 Rajora.ai</span>
+            <span className="hidden md:inline">•</span>
+            <span className="flex items-center gap-1">
+              Made with <Heart size={10} className="text-violet-500" /> for the community
+            </span>
+          </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
@@ -168,19 +172,12 @@ const FooterSection = ({ className = '' }: FooterSectionProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-[#A7AFBA] hover:text-[#B6FF2E] transition-colors"
+                className="text-zinc-500 hover:text-white transition-all transform hover:-translate-y-1"
               >
                 <social.icon size={20} />
               </a>
             ))}
           </div>
-        </div>
-
-        {/* Made with love */}
-        <div className="text-center mt-6">
-          <p className="text-[#A7AFBA]/40 text-xs flex items-center justify-center gap-1">
-            Made with <Heart size={12} className="text-[#B6FF2E]" /> for developers
-          </p>
         </div>
       </div>
     </footer>

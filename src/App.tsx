@@ -35,23 +35,31 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="relative min-h-screen bg-[#0A0A0F]">
-      <Navigation />
-      <Suspense fallback={<PageLoader />}>
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/tool-guide" element={<ToolExplorerPage />} />
-            <Route path="/categories" element={<CategoriesPage />} />
-            <Route path="/tool/:slug" element={<ToolDetailPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/feedback" element={<FeedbackPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          </Routes>
-        </AnimatePresence>
-      </Suspense>
-      <FooterSection />
+    <div className="relative min-h-screen bg-void selection:bg-violet-600/30 selection:text-violet-400">
+      {/* Global Background Effects */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 bg-grid-premium opacity-50" />
+        <div className="absolute inset-0 hero-glow" />
+      </div>
+
+      <div className="relative z-10">
+        <Navigation />
+        <Suspense fallback={<PageLoader />}>
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/tool-guide" element={<ToolExplorerPage />} />
+              <Route path="/categories" element={<CategoriesPage />} />
+              <Route path="/tool/:slug" element={<ToolDetailPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/feedback" element={<FeedbackPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
+        <FooterSection />
+      </div>
       <ScrollToTop />
     </div>
   );

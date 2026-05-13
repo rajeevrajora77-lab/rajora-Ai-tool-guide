@@ -132,128 +132,76 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
     <section
       ref={sectionRef}
       id="hero"
-      className={`relative w-full h-screen overflow-hidden bg-[#0B0C10] ${className}`}
+      className={`relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-void ${className}`}
     >
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            repeating-linear-gradient(
-              0deg,
-              rgba(242, 245, 248, 0.03) 0px,
-              rgba(242, 245, 248, 0.03) 1px,
-              transparent 1px,
-              transparent 40px
-            ),
-            repeating-linear-gradient(
-              90deg,
-              rgba(242, 245, 248, 0.03) 0px,
-              rgba(242, 245, 248, 0.03) 1px,
-              transparent 1px,
-              transparent 40px
-            )
-          `,
-        }}
-      />
-
-      {/* Noise texture */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.04]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Hero Image (right) */}
-      <div
-        ref={imageRef}
-        className="absolute hidden lg:block"
-        style={{
-          left: '52vw',
-          top: '14vh',
-          width: '44vw',
-          height: '72vh',
-        }}
-      >
-        <img
-          src="/hero_portrait.jpg"
-          alt="Developer"
-          className="w-full h-full object-cover rounded-[10px]"
-          style={{
-            boxShadow: '0 18px 50px rgba(0,0,0,0.55)',
-          }}
-        />
-        {/* Neon accent border */}
-        <div className="absolute inset-0 rounded-[10px] border border-[#B6FF2E]/20 pointer-events-none" />
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 bg-grid-premium opacity-30" />
+        <div className="absolute inset-0 hero-glow" />
       </div>
 
-      {/* Headline Block (left) */}
-      <div
-        ref={headlineRef}
-        className="absolute flex flex-col justify-center"
-        style={{
-          left: '8vw',
-          top: '22vh',
-          width: 'clamp(320px, 40vw, 600px)',
-        }}
-      >
-        <h1 className="animate-item font-['Space_Grotesk'] font-bold text-[#F2F5F8] leading-[0.95] tracking-[-0.02em]"
-          style={{ fontSize: 'clamp(36px, 5.5vw, 72px)' }}
+      <div className="section-padding relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center text-center">
+        {/* Animated Badge */}
+        <div className="animate-item inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 mb-8 backdrop-blur-md">
+          <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-violet-400">
+            Curated Intelligence • 2026 Edition
+          </span>
+        </div>
+
+        {/* Main Title */}
+        <h1 
+          ref={headlineRef}
+          className="animate-item text-5xl md:text-8xl font-display font-bold tracking-tight text-white mb-8 leading-[0.9]"
         >
-          <span className="relative inline-block">
-            Build
-            <span className="absolute -bottom-2 left-0 w-full h-[4px] bg-[#B6FF2E]" />
-          </span>{' '}
-          like it's{' '}
-          <span className="text-[#B6FF2E]">2026</span>.
+          Discover the future of{" "}
+          <span className="text-gradient-purple">AI Tools</span>
         </h1>
-        
-        <p className="animate-item mt-6 text-[#A7AFBA] leading-relaxed"
-          style={{ fontSize: 'clamp(16px, 1.4vw, 20px)' }}
-        >
-          A free, step-by-step guide to{' '}
-          <span className="text-[#F2F5F8] font-medium">150+ tools</span> across
-          GenAI, DevOps, Cloud, Data, and Full Stack.
+
+        {/* Subtitle */}
+        <p className="animate-item text-lg md:text-xl text-zinc-400 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
+          Join 10k+ developers exploring the world's most comprehensive 
+          directory of AI tools, curated by <span className="text-white font-medium">Rajora.ai</span>. 
+          Built for the next generation of builders.
         </p>
-      </div>
 
-      {/* CTA Row */}
-      <div
-        ref={ctaRef}
-        className="absolute flex flex-col sm:flex-row gap-4"
-        style={{
-          left: '8vw',
-          top: '62vh',
-        }}
-      >
-        <button
-          onClick={scrollToWorkflow}
-          className="animate-item group flex items-center gap-3 px-6 py-4 bg-[#B6FF2E] text-[#0B0C10] font-['IBM_Plex_Mono'] text-sm uppercase tracking-[0.08em] font-medium rounded-[10px] hover:bg-[#d4ff6e] transition-all duration-300 hover:-translate-y-[2px]"
+        {/* Action Row */}
+        <div
+          ref={ctaRef}
+          className="animate-item flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
         >
-          <Layers size={18} />
-          Explore the Layers
-          <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-        </button>
-        
-        <button
-          onClick={scrollToDirectory}
-          className="animate-item px-6 py-4 border border-[#B6FF2E]/40 text-[#F2F5F8] font-['IBM_Plex_Mono'] text-sm uppercase tracking-[0.08em] rounded-[10px] hover:border-[#B6FF2E] hover:bg-[#B6FF2E]/10 transition-all duration-300"
-        >
-          View the Directory
-        </button>
-      </div>
+          <button
+            onClick={scrollToDirectory}
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-void font-bold hover:bg-zinc-200 transition-all shadow-[0_0_40px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 group"
+          >
+            Explore Directory
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button
+            onClick={scrollToWorkflow}
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+          >
+            Submit a Tool
+          </button>
+        </div>
 
-      {/* Microcopy */}
-      <div
-        ref={microcopyRef}
-        className="absolute font-['IBM_Plex_Mono'] text-xs uppercase tracking-[0.08em] text-[#A7AFBA]/70"
-        style={{
-          left: '8vw',
-          top: '86vh',
-        }}
-      >
-        Last updated: Feb 2026 • 150+ tools • Always-free tiers
+        {/* Featured Stats */}
+        <div
+          ref={microcopyRef}
+          className="animate-item mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-5xl border-t border-white/5 pt-12"
+        >
+          {[
+            { label: "Curated Tools", value: "150+" },
+            { label: "Daily Updates", value: "Realtime" },
+            { label: "Active Users", value: "10k+" },
+            { label: "Premium Access", value: "Free" },
+          ].map((stat, i) => (
+            <div key={i} className="text-center group cursor-default">
+              <p className="text-3xl font-display font-bold text-white mb-1 group-hover:text-violet-400 transition-colors">{stat.value}</p>
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

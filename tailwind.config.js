@@ -5,6 +5,37 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Void Background Hierarchy
+        void: "#030303",     // Absolute black for AMOLED
+        base: "#0A0A0B",     // Primary background
+        surface: "#111112",  // Secondary background
+        elevated: "#18181A", // Elevated surface (cards)
+        overlay: "#212124",  // Modals/Overlays
+        
+        // Semantic Accents
+        cyan: {
+          400: "#22D3EE",
+          500: "#06B6D4",
+          600: "#0891B2",
+        },
+        violet: {
+          400: "#A78BFA",
+          500: "#8B5CF6",
+          600: "#7C3AED",
+        },
+        amber: {
+          400: "#FBBF24",
+          500: "#F59E0B",
+          600: "#D97706",
+        },
+        
+        // Brand Identity
+        rajora: {
+          primary: "#06B6D4",
+          secondary: "#7C3AED",
+          accent: "#B6FF2E",
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -49,6 +80,11 @@ module.exports = {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        display: ["Cabinet Grotesk", "Space Grotesk", "sans-serif"],
+        body: ["Satoshi", "Inter", "sans-serif"],
+        mono: ["JetBrains Mono", "IBM Plex Mono", "monospace"],
+      },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
@@ -58,6 +94,8 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        'premium': '0 0 50px -12px rgba(0, 0, 0, 0.5)',
+        'glow-cyan': '0 0 20px -5px rgba(6, 182, 212, 0.3)',
       },
       keyframes: {
         "accordion-down": {
@@ -72,11 +110,25 @@ module.exports = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.05)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "fade-up": "fade-up 0.5s ease-out forwards",
+        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "neural-grid": "url('/neural-grid.svg')",
+        "grad-primary": "linear-gradient(135deg, #06B6D4 0%, #7C3AED 100%)",
       },
     },
   },

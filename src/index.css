@@ -1,45 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Tool Guide Premium Dark Theme */
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
-    --card: 240 6% 8%;
+    
+    --card: 240 10% 6%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 6% 8%;
+    
+    --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
+    
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 6% 10%;
+    
+    --secondary: 240 10% 10%;
     --secondary-foreground: 0 0% 98%;
+    
     --muted: 240 5% 15%;
     --muted-foreground: 240 5% 65%;
+    
     --accent: 263 70% 50%;
     --accent-foreground: 0 0% 100%;
+    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 18%;
-    --input: 240 6% 18%;
+    
+    --border: 240 6% 12%;
+    --input: 240 6% 12%;
     --ring: 263 70% 50%;
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
-    /* Tool Guide Brand Colors */
-    --tg-bg: #0A0A0F;
-    --tg-bg-secondary: #12121A;
-    --tg-bg-tertiary: #1A1A24;
-    --tg-accent: #7C3AED;
-    --tg-accent-light: #A78BFA;
-    --tg-accent-glow: rgba(124, 58, 237, 0.15);
-    --tg-cyan: #06B6D4;
-    --tg-emerald: #10B981;
-    --tg-text: #FAFAFA;
-    --tg-text-secondary: #A1A1AA;
-    --tg-text-muted: #71717A;
+    /* Custom Premium Tokens */
+    --void: #030303;
+    --base: #0A0A0B;
+    --surface: #111112;
+    --elevated: #18181A;
+    --overlay: #212124;
+    
+    --cyan-500: #06B6D4;
+    --violet-600: #7C3AED;
+    --accent-neon: #B6FF2E;
+    
     --tg-border: rgba(255, 255, 255, 0.08);
     --tg-border-hover: rgba(124, 58, 237, 0.4);
   }
@@ -57,87 +61,45 @@
   }
 
   body {
-    @apply bg-[var(--tg-bg)] text-[var(--tg-text)] antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-void text-foreground font-body antialiased selection:bg-violet-600/30 selection:text-violet-400;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-
-  code, pre {
-    font-family: 'IBM Plex Mono', monospace;
+    @apply font-display font-bold tracking-tight;
   }
 }
 
 @layer components {
-  .font-display {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-  }
-
-  .font-mono {
-    font-family: 'IBM Plex Mono', monospace;
-  }
-
-  .text-gradient-purple {
-    background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 50%, #C4B5FD 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .text-gradient-cyan {
-    background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .glass-card {
-    background: rgba(18, 18, 26, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--tg-border);
-  }
-
-  .glass-card:hover {
-    border-color: var(--tg-border-hover);
-  }
-
-  .glow-purple {
-    box-shadow: 0 0 40px rgba(124, 58, 237, 0.15), 0 0 80px rgba(124, 58, 237, 0.05);
-  }
-
-  .glow-line {
-    background: linear-gradient(90deg, transparent, var(--tg-accent), transparent);
-    height: 1px;
-  }
-
-  .bg-grid-pattern {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .bg-dot-pattern {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-
   .section-padding {
     @apply px-6 md:px-12 lg:px-20 xl:px-28;
   }
 
-  .premium-border {
-    border: 1px solid var(--tg-border);
-    transition: border-color 0.3s ease;
+  .text-gradient-premium {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/60;
   }
 
-  .premium-border:hover {
-    border-color: var(--tg-border-hover);
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-violet-400 via-violet-500 to-violet-600;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-cyan-400 to-cyan-600;
+  }
+
+  .glass-card {
+    @apply bg-surface/60 backdrop-blur-2xl border border-white/5 hover:border-white/10 transition-all duration-300;
+  }
+
+  .hero-glow {
+    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, rgba(3, 3, 3, 0) 70%);
+  }
+
+  .bg-grid-premium {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
