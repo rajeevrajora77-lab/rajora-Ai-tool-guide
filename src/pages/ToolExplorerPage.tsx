@@ -1,10 +1,10 @@
-import { useState, useMemo, useDeferredValue, useCallback, memo, useRef } from 'react';
+import { useState, useMemo, useDeferredValue, useCallback, memo, useRef, type ChangeEvent, type MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useVirtualizer } from '@tanstack/react-virtual';
+import { useVirtualizer, type VirtualItem } from '@tanstack/react-virtual';
 import {
   Search, Filter, ExternalLink, X, Terminal, BookOpen, Github,
-  ArrowRight, Layers
+  Layers
 } from 'lucide-react';
 import { tools, layerInfo, type Tool } from '../data/tools';
 
@@ -93,7 +93,7 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.96, opacity: 0 }}
       className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#12121A] rounded-2xl border border-white/10 p-6 shadow-2xl"
-      onClick={(e) => e.stopPropagation()}
+      onClick={(e: MouseEvent) => e.stopPropagation()}
     >
       <div className="flex items-start justify-between mb-6">
         <div>
@@ -280,7 +280,7 @@ const ToolExplorerPage = () => {
               type="text"
               placeholder="Search tools (e.g., 'Docker', 'LLM', 'SQL')..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3.5 bg-[#12121A] border border-white/8 rounded-xl text-white placeholder-[#52525B] focus:border-[#7C3AED]/40 focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 transition-all text-sm"
               id="tool-search"
             />
@@ -339,7 +339,7 @@ const ToolExplorerPage = () => {
                 position: 'relative',
               }}
             >
-              {virtualizer.getVirtualItems().map((virtualRow) => {
+              {virtualizer.getVirtualItems().map((virtualRow: VirtualItem) => {
                 const startIndex = virtualRow.index * itemsPerRow;
                 const rowTools = filteredTools.slice(startIndex, startIndex + itemsPerRow);
 

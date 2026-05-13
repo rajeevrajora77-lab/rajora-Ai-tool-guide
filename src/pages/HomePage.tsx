@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, Sparkles, Search, Shield, Zap, Globe, Cpu,
-  BarChart3, Code2, Cloud, Database, GitBranch, Bot,
+  BarChart3, Code2, Cloud, GitBranch, Bot,
   ExternalLink, Layers, Star, TrendingUp, CheckCircle2
 } from 'lucide-react';
 import { tools, layerInfo } from '../data/tools';
