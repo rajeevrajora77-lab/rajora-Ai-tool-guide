@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Search, ExternalLink, Github, BookOpen, Terminal, Filter, Sparkles, X, ArrowRight } from 'lucide-react';
+import { Search, ExternalLink, Github, BookOpen, Terminal, Sparkles, X } from 'lucide-react';
 import { tools, layerInfo, type Tool } from '../data/tools';
 import { motion, AnimatePresence } from 'framer-motion';
 

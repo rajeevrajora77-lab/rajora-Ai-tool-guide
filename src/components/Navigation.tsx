@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ExternalLink, ChevronDown } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -13,7 +13,6 @@ const navLinks = [
 const Navigation = memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const Navigation = memo(() => {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    setIsEcosystemOpen(false);
   }, [location.pathname]);
 
   const toggleMobileMenu = useCallback(() => {
