@@ -1,149 +1,58 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { lazy, Suspense } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
-import HeroSection from './sections/HeroSection';
-import WorkflowSection from './sections/WorkflowSection';
-import LayerSection from './sections/LayerSection';
-import DirectorySection from './sections/DirectorySection';
-import NewsletterSection from './sections/NewsletterSection';
-import FooterSection from './sections/FooterSection';
-import { layerInfo } from './data/tools';
+import FooterSection from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
-gsap.registerPlugin(ScrollTrigger);
+// Lazy-loaded pages for code splitting
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ToolExplorerPage = lazy(() => import('./pages/ToolExplorerPage'));
+const CategoriesPage = lazy(() => import('./pages/CategoriesPage'));
+const ToolDetailPage = lazy(() => import('./pages/ToolDetailPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const FeedbackPage = lazy(() => import('./pages/FeedbackPage'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+
+// Loading fallback
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-[#0A0A0F]">
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 rounded-full border-2 border-[#7C3AED]/20" />
+        <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#7C3AED] animate-spin" />
+      </div>
+      <p className="font-mono text-xs uppercase tracking-[0.12em] text-[#A1A1AA]">
+        Loading...
+      </p>
+    </div>
+  </div>
+);
 
 function App() {
-  const mainRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Wait for all sections to mount before setting up global snap
-    const timer = setTimeout(() => {
-      const pinned = ScrollTrigger.getAll()
-        .filter(st => st.vars.pin)
-        .sort((a, b) => a.start - b.start);
-      
-      const maxScroll = ScrollTrigger.maxScroll(window);
-      
-      if (!maxScroll || pinned.length === 0) return;
-
-      const pinnedRanges = pinned.map(st => ({
-        start: st.start / maxScroll,
-        end: (st.end ?? st.start) / maxScroll,
-        center: (st.start + ((st.end ?? st.start) - st.start) * 0.5) / maxScroll,
-      }));
-
-      ScrollTrigger.create({
-        snap: {
-          snapTo: (value: number) => {
-            const inPinned = pinnedRanges.some(
-              r => value >= r.start - 0.02 && value <= r.end + 0.02
-            );
-            if (!inPinned) return value;
-
-            const target = pinnedRanges.reduce(
-              (closest, r) =>
-                Math.abs(r.center - value) < Math.abs(closest - value)
-                  ? r.center
-                  : closest,
-              pinnedRanges[0]?.center ?? 0
-            );
-            return target;
-          },
-          duration: { min: 0.15, max: 0.35 },
-          delay: 0,
-          ease: 'power2.out',
-        },
-      });
-    }, 500);
-
-    return () => {
-      clearTimeout(timer);
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
-  }, []);
+  const location = useLocation();
 
   return (
-    <div ref={mainRef} className="relative">
+    <div className="relative min-h-screen bg-[#0A0A0F]">
       <Navigation />
-      
-      {/* Section 1: Hero */}
-      <HeroSection className="z-10" />
-      
-      {/* Section 2: Workflow */}
-      <WorkflowSection className="z-20" />
-      
-      {/* Section 3: Foundation (Layer 0) */}
-      <LayerSection
-        layerKey="foundation"
-        title="Layer 0"
-        subtitle="Foundation"
-        description="Terminal, Git, VS Code, Node, Python, Docker. Get your environment right once—then build anything."
-        image="/terminal_coder.jpg"
-        imagePosition="right"
-        tools={layerInfo.foundation.tools.slice(0, 6)}
-        className="z-30"
-      />
-      
-      {/* Section 4: Cloud & DevOps (Layers 1-2) */}
-      <LayerSection
-        layerKey="cloud"
-        title="Cloud & DevOps"
-        subtitle="Layers 1–2"
-        description="Cloud platforms, deployment, CI/CD pipelines, and container orchestration."
-        image="/cloud_server_room.jpg"
-        imagePosition="left"
-        tools={[
-          ...layerInfo.cloud.tools.slice(0, 3),
-          ...layerInfo.devops.tools.slice(0, 3)
-        ]}
-        className="z-40"
-      />
-      
-      {/* Section 5: GenAI & Data Science (Layer 3) */}
-      <LayerSection
-        layerKey="genai"
-        title="GenAI & Data Science"
-        subtitle="Layer 3"
-        description="LangChain, vector databases, free LLM APIs, and experiment tracking—wired together so you can ship AI features fast."
-        image="/ai_brain_visual.jpg"
-        imagePosition="right"
-        tools={layerInfo.genai.tools.slice(0, 6)}
-        className="z-50"
-      />
-      
-      {/* Section 6: Data Analytics (Layer 4) */}
-      <LayerSection
-        layerKey="analytics"
-        title="Data Analytics"
-        subtitle="Layer 4"
-        description="SQL, Python analytics, visualization libraries, and BI tools for data-driven decisions."
-        image="/data_dashboard.jpg"
-        imagePosition="left"
-        tools={layerInfo.analytics.tools.slice(0, 6)}
-        className="z-[60]"
-      />
-      
-      {/* Section 7: Full Stack (Layer 5) */}
-      <LayerSection
-        layerKey="fullstack"
-        title="Full Stack"
-        subtitle="Layer 5"
-        description="Next.js, Supabase, auth, UI kits, and deployment—everything you need to ship a complete product."
-        image="/fullstack_ui.jpg"
-        imagePosition="right"
-        tools={layerInfo.fullstack.tools.slice(0, 6)}
-        className="z-[70]"
-      />
-      
-      {/* Section 8: Directory (Search & Filter) */}
-      <DirectorySection className="z-[80]" />
-      
-      {/* Section 9: Newsletter */}
-      <NewsletterSection className="z-[90]" />
-      
-      {/* Section 10: Footer */}
-      <FooterSection className="z-[100]" />
+      <Suspense fallback={<PageLoader />}>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tool-guide" element={<ToolExplorerPage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+            <Route path="/tool/:slug" element={<ToolDetailPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/feedback" element={<FeedbackPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          </Routes>
+        </AnimatePresence>
+      </Suspense>
+      <FooterSection />
+      <ScrollToTop />
     </div>
   );
 }
