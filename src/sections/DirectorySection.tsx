@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from 'react';
+import { useState, useLayoutEffect, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Search, ExternalLink, Github, BookOpen, Terminal, Sparkles, X } from 'lucide-react';
@@ -11,15 +11,29 @@ interface DirectorySectionProps {
   className?: string;
 }
 
+const DEBOUNCE_DELAY = 200;
+
 const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const lastFocusedElementRef = useRef<HTMLElement | null>(null);
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const [selectedLayer, setSelectedLayer] = useState<string>('all');
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
+
+  // Debounce search input for performance
+  useEffect(() => {
+    const handler = window.setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, DEBOUNCE_DELAY);
+
+    return () => window.clearTimeout(handler);
+  }, [searchQuery]);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -63,7 +77,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
         }
       );
 
-      // Grid cards animation
+      // Grid cards animation (one-time appearance; avoid re-running on every filter change)
       const cards = grid.querySelectorAll('.tool-card');
       gsap.fromTo(
         cards,
@@ -85,18 +99,17 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  // Filter tools based on search and layer
+  // Filter tools based on debounced search and layer
   const filteredTools = tools.filter((tool) => {
-    const matchesSearch =
-      searchQuery === '' ||
-      tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.tags.some((tag) =>
-        tag.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+    const query = debouncedQuery.toLowerCase();
 
-    const matchesLayer =
-      selectedLayer === 'all' || tool.layer === selectedLayer;
+    const matchesSearch =
+      query === '' ||
+      tool.name.toLowerCase().includes(query) ||
+      tool.description.toLowerCase().includes(query) ||
+      tool.tags.some((tag) => tag.toLowerCase().includes(query));
+
+    const matchesLayer = selectedLayer === 'all' || tool.layer === selectedLayer;
 
     return matchesSearch && matchesLayer;
   });
@@ -123,21 +136,80 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
     return colors[layer] || '#B6FF2E';
   };
 
+  // Modal a11y: focus trapping and ESC to close
+  useEffect(() => {
+    if (!selectedTool) return;
+
+    lastFocusedElementRef.current = document.activeElement as HTMLElement | null;
+
+    const modal = modalRef.current;
+    if (modal) {
+      const focusableSelectors = [
+        'a[href]',
+        'button:not([disabled])',
+        'textarea:not([disabled])',
+        'input:not([disabled])',
+        'select:not([disabled])',
+        '[tabindex]:not([tabindex="-1"])',
+      ];
+      const focusableElements = Array.from(
+        modal.querySelectorAll<HTMLElement>(focusableSelectors.join(','))
+      );
+      if (focusableElements.length) {
+        focusableElements[0].focus();
+      }
+
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          setSelectedTool(null);
+          return;
+        }
+
+        if (event.key === 'Tab' && focusableElements.length > 0) {
+          const first = focusableElements[0];
+          const last = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        if (lastFocusedElementRef.current) {
+          lastFocusedElementRef.current.focus();
+        }
+      };
+    }
+  }, [selectedTool]);
+
   return (
     <section
       ref={sectionRef}
       id="directory"
       className={`relative w-full min-h-screen bg-void py-24 ${className}`}
+      aria-labelledby="directory-heading"
     >
       {/* Background patterns */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
+      <div className="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
         <div className="absolute inset-0 bg-grid-premium" />
       </div>
 
       <div className="relative section-padding">
         {/* Header */}
         <div ref={headerRef} className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+          <h2
+            id="directory-heading"
+            className="text-4xl md:text-5xl font-display font-bold text-white mb-4"
+          >
             Find your next <span className="text-gradient-purple">Intelligence</span>
           </h2>
           <p className="text-zinc-400 font-body max-w-xl leading-relaxed">
@@ -154,48 +226,75 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
               <Search
                 size={18}
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"
+                aria-hidden="true"
               />
+              <label htmlFor="tool-search" className="sr-only">
+                Search tools, categories, or tags
+              </label>
               <input
+                id="tool-search"
                 type="text"
                 placeholder="Search tools, categories, or tags..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-12 py-4 bg-surface/50 backdrop-blur-xl border border-zinc-200 dark:border-white/5 rounded-xl text-zinc-900 dark:text-white placeholder-zinc-500 focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/20 focus:outline-none transition-all"
+                autoComplete="off"
               />
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-[10px] font-mono text-zinc-500">
+              <div
+                className="absolute right-4 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-[10px] font-mono text-zinc-500"
+                aria-hidden="true"
+              >
                 ⌘K
               </div>
             </div>
 
             {/* View Toggle / Sorting (Placeholder) */}
             <div className="flex items-center gap-4 text-zinc-500 text-sm font-mono">
-              <span className="hidden sm:inline">Showing {filteredTools.length} results</span>
+              <span className="hidden sm:inline" aria-live="polite">
+                Showing {filteredTools.length} results
+              </span>
             </div>
           </div>
 
           {/* Layer Filters */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div
+            className="flex flex-wrap items-center gap-2"
+            role="radiogroup"
+            aria-label="Filter tools by layer"
+          >
             <div className="flex items-center gap-2 mr-2">
               <span className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
                 Filter By Layer
               </span>
             </div>
-            {layerFilters.map((layer) => (
-              <button
-                key={layer.key}
-                onClick={() => setSelectedLayer(layer.key)}
-                className={`px-4 py-2 rounded-lg font-body text-sm transition-all duration-300 border ${
-                  selectedLayer === layer.key
-                    ? 'bg-zinc-900 dark:bg-white text-white dark:text-void border-zinc-900 dark:border-white font-bold'
-                    : 'bg-zinc-100 dark:bg-white/5 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white border-zinc-200 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/10'
-                }`}
-              >
-                {layer.label}
-                <span className={`ml-2 text-[10px] ${selectedLayer === layer.key ? 'text-zinc-300 dark:text-void/60' : 'text-zinc-400 dark:text-zinc-600'}`}>
-                  {layer.count}
-                </span>
-              </button>
-            ))}
+            {layerFilters.map((layer) => {
+              const isSelected = selectedLayer === layer.key;
+              return (
+                <button
+                  key={layer.key}
+                  type="button"
+                  onClick={() => setSelectedLayer(layer.key)}
+                  className={`px-4 py-2 rounded-lg font-body text-sm transition-all duration-300 border ${
+                    isSelected
+                      ? 'bg-zinc-900 dark:bg-white text-white dark:text-void border-zinc-900 dark:border-white font-bold'
+                      : 'bg-zinc-100 dark:bg-white/5 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white border-zinc-200 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/10'
+                  }`}
+                  role="radio"
+                  aria-checked={isSelected}
+                >
+                  {layer.label}
+                  <span
+                    className={`ml-2 text-[10px] ${
+                      isSelected
+                        ? 'text-zinc-300 dark:text-void/60'
+                        : 'text-zinc-400 dark:text-zinc-600'
+                    }`}
+                  >
+                    {layer.count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -203,6 +302,8 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
         <div
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+          role="list"
+          aria-label="AI tools directory results"
         >
           {filteredTools.map((tool) => (
             <motion.div
@@ -210,13 +311,21 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
               layout
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              onClick={() => setSelectedTool(tool)}
               className="tool-card group relative p-6 bg-surface/40 dark:bg-surface/40 backdrop-blur-md rounded-2xl border border-zinc-200 dark:border-white/5 hover:border-violet-500/30 cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+              role="listitem"
             >
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              <button
+                type="button"
+                onClick={() => setSelectedTool(tool)}
+                className="relative z-10 flex flex-col text-left w-full h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/70 rounded-2xl"
+                aria-label={`View details for ${tool.name}`}
+              >
+                {/* Hover Glow Effect */}
+                <div
+                  className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  aria-hidden="true"
+                />
 
-              <div className="relative z-10">
                 {/* Layer badge */}
                 <div className="flex items-center justify-between mb-6">
                   <span
@@ -230,7 +339,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                     {tool.layer}
                   </span>
                   <div className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
-                    <ExternalLink size={14} />
+                    <ExternalLink size={14} aria-hidden="true" />
                   </div>
                 </div>
 
@@ -243,7 +352,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                 </p>
 
                 {/* Footer Tags */}
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mt-auto">
                   {tool.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
@@ -253,23 +362,26 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                     </span>
                   ))}
                   {tool.tags.length > 3 && (
-                    <span className="text-[10px] text-zinc-500 dark:text-zinc-600 font-mono">+{tool.tags.length - 3}</span>
+                    <span className="text-[10px] text-zinc-500 dark:text-zinc-600 font-mono">
+                      +{tool.tags.length - 3}
+                    </span>
                   )}
                 </div>
-              </div>
+              </button>
             </motion.div>
           ))}
         </div>
 
         {/* No results */}
         {filteredTools.length === 0 && (
-          <div className="text-center py-32 glass-card rounded-3xl">
-            <div className="mb-4 inline-flex p-4 rounded-full bg-white/5">
+          <div className="text-center py-32 glass-card rounded-3xl" role="status" aria-live="polite">
+            <div className="mb-4 inline-flex p-4 rounded-full bg-white/5" aria-hidden="true">
               <Search size={32} className="text-zinc-600" />
             </div>
             <p className="text-white text-xl font-display font-bold">No results found</p>
             <p className="text-zinc-500 font-body mt-2">Try adjusting your filters or search terms.</p>
             <button
+              type="button"
               onClick={() => {
                 setSearchQuery('');
                 setSelectedLayer('all');
@@ -285,16 +397,23 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
       {/* Tool Detail Modal */}
       <AnimatePresence>
         {selectedTool && (
-          <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4 md:p-8">
+          <div
+            className="fixed inset-0 z-[2000] flex items-center justify-center p-4 md:p-8"
+            aria-labelledby="tool-modal-title"
+            aria-modal="true"
+            role="dialog"
+          >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedTool(null)}
               className="absolute inset-0 bg-void/80 backdrop-blur-3xl"
+              aria-hidden="true"
             />
             
             <motion.div
+              ref={modalRef}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -319,13 +438,18 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                       {selectedTool.layer} Layer
                     </span>
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-display font-bold text-zinc-900 dark:text-white tracking-tight">
+                  <h3
+                    id="tool-modal-title"
+                    className="text-3xl md:text-5xl font-display font-bold text-zinc-900 dark:text-white tracking-tight"
+                  >
                     {selectedTool.name}
                   </h3>
                 </div>
                 <button
+                  type="button"
                   onClick={() => setSelectedTool(null)}
                   className="p-2 rounded-full bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  aria-label="Close tool details"
                 >
                   <X size={20} />
                 </button>
@@ -343,7 +467,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   {/* Free tier details */}
                   <div className="mt-8 p-6 bg-surface/50 rounded-2xl border border-violet-500/20 group">
                     <div className="flex items-center gap-2 mb-3">
-                      <Sparkles size={16} className="text-violet-600 dark:text-violet-400" />
+                      <Sparkles size={16} className="text-violet-600 dark:text-violet-400" aria-hidden="true" />
                       <h4 className="font-mono text-xs uppercase tracking-widest text-violet-600 dark:text-violet-400">
                         Free Tier Details
                       </h4>
@@ -363,7 +487,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-900 dark:bg-white text-white dark:text-void font-bold rounded-xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-lg"
                     >
-                      <ExternalLink size={18} />
+                      <ExternalLink size={18} aria-hidden="true" />
                       Visit Website
                     </a>
                     {selectedTool.documentationUrl && (
@@ -373,7 +497,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold rounded-xl hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
                       >
-                        <BookOpen size={18} />
+                        <BookOpen size={18} aria-hidden="true" />
                         Docs
                       </a>
                     )}
@@ -384,7 +508,7 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-bold rounded-xl hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
                       >
-                        <Github size={18} />
+                        <Github size={18} aria-hidden="true" />
                         Source
                       </a>
                     )}
@@ -417,10 +541,13 @@ const DirectorySection = ({ className = '' }: DirectorySectionProps) => {
                   </h4>
                   <div className="flex items-center justify-between gap-4 p-4 bg-zinc-100 dark:bg-void rounded-xl border border-zinc-200 dark:border-white/5 font-mono text-sm text-zinc-700 dark:text-zinc-300 group">
                     <div className="flex items-center gap-3">
-                      <Terminal size={16} className="text-violet-600 dark:text-violet-500" />
+                      <Terminal size={16} className="text-violet-600 dark:text-violet-500" aria-hidden="true" />
                       <code className="text-violet-700 dark:text-violet-400">{selectedTool.installCommand}</code>
                     </div>
-                    <button className="opacity-0 group-hover:opacity-100 transition-opacity text-zinc-500 hover:text-zinc-900 dark:hover:text-white">
+                    <button
+                      type="button"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
+                    >
                       Copy
                     </button>
                   </div>
