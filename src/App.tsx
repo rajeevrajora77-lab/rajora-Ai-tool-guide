@@ -18,7 +18,7 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 
 // Loading fallback
 const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-void">
+  <div className="flex items-center justify-center min-h-screen bg-void dark:bg-void">
     <div className="flex flex-col items-center gap-4">
       <div className="relative w-12 h-12">
         <div className="absolute inset-0 rounded-full border-2 border-violet-500/20" />
@@ -35,7 +35,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="relative min-h-screen bg-void selection:bg-violet-600/30 selection:text-violet-600 dark:selection:text-violet-400">
+    <div className="relative min-h-screen bg-white text-zinc-900 dark:bg-void dark:text-white selection:bg-violet-600/30 selection:text-violet-800 dark:selection:text-violet-400">
       {/* Global Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 bg-grid-premium opacity-[var(--glow-opacity)]" />
