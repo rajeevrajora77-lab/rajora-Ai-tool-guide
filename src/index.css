@@ -10,7 +10,6 @@
     /* Background: warm off-white #F8F7F4 = hsl(40 13% 97%) */
     --background: 40 13% 97%;
     --foreground: 240 10% 4%;
-    /* Card: slightly warmer #F3F2EF */
     --card: 40 10% 95%;
     --card-foreground: 240 10% 4%;
     --popover: 40 13% 97%;
@@ -78,30 +77,36 @@
 
   .dark {
     color-scheme: dark;
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 8%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 263 70% 50%;
+
+    /* Background: soft charcoal #16151C = hsl(252 12% 10%) */
+    --background: 252 12% 10%;
+    --foreground: 0 0% 95%;
+    /* Card: slightly lighter #1E1C26 */
+    --card: 252 12% 13%;
+    --card-foreground: 0 0% 95%;
+    --popover: 252 12% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 263 70% 58%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 10%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 263 70% 50%;
+    --secondary: 252 10% 17%;
+    --secondary-foreground: 0 0% 92%;
+    --muted: 252 8% 20%;
+    --muted-foreground: 252 5% 65%;
+    --accent: 263 70% 58%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 12%;
-    --input: 240 6% 12%;
-    --ring: 263 70% 50%;
-    --void: #030303;
-    --base: #0A0A0B;
-    --surface: #111112;
-    --elevated: #18181A;
-    --overlay: #212124;
+    --border: 252 8% 18%;
+    --input: 252 8% 18%;
+    --ring: 263 70% 58%;
+
+    /* Surface stack — soft charcoal palette */
+    --void: #16151C;
+    --base: #1A1923;
+    --surface: #1E1C26;
+    --elevated: #252330;
+    --overlay: #2D2B3A;
+
     --cyan-500: #06B6D4;
     --violet-600: #7C3AED;
     --accent-neon: #B6FF2E;
@@ -111,9 +116,9 @@
     --layer-genai: #7C3AED;
     --layer-analytics: #EC4899;
     --layer-fullstack: #3B82F6;
-    --tg-border: rgba(255, 255, 255, 0.08);
+    --tg-border: rgba(255, 255, 255, 0.07);
     --tg-border-hover: rgba(124, 58, 237, 0.4);
-    --glow-opacity: 0.15;
+    --glow-opacity: 0.18;
   }
 }
 
@@ -170,7 +175,6 @@
 /* ─── LAYOUT COMPONENTS ──────────────────────────────────────────── */
 @layer components {
 
-  /* Compact horizontal page padding, max-width 1440 */
   .section-padding {
     padding-inline: clamp(1rem, 3vw, 5rem);
     max-width: 1440px;
@@ -178,7 +182,6 @@
     width: 100%;
   }
 
-  /* Vertical section rhythm — tighter than before */
   .section-gap {
     padding-block: clamp(3rem, 5vw, 5rem);
   }
@@ -190,7 +193,6 @@
     padding-inline: clamp(1rem, 3vw, 5rem);
   }
 
-  /* ── Navigation (compact 56px height) ── */
   .nav-root {
     position: fixed;
     bottom: 0;
@@ -223,7 +225,6 @@
     }
   }
 
-  /* ── Tool Card Grid — responsive dense layout ── */
   .tool-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -246,7 +247,6 @@
     .tool-grid { grid-template-columns: repeat(5, 1fr); }
   }
 
-  /* ── Cards ── */
   .glass-card {
     background-color: color-mix(in srgb, var(--surface) 60%, transparent);
     @apply backdrop-blur-2xl border transition-all duration-300;
@@ -268,12 +268,10 @@
     .card-body   { font-size: var(--text-xs); }
   }
 
-  /* ── Hero ── */
   .hero-glow {
     background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, calc(var(--glow-opacity) * 3)) 0%, transparent 70%);
   }
 
-  /* ── Section header spacing ── */
   .section-header {
     margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   }
@@ -300,7 +298,6 @@
     margin-inline: auto;
   }
 
-  /* ── Media ── */
   .media-16-9 {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -315,7 +312,6 @@
     object-fit: cover;
   }
 
-  /* ── Text gradients ── */
   .text-gradient-premium {
     @apply bg-clip-text text-transparent bg-gradient-to-br
            from-zinc-900 via-zinc-800 to-zinc-600
@@ -332,7 +328,6 @@
            from-cyan-400 to-cyan-600;
   }
 
-  /* ── Background patterns ── */
   .bg-grid-pattern {
     background-image:
       linear-gradient(currentColor 1px, transparent 1px),
@@ -347,7 +342,6 @@
     @apply text-zinc-900/10 dark:text-white/[0.08];
   }
 
-  /* ── Shadow utilities ── */
   .shadow-soft-panel {
     box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
   }
