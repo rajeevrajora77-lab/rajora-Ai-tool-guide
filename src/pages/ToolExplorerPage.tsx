@@ -10,7 +10,7 @@ import ToolCard from '../components/ToolCard';
 
 const ITEMS_PER_ROW_DESKTOP = 4;
 const ITEMS_PER_ROW_TABLET = 2;
-const ROW_HEIGHT = 220;
+const ROW_HEIGHT = 260;  // increased from 220 to prevent clipping
 const ROW_GAP = 16;
 
 const layerFilters = [
@@ -155,10 +155,8 @@ const ToolExplorerPage = () => {
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
   const parentRef = useRef<HTMLDivElement>(null);
 
-  // Deferred search for performance
   const deferredQuery = useDeferredValue(searchQuery);
 
-  // Memoized filtered tools
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
       const matchesSearch =
@@ -168,15 +166,11 @@ const ToolExplorerPage = () => {
         tool.tags.some((tag) =>
           tag.toLowerCase().includes(deferredQuery.toLowerCase())
         );
-
-      const matchesLayer =
-        selectedLayer === 'all' || tool.layer === selectedLayer;
-
+      const matchesLayer = selectedLayer === 'all' || tool.layer === selectedLayer;
       return matchesSearch && matchesLayer;
     });
   }, [deferredQuery, selectedLayer]);
 
-  // Grid layout: chunk tools into rows
   const getItemsPerRow = useCallback(() => {
     if (typeof window === 'undefined') return ITEMS_PER_ROW_DESKTOP;
     if (window.innerWidth >= 1280) return ITEMS_PER_ROW_DESKTOP;
@@ -313,7 +307,11 @@ const ToolExplorerPage = () => {
                   >
                     <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
                       {rowTools.map((tool) => (
-                        <ToolCard key={tool.id} tool={tool} />
+                        <ToolCard
+                          key={tool.id}
+                          tool={tool}
+                          onClick={() => setSelectedTool(tool)}
+                        />
                       ))}
                     </div>
                   </div>
