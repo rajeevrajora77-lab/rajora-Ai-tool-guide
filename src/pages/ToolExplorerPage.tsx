@@ -44,7 +44,7 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
   >
     <motion.div
       initial={{ scale: 0.96, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.96, opacity: 0 }}
-      className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#111112] rounded-2xl border border-white/10 p-6 shadow-2xl"
+      className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[var(--surface)] rounded-2xl border border-[var(--tg-border)] p-6 shadow-2xl"
       onClick={(e: MouseEvent) => e.stopPropagation()}
     >
       <div className="flex items-start justify-between mb-6">
@@ -55,42 +55,42 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
           >
             {tool.category}
           </span>
-          <h3 className="font-display text-2xl font-bold text-white">{tool.name}</h3>
+          <h3 className="font-display text-2xl font-bold text-foreground">{tool.name}</h3>
           {(tool as Tool & { developer?: string }).developer && (
-            <p className="text-xs text-zinc-500 mt-1">by {(tool as Tool & { developer?: string }).developer}</p>
+            <p className="text-xs text-muted-foreground mt-1">by {(tool as Tool & { developer?: string }).developer}</p>
           )}
         </div>
         <button
           onClick={onClose}
-          className="p-2 rounded-lg hover:bg-white/10 text-zinc-400 hover:text-white transition-all"
+          className="p-2 rounded-lg hover:bg-black/10 dark:hover:bg-white/10 text-muted-foreground hover:text-foreground transition-all"
           aria-label="Close modal"
         >
           <X size={20} />
         </button>
       </div>
 
-      <p className="text-zinc-400 text-base mb-6 leading-relaxed">{tool.description}</p>
+      <p className="text-muted-foreground text-base mb-6 leading-relaxed">{tool.description}</p>
 
       <div className="p-4 rounded-xl bg-violet-500/5 border border-violet-500/20 mb-6">
-        <h4 className="font-mono text-xs uppercase tracking-wider text-violet-400 mb-2">Free Tier</h4>
-        <p className="text-white text-sm">{tool.freeTierDetails}</p>
+        <h4 className="font-mono text-xs uppercase tracking-wider text-violet-500 dark:text-violet-400 mb-2">Free Tier</h4>
+        <p className="text-foreground text-sm">{tool.freeTierDetails}</p>
       </div>
 
       {tool.installCommand && (
         <div className="mb-6">
-          <h4 className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-2">Install Command</h4>
-          <div className="flex items-center gap-2 p-3 rounded-xl bg-black/40 border border-white/10 font-mono text-sm text-white">
-            <Terminal size={14} className="text-violet-400 shrink-0" />
+          <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-2">Install Command</h4>
+          <div className="flex items-center gap-2 p-3 rounded-xl bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 font-mono text-sm text-foreground">
+            <Terminal size={14} className="text-violet-500 dark:text-violet-400 shrink-0" />
             <code className="break-all">{tool.installCommand}</code>
           </div>
         </div>
       )}
 
       <div className="mb-6">
-        <h4 className="font-mono text-xs uppercase tracking-wider text-zinc-500 mb-2">Tags</h4>
+        <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-2">Tags</h4>
         <div className="flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-white/5 rounded-lg text-zinc-400 text-xs">{tag}</span>
+            <span key={tag} className="px-3 py-1 bg-black/5 dark:bg-white/5 rounded-lg text-muted-foreground text-xs">{tag}</span>
           ))}
         </div>
       </div>
@@ -106,13 +106,13 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
         </a>
         {tool.documentationUrl && (
           <a href={tool.documentationUrl} target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm rounded-xl hover:bg-white/5 transition-all">
+            className="flex items-center gap-2 px-5 py-3 border border-black/10 dark:border-white/10 text-foreground text-sm rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
             <BookOpen size={16} /> Documentation
           </a>
         )}
         {tool.githubUrl && (
           <a href={tool.githubUrl} target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm rounded-xl hover:bg-white/5 transition-all">
+            className="flex items-center gap-2 px-5 py-3 border border-black/10 dark:border-white/10 text-foreground text-sm rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
             <Github size={16} /> GitHub
           </a>
         )}
@@ -131,7 +131,6 @@ const ToolExplorerPage = () => {
   const inputRef      = useRef<HTMLInputElement>(null);
   const deferredQuery = useDeferredValue(searchQuery);
 
-  // Ctrl+K / Cmd+K focus shortcut
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -190,27 +189,27 @@ const ToolExplorerPage = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-3">
-            <Layers size={16} className="text-violet-400" />
-            <span className="font-mono text-xs uppercase tracking-[0.12em] text-violet-400">Tool Explorer</span>
+            <Layers size={16} className="text-violet-500 dark:text-violet-400" />
+            <span className="font-mono text-xs uppercase tracking-[0.12em] text-violet-500 dark:text-violet-400">Tool Explorer</span>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2">Find the perfect tool</h1>
-          <p className="text-zinc-400">
-            Discover from <span className="text-white font-medium">{tools.length}+</span> curated developer &amp; AI tools.
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">Find the perfect tool</h1>
+          <p className="text-muted-foreground">
+            Discover from <span className="text-foreground font-medium">{tools.length}+</span> curated developer &amp; AI tools.
           </p>
         </div>
 
         {/* Search */}
         <div className="mb-8 space-y-4">
           <div className="relative max-w-xl">
-            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" />
+            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <input
               ref={inputRef}
               type="text"
               placeholder="Search by name, description, category, developer, tags…"
               value={searchQuery}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-28 py-3.5 bg-white/5 border border-white/10 rounded-xl
-                         text-white placeholder-zinc-600 focus:border-violet-500/50 focus:outline-none
+              className="w-full pl-11 pr-28 py-3.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl
+                         text-foreground placeholder:text-muted-foreground focus:border-violet-500/50 focus:outline-none
                          focus:ring-1 focus:ring-violet-500/30 transition-all text-sm"
               aria-label="Search tools"
             />
@@ -218,14 +217,14 @@ const ToolExplorerPage = () => {
               {searchQuery ? (
                 <button
                   onClick={() => { setSearchQuery(''); inputRef.current?.focus(); }}
-                  className="p-1 rounded hover:bg-white/10 text-zinc-400 hover:text-white transition-colors"
+                  className="p-1 rounded hover:bg-black/10 dark:hover:bg-white/10 text-muted-foreground hover:text-foreground transition-colors"
                   aria-label="Clear search"
                 >
                   <X size={14} />
                 </button>
               ) : (
-                <kbd className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-white/5 border border-white/10
-                               text-zinc-500 text-[10px] font-mono">
+                <kbd className="hidden sm:flex items-center gap-1 px-2 py-1 rounded bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10
+                               text-muted-foreground text-[10px] font-mono">
                   <Command size={10} /> K
                 </kbd>
               )}
@@ -234,7 +233,7 @@ const ToolExplorerPage = () => {
 
           {/* Filters */}
           <div className="flex flex-wrap gap-2 items-center">
-            <Filter size={13} className="text-zinc-500" />
+            <Filter size={13} className="text-muted-foreground" />
             {layerFilters.map((layer) => (
               <button
                 key={layer.key}
@@ -242,7 +241,7 @@ const ToolExplorerPage = () => {
                 className={`px-3 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-all duration-200 ${
                   selectedLayer === layer.key
                     ? 'bg-violet-600 text-white shadow-lg shadow-violet-600/25'
-                    : 'bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10 border border-white/10'
+                    : 'bg-black/5 dark:bg-white/5 text-muted-foreground hover:text-foreground hover:bg-black/10 dark:hover:bg-white/10 border border-black/10 dark:border-white/10'
                 }`}
               >
                 {layer.label}
@@ -253,9 +252,9 @@ const ToolExplorerPage = () => {
         </div>
 
         {/* Count */}
-        <p className="text-xs text-zinc-500 font-mono mb-4">
+        <p className="text-xs text-muted-foreground font-mono mb-4">
           {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} found
-          {deferredQuery && <span className="text-zinc-400"> for &quot;{deferredQuery}&quot;</span>}
+          {deferredQuery && <span className="text-foreground/70"> for &quot;{deferredQuery}&quot;</span>}
         </p>
 
         {/* Grid */}
@@ -291,13 +290,13 @@ const ToolExplorerPage = () => {
           </div>
         ) : (
           <div className="text-center py-24 flex flex-col items-center gap-4">
-            <Search size={40} className="text-zinc-700" />
-            <p className="text-zinc-400 text-lg font-medium">No tools found</p>
-            <p className="text-zinc-600 text-sm">Try a different keyword or clear the filters</p>
+            <Search size={40} className="text-muted-foreground/50" />
+            <p className="text-muted-foreground text-lg font-medium">No tools found</p>
+            <p className="text-muted-foreground/70 text-sm">Try a different keyword or clear the filters</p>
             <button
               onClick={() => { setSearchQuery(''); setSelectedLayer('all'); }}
-              className="mt-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl
-                         text-zinc-300 text-sm hover:bg-white/10 transition-colors"
+              className="mt-2 px-5 py-2.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl
+                         text-foreground text-sm hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
             >
               Clear all filters
             </button>
