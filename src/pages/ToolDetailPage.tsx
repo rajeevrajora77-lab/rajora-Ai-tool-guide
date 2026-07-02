@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { tools } from '../data/tools';
 import { useState, useCallback } from 'react';
+import ToolCard from '../components/ToolCard';
 
 function getCategoryColor(layer: string): string {
   const colors: Record<string, string> = {
@@ -49,15 +50,15 @@ const ToolDetailPage = () => {
         className="min-h-screen pt-32 pb-16"
       >
         <div className="section-padding text-center">
-          <h1 className="font-display text-3xl font-bold text-white mb-4">
+          <h1 className="font-display text-3xl font-bold text-foreground mb-4">
             Tool not found
           </h1>
-          <p className="text-[#71717A] mb-8">
+          <p className="text-muted-foreground mb-8">
             The tool you're looking for doesn't exist or may have been moved.
           </p>
           <Link
             to="/tool-guide"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#7C3AED] text-white rounded-xl hover:bg-[#6D28D9] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-foreground rounded-xl hover:bg-primary/90 transition-colors"
           >
             <ArrowLeft size={16} />
             Back to Tool Guide
@@ -82,7 +83,7 @@ const ToolDetailPage = () => {
         <div className="mb-8">
           <Link
             to="/tool-guide"
-            className="inline-flex items-center gap-2 text-sm text-[#A78BFA] hover:text-[#7C3AED] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
           >
             <ArrowLeft size={14} />
             Back to Tool Guide
@@ -98,15 +99,15 @@ const ToolDetailPage = () => {
             >
               {tool.layer}
             </span>
-            <span className="text-[#52525B] text-xs">•</span>
-            <span className="text-xs text-[#52525B] font-mono">{tool.category}</span>
+            <span className="text-muted-foreground text-xs">•</span>
+            <span className="text-xs text-muted-foreground font-mono">{tool.category}</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             {tool.name}
           </h1>
 
-          <p className="text-lg text-[#A1A1AA] leading-relaxed max-w-2xl">
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
             {tool.description}
           </p>
         </div>
@@ -117,7 +118,7 @@ const ToolDetailPage = () => {
             href={tool.officialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#7C3AED] text-white font-medium rounded-xl hover:bg-[#6D28D9] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-foreground font-medium rounded-xl hover:bg-primary/90 transition-colors"
           >
             <ExternalLink size={16} />
             Visit Official Site
@@ -127,7 +128,7 @@ const ToolDetailPage = () => {
               href={tool.documentationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 text-white rounded-xl hover:bg-white/5 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border/70 text-foreground rounded-xl hover:bg-muted/70 transition-all"
             >
               <BookOpen size={16} />
               Documentation
@@ -138,7 +139,7 @@ const ToolDetailPage = () => {
               href={tool.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 text-white rounded-xl hover:bg-white/5 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-border/70 text-foreground rounded-xl hover:bg-muted/70 transition-all"
             >
               <Github size={16} />
               Source Code
@@ -149,39 +150,39 @@ const ToolDetailPage = () => {
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {/* Free Tier */}
-          <div className="p-6 rounded-2xl bg-[#12121A] border border-[#7C3AED]/20">
+          <div className="p-6 rounded-2xl bg-card border border-[#7C3AED]/20">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-[#7C3AED]/10 flex items-center justify-center">
-                <Layers size={16} className="text-[#A78BFA]" />
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Layers size={16} className="text-primary" />
               </div>
               <h3 className="font-mono text-xs uppercase tracking-wider text-[#7C3AED]">
                 Free Tier
               </h3>
             </div>
-            <p className="text-white text-sm leading-relaxed">{tool.freeTierDetails}</p>
+            <p className="text-foreground text-sm leading-relaxed">{tool.freeTierDetails}</p>
           </div>
 
           {/* Install Command */}
           {tool.installCommand && (
-            <div className="p-6 rounded-2xl bg-[#12121A] border border-white/5">
+            <div className="p-6 rounded-2xl bg-card border border-border/70">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
-                  <Terminal size={16} className="text-[#A1A1AA]" />
+                <div className="w-8 h-8 rounded-lg bg-muted/70 flex items-center justify-center">
+                  <Terminal size={16} className="text-muted-foreground" />
                 </div>
-                <h3 className="font-mono text-xs uppercase tracking-wider text-[#71717A]">
+                <h3 className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                   Install
                 </h3>
               </div>
               <div className="flex items-center gap-2">
-                <code className="text-white text-sm font-mono break-all flex-grow">
+                <code className="text-foreground text-sm font-mono break-all flex-grow">
                   {tool.installCommand}
                 </code>
                 <button
                   onClick={() => handleCopy(tool.installCommand!)}
-                  className="p-2 rounded-lg hover:bg-white/5 text-[#71717A] hover:text-white transition-all shrink-0"
+                  className="p-2 rounded-lg hover:bg-muted/70 text-muted-foreground hover:text-foreground transition-all shrink-0"
                   aria-label="Copy command"
                 >
-                  {copied ? <Check size={16} className="text-[#10B981]" /> : <Copy size={16} />}
+                  {copied ? <Check size={16} className="text-emerald-500" /> : <Copy size={16} />}
                 </button>
               </div>
             </div>
@@ -191,8 +192,8 @@ const ToolDetailPage = () => {
         {/* Tags */}
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-3">
-            <Tag size={14} className="text-[#52525B]" />
-            <h3 className="font-mono text-xs uppercase tracking-wider text-[#52525B]">
+            <Tag size={14} className="text-muted-foreground" />
+            <h3 className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
               Tags
             </h3>
           </div>
@@ -200,7 +201,7 @@ const ToolDetailPage = () => {
             {tool.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1.5 bg-white/5 rounded-lg text-[#A1A1AA] text-sm border border-white/5"
+                className="px-3 py-1.5 bg-muted/70 rounded-lg text-muted-foreground text-sm border border-border/70"
               >
                 {tag}
               </span>
@@ -211,21 +212,12 @@ const ToolDetailPage = () => {
         {/* Related Tools */}
         {relatedTools.length > 0 && (
           <div>
-            <h2 className="font-display text-xl font-semibold text-white mb-6">
+            <h2 className="font-display text-xl font-semibold text-foreground mb-6">
               More {tool.layer} tools
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedTools.map((related) => (
-                <Link
-                  key={related.id}
-                  to={`/tool/${related.id}`}
-                  className="group p-4 rounded-xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all"
-                >
-                  <h4 className="font-semibold text-white text-sm mb-1 group-hover:text-[#A78BFA] transition-colors">
-                    {related.name}
-                  </h4>
-                  <p className="text-xs text-[#71717A] line-clamp-2">{related.description}</p>
-                </Link>
+                <ToolCard key={related.id} tool={related} compact />
               ))}
             </div>
           </div>

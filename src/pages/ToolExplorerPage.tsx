@@ -1,12 +1,12 @@
 import { useState, useMemo, useDeferredValue, useCallback, memo, useRef, type ChangeEvent, type MouseEvent } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useVirtualizer, type VirtualItem } from '@tanstack/react-virtual';
 import {
   Search, Filter, ExternalLink, X, Terminal, BookOpen, Github,
-  Layers, ArrowRight
+  Layers
 } from 'lucide-react';
 import { tools, layerInfo, type Tool } from '../data/tools';
+import ToolCard from '../components/ToolCard';
 
 const ITEMS_PER_ROW_DESKTOP = 4;
 const ITEMS_PER_ROW_TABLET = 2;
@@ -35,67 +35,20 @@ function getCategoryColor(layer: string): string {
   return colors[layer] || '#7C3AED';
 }
 
-// ─── Tool Card ───
-const ToolCard = memo(({ tool }: { tool: Tool }) => (
-  <Link
-    to={`/tool/${tool.id}`}
-    className="group relative flex flex-col p-6 rounded-2xl bg-surface/50 border border-white/5 hover:border-violet-500/30 transition-all duration-500 h-full overflow-hidden"
-  >
-    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-    
-    <div className="relative z-10 flex items-center justify-between mb-4">
-      <span
-        className="px-2 py-0.5 rounded-full font-mono text-[9px] uppercase tracking-wider border"
-        style={{
-          backgroundColor: `${getCategoryColor(tool.layer)}10`,
-          color: getCategoryColor(tool.layer),
-          borderColor: `${getCategoryColor(tool.layer)}20`,
-        }}
-      >
-        {tool.layer}
-      </span>
-      <ArrowRight
-        size={14}
-        className="text-zinc-500 group-hover:text-white transform group-hover:translate-x-1 transition-all"
-      />
-    </div>
-
-    <h3 className="relative z-10 font-display font-bold text-white text-lg mb-2 group-hover:text-violet-100 transition-colors">
-      {tool.name}
-    </h3>
-
-    <p className="relative z-10 text-xs text-zinc-400 font-body line-clamp-2 leading-relaxed mb-4 flex-grow">
-      {tool.description}
-    </p>
-
-    <div className="relative z-10 flex flex-wrap gap-1.5 mt-auto">
-      {tool.tags.slice(0, 3).map((tag) => (
-        <span
-          key={tag}
-          className="px-2 py-0.5 bg-white/5 rounded-md text-zinc-500 text-[9px] font-mono uppercase tracking-wider group-hover:text-zinc-300 transition-colors"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
-  </Link>
-));
-ToolCard.displayName = 'ToolCard';
-
 // ─── Tool Detail Modal ───
 const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
-    className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-[#0A0A0F]/90 backdrop-blur-sm"
+    className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-card/90 backdrop-blur-sm"
     onClick={onClose}
   >
     <motion.div
       initial={{ scale: 0.96, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.96, opacity: 0 }}
-      className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#12121A] rounded-2xl border border-white/10 p-6 shadow-2xl"
+      className="w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card rounded-2xl border border-border/70 p-6 shadow-2xl"
       onClick={(e: MouseEvent) => e.stopPropagation()}
     >
       <div className="flex items-start justify-between mb-6">
@@ -109,35 +62,35 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
           >
             {tool.category}
           </span>
-          <h3 className="font-display text-2xl font-bold text-white">
+          <h3 className="font-display text-2xl font-bold text-foreground">
             {tool.name}
           </h3>
         </div>
         <button
           onClick={onClose}
-          className="p-2 rounded-lg hover:bg-white/5 text-[#71717A] hover:text-white transition-all"
+          className="p-2 rounded-lg hover:bg-muted/70 text-muted-foreground hover:text-foreground transition-all"
         >
           <X size={20} />
         </button>
       </div>
 
-      <p className="text-[#A1A1AA] text-base mb-6 leading-relaxed">
+      <p className="text-muted-foreground text-base mb-6 leading-relaxed">
         {tool.description}
       </p>
 
-      <div className="p-4 rounded-xl bg-[#0A0A0F] border border-[#7C3AED]/20 mb-6">
+      <div className="p-4 rounded-xl bg-card border border-[#7C3AED]/20 mb-6">
         <h4 className="font-mono text-xs uppercase tracking-wider text-[#7C3AED] mb-2">
           Free Tier
         </h4>
-        <p className="text-white text-sm">{tool.freeTierDetails}</p>
+        <p className="text-foreground text-sm">{tool.freeTierDetails}</p>
       </div>
 
       {tool.installCommand && (
         <div className="mb-6">
-          <h4 className="font-mono text-xs uppercase tracking-wider text-[#71717A] mb-2">
+          <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-2">
             Install Command
           </h4>
-          <div className="flex items-center gap-2 p-3 rounded-xl bg-[#0A0A0F] border border-white/5 font-mono text-sm text-white">
+          <div className="flex items-center gap-2 p-3 rounded-xl bg-card border border-border/70 font-mono text-sm text-foreground">
             <Terminal size={14} className="text-[#7C3AED] shrink-0" />
             <code className="break-all">{tool.installCommand}</code>
           </div>
@@ -145,12 +98,12 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
       )}
 
       <div className="mb-6">
-        <h4 className="font-mono text-xs uppercase tracking-wider text-[#71717A] mb-2">
+        <h4 className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-2">
           Tags
         </h4>
         <div className="flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-white/5 rounded-lg text-[#A1A1AA] text-xs">
+            <span key={tag} className="px-3 py-1 bg-muted/70 rounded-lg text-muted-foreground text-xs">
               {tag}
             </span>
           ))}
@@ -162,7 +115,7 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
           href={tool.officialUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-3 bg-[#7C3AED] text-white font-medium text-sm rounded-xl hover:bg-[#6D28D9] transition-colors"
+          className="flex items-center gap-2 px-5 py-3 bg-primary text-foreground font-medium text-sm rounded-xl hover:bg-primary/90 transition-colors"
         >
           <ExternalLink size={16} />
           Official Website
@@ -172,7 +125,7 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
             href={tool.documentationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm rounded-xl hover:bg-white/5 transition-all"
+            className="flex items-center gap-2 px-5 py-3 border border-border/70 text-foreground text-sm rounded-xl hover:bg-muted/70 transition-all"
           >
             <BookOpen size={16} />
             Documentation
@@ -183,7 +136,7 @@ const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) 
             href={tool.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 border border-white/10 text-white text-sm rounded-xl hover:bg-white/5 transition-all"
+            className="flex items-center gap-2 px-5 py-3 border border-border/70 text-foreground text-sm rounded-xl hover:bg-muted/70 transition-all"
           >
             <Github size={16} />
             GitHub
@@ -262,12 +215,12 @@ const ToolExplorerPage = () => {
               Tool Guide Explorer
             </span>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-2">
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
             Find the perfect tool
           </h1>
-          <p className="text-[#71717A]">
+          <p className="text-muted-foreground">
             Search, filter, and discover from{' '}
-            <span className="text-white font-medium">{tools.length}+</span>{' '}
+            <span className="text-foreground font-medium">{tools.length}+</span>{' '}
             curated developer tools.
           </p>
         </div>
@@ -277,20 +230,20 @@ const ToolExplorerPage = () => {
           <div className="relative max-w-xl">
             <Search
               size={18}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#52525B]"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
             />
             <input
               type="text"
               placeholder="Search tools (e.g., 'Docker', 'LLM', 'SQL')..."
               value={searchQuery}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 bg-[#12121A] border border-white/8 rounded-xl text-white placeholder-[#52525B] focus:border-[#7C3AED]/40 focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 transition-all text-sm"
+              className="w-full pl-12 pr-4 py-3.5 bg-card border border-border/70 rounded-xl text-foreground placeholder-[#52525B] focus:border-[#7C3AED]/40 focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 transition-all text-sm"
               id="tool-search"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-lg hover:bg-white/5 text-[#52525B] hover:text-white transition-all"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-lg hover:bg-muted/70 text-muted-foreground hover:text-foreground transition-all"
               >
                 <X size={16} />
               </button>
@@ -299,8 +252,8 @@ const ToolExplorerPage = () => {
 
           <div className="flex flex-wrap gap-2 items-center">
             <div className="flex items-center gap-2 mr-2">
-              <Filter size={14} className="text-[#52525B]" />
-              <span className="font-mono text-xs uppercase tracking-wider text-[#52525B]">
+              <Filter size={14} className="text-muted-foreground" />
+              <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Filter:
               </span>
             </div>
@@ -310,8 +263,8 @@ const ToolExplorerPage = () => {
                 onClick={() => handleLayerSelect(layer.key)}
                 className={`px-3 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider transition-all duration-200 ${
                   selectedLayer === layer.key
-                    ? 'bg-[#7C3AED] text-white'
-                    : 'bg-white/5 text-[#71717A] hover:text-white hover:bg-white/8 border border-white/5'
+                    ? 'bg-primary text-foreground'
+                    : 'bg-muted/70 text-muted-foreground hover:text-foreground hover:bg-muted/80 border border-border/70'
                 }`}
               >
                 {layer.label}
@@ -323,7 +276,7 @@ const ToolExplorerPage = () => {
 
         {/* Results count */}
         <div className="mb-4">
-          <p className="text-xs text-[#52525B] font-mono">
+          <p className="text-xs text-muted-foreground font-mono">
             {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} found
           </p>
         </div>
@@ -358,13 +311,7 @@ const ToolExplorerPage = () => {
                       transform: `translateY(${virtualRow.start}px)`,
                     }}
                   >
-                    <div className={`grid gap-4 h-full ${
-                      itemsPerRow === 4
-                        ? 'grid-cols-4'
-                        : itemsPerRow === 2
-                        ? 'grid-cols-2'
-                        : 'grid-cols-1'
-                    }`}>
+                    <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
                       {rowTools.map((tool) => (
                         <ToolCard key={tool.id} tool={tool} />
                       ))}
@@ -376,7 +323,7 @@ const ToolExplorerPage = () => {
           </div>
         ) : (
           <div className="text-center py-20">
-            <p className="text-[#71717A] text-lg mb-4">
+            <p className="text-muted-foreground text-lg mb-4">
               No tools found matching your criteria.
             </p>
             <button
@@ -384,7 +331,7 @@ const ToolExplorerPage = () => {
                 setSearchQuery('');
                 setSelectedLayer('all');
               }}
-              className="text-[#A78BFA] hover:text-[#7C3AED] transition-colors text-sm"
+              className="text-primary hover:text-primary/80 transition-colors text-sm"
             >
               Clear filters
             </button>

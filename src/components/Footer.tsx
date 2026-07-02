@@ -4,77 +4,72 @@ import { Github, Linkedin, Mail, ExternalLink, Heart } from 'lucide-react';
 
 const FooterSection = memo(() => {
   return (
-    <footer className="relative w-full bg-base dark:bg-void border-t border-zinc-200 dark:border-white/5">
-      {/* Gradient line at top */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
+    <footer className="relative w-full border-t border-border/70 bg-background/95">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
       <div className="section-padding py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          {/* Brand */}
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <span className="font-display text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
+            <Link to="/" className="mb-4 inline-flex items-center gap-2">
+              <span className="font-display text-xl font-bold tracking-tight text-foreground">
                 Tool Guide
               </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
+              <span className="rounded-full border border-primary/20 bg-primary/10 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-primary">
                 by Rajora.ai
               </span>
             </Link>
-            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed max-w-sm mt-3 font-body">
-              The most comprehensive AI & developer tools discovery platform.
-              Curated, verified, and always free to explore.
+            <p className="mt-3 max-w-sm font-body text-sm leading-relaxed text-foreground/70">
+              The most comprehensive AI & developer tools discovery platform. Curated, verified, and always free to explore.
             </p>
-            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-500 font-mono">
+            <p className="mt-4 font-mono text-xs text-foreground/60">
               Tool Guide is a{' '}
               <a
                 href="https://rajora.live"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-violet-600 dark:text-violet-400 hover:text-violet-500 transition-colors"
+                className="text-primary transition-colors hover:text-primary/80"
               >
                 Rajora.ai
-              </a>
-              {' '}ecosystem product.
+              </a>{' '}
+              ecosystem product.
             </p>
           </div>
 
-          {/* Tool Guide Links */}
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
+            <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-foreground/60">
               Tool Guide
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
+                <Link to="/about" className="text-sm text-foreground/70 transition-colors hover:text-foreground">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/tool-guide" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
+                <Link to="/tool-guide" className="text-sm text-foreground/70 transition-colors hover:text-foreground">
                   Explore Tools
                 </Link>
               </li>
               <li>
-                <Link to="/categories" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
+                <Link to="/categories" className="text-sm text-foreground/70 transition-colors hover:text-foreground">
                   Categories
                 </Link>
               </li>
               <li>
-                <Link to="/feedback" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
+                <Link to="/feedback" className="text-sm text-foreground/70 transition-colors hover:text-foreground">
                   Feedback
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm">
+                <Link to="/contact" className="text-sm text-foreground/70 transition-colors hover:text-foreground">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Rajora.ai Ecosystem */}
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
+            <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-foreground/60">
               Rajora.ai Ecosystem
             </h4>
             <ul className="space-y-3">
@@ -83,7 +78,7 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
+                  className="inline-flex items-center gap-1.5 text-sm text-foreground/70 transition-colors hover:text-primary"
                 >
                   Rajora.ai <ExternalLink size={11} />
                 </a>
@@ -93,7 +88,7 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
+                  className="inline-flex items-center gap-1.5 text-sm text-foreground/70 transition-colors hover:text-primary"
                 >
                   AION <ExternalLink size={11} />
                 </a>
@@ -103,7 +98,7 @@ const FooterSection = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-sm"
+                  className="inline-flex items-center gap-1.5 text-sm text-foreground/70 transition-colors hover:text-primary"
                 >
                   Rajora Dashboard <ExternalLink size={11} />
                 </a>
@@ -111,9 +106,8 @@ const FooterSection = memo(() => {
             </ul>
           </div>
 
-          {/* Community */}
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 mb-4">
+            <h4 className="mb-4 font-mono text-xs uppercase tracking-[0.12em] text-foreground/60">
               Community
             </h4>
             <div className="flex items-center gap-3">
@@ -122,7 +116,7 @@ const FooterSection = memo(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/80 text-foreground/70 transition-all hover:bg-muted hover:text-foreground"
               >
                 <Github size={16} />
               </a>
@@ -131,14 +125,14 @@ const FooterSection = memo(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/80 text-foreground/70 transition-all hover:bg-muted hover:text-foreground"
               >
                 <Linkedin size={16} />
               </a>
               <a
                 href="mailto:contact@rajora.live"
                 aria-label="Email"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-white/10 transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted/80 text-foreground/70 transition-all hover:bg-muted hover:text-foreground"
               >
                 <Mail size={16} />
               </a>
@@ -146,15 +140,18 @@ const FooterSection = memo(() => {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-zinc-200 dark:border-white/5">
-          <div className="flex items-center gap-6 text-xs text-zinc-500">
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-border/70 pt-12 md:flex-row">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-foreground/60">
             <span>© 2026 Rajora.ai • Tool Guide</span>
-            <Link to="/privacy" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms</Link>
+            <Link to="/privacy-policy" className="transition-colors hover:text-foreground">
+              Privacy
+            </Link>
+            <Link to="/privacy-policy" className="transition-colors hover:text-foreground">
+              Terms
+            </Link>
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-mono">
-            Made with <Heart size={12} className="text-red-500 fill-red-500" /> by <span className="text-zinc-900 dark:text-zinc-300">Rajora Team</span>
+          <div className="flex items-center gap-1.5 font-mono text-xs text-foreground/60">
+            Made with <Heart size={12} className="fill-red-500 text-red-500" /> by <span className="text-foreground">Rajora Team</span>
           </div>
         </div>
       </div>
