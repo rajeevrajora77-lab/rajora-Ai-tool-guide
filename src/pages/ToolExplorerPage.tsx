@@ -35,21 +35,6 @@ function getCategoryColor(layer: string): string {
   return colors[layer] || '#7C3AED';
 }
 
-/** Wrap matched text portions in <mark> spans */
-function Highlight({ text, query }: { text: string; query: string }) {
-  if (!query.trim()) return <>{text}</>;
-  const parts = text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
-  return (
-    <>
-      {parts.map((part, i) =>
-        part.toLowerCase() === query.toLowerCase()
-          ? <mark key={i} className="bg-violet-500/30 text-violet-300 rounded px-0.5">{part}</mark>
-          : part
-      )}
-    </>
-  );
-}
-
 // ─── Tool Detail Modal ───
 const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) => (
   <motion.div
@@ -139,11 +124,11 @@ ToolModal.displayName = 'ToolModal';
 
 // ─── Main Page ───
 const ToolExplorerPage = () => {
-  const [searchQuery, setSearchQuery]   = useState('');
+  const [searchQuery, setSearchQuery]     = useState('');
   const [selectedLayer, setSelectedLayer] = useState<string>('all');
-  const [selectedTool, setSelectedTool]  = useState<Tool | null>(null);
-  const parentRef  = useRef<HTMLDivElement>(null);
-  const inputRef   = useRef<HTMLInputElement>(null);
+  const [selectedTool, setSelectedTool]   = useState<Tool | null>(null);
+  const parentRef     = useRef<HTMLDivElement>(null);
+  const inputRef      = useRef<HTMLInputElement>(null);
   const deferredQuery = useDeferredValue(searchQuery);
 
   // Ctrl+K / Cmd+K focus shortcut
@@ -270,7 +255,7 @@ const ToolExplorerPage = () => {
         {/* Count */}
         <p className="text-xs text-zinc-500 font-mono mb-4">
           {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} found
-          {deferredQuery && <span className="text-zinc-400"> for "{deferredQuery}"</span>}
+          {deferredQuery && <span className="text-zinc-400"> for &quot;{deferredQuery}&quot;</span>}
         </p>
 
         {/* Grid */}
