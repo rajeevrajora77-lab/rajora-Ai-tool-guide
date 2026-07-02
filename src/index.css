@@ -7,7 +7,6 @@
   :root {
     color-scheme: light;
 
-    /* shadcn/ui semantic tokens */
     --background: 0 0% 100%;
     --foreground: 240 10% 4%;
     --card: 0 0% 98%;
@@ -53,7 +52,7 @@
     --tg-border-hover: rgba(124, 58, 237, 0.2);
     --glow-opacity: 0.05;
 
-    /* ── Fluid spacing scale (8px base, clamp between breakpoints) ── */
+    /* Fluid spacing */
     --space-1: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
     --space-2: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
     --space-3: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
@@ -62,7 +61,7 @@
     --space-8: clamp(2rem, 1.5rem + 2.5vw, 4rem);
     --space-12: clamp(3rem, 2rem + 5vw, 6rem);
 
-    /* ── Fluid type scale ── */
+    /* Fluid type scale */
     --text-xs:   clamp(0.7rem,  0.65rem + 0.25vw, 0.8rem);
     --text-sm:   clamp(0.8rem,  0.75rem + 0.3vw,  0.95rem);
     --text-base: clamp(0.9rem,  0.85rem + 0.3vw,  1.1rem);
@@ -96,7 +95,6 @@
     --border: 240 6% 12%;
     --input: 240 6% 12%;
     --ring: 263 70% 50%;
-
     --void: #030303;
     --base: #0A0A0B;
     --surface: #111112;
@@ -128,13 +126,11 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Fluid base font feeds all rem-based clamp() values */
     font-size: clamp(15px, 14px + 0.3vw, 18px);
   }
 
   html, body, #root {
     min-height: 100%;
-    /* Safe-area insets for notch + gesture-bar devices */
     padding-top: env(safe-area-inset-top);
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
@@ -142,13 +138,19 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased transition-colors duration-300
-           selection:bg-primary/30 selection:text-primary;
+    /* selection:bg-primary/30 omitted from @apply — primary is an HSL var;
+       set selection colour via raw CSS instead */
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-size: var(--text-base);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    overflow-x: hidden; /* Belt-and-suspenders: no horizontal scroll at any width */
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+    color: hsl(var(--primary));
   }
 
   h1 { font-size: var(--text-hero); @apply font-display font-bold tracking-tight; }
@@ -158,7 +160,6 @@
   h5 { font-size: var(--text-xl);   @apply font-display font-semibold; }
   h6 { font-size: var(--text-lg);   @apply font-display font-semibold; }
 
-  /* Every image/video is contained — never forces horizontal scroll */
   img, video, svg, canvas {
     max-width: 100%;
     height: auto;
@@ -169,17 +170,14 @@
 /* ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────── */
 @layer components {
 
-  /* Fluid section padding: collapses gracefully from 320px to 4K */
   .section-padding {
     padding-inline: clamp(1rem, 4vw, 7rem);
   }
 
-  /* Fluid section vertical rhythm */
   .section-gap {
     padding-block: var(--space-12);
   }
 
-  /* Max-width page container, centered, fluid gutter */
   .page-container {
     width: 100%;
     max-width: 1536px;
@@ -188,23 +186,18 @@
   }
 
   /* ── Navigation ──────────────────────────────────────────────────────── */
-
-  /* Mobile nav: bottom bar (restructured, not shrunk) */
   .nav-root {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    /* Respect gesture bar on iPhone */
     padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
     z-index: 50;
-    /* bg-elevated/90 is invalid (@apply can't use opacity modifier on CSS vars);
-       use raw CSS with color-mix for the semi-transparent elevated surface */
+    /* color-mix replaces the invalid bg-elevated/90 @apply shorthand */
     background-color: color-mix(in srgb, var(--elevated) 90%, transparent);
     @apply backdrop-blur-xl border-t border-border;
   }
 
-  /* Desktop nav: top horizontal bar at 1024px+ */
   @media (min-width: 1024px) {
     .nav-root {
       position: sticky;
@@ -218,7 +211,6 @@
     }
   }
 
-  /* Touch targets >= 44x44px on any sub-1024px viewport */
   @media (max-width: 1023px) {
     .nav-item, button, [role="button"], a {
       min-height: 44px;
@@ -230,15 +222,12 @@
   }
 
   /* ── Card Grid ───────────────────────────────────────────────────────── */
-
-  /* auto-fit: single column at 320px, expands as space allows */
   .tool-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: var(--space-4);
   }
 
-  /* 2-col on tablet explicitly, 3-col on laptop+ */
   @media (min-width: 768px) {
     .tool-grid {
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
@@ -247,11 +236,12 @@
 
   /* ── Cards ───────────────────────────────────────────────────────────── */
   .glass-card {
-    @apply bg-surface/60 backdrop-blur-2xl border transition-all duration-300;
+    /* color-mix replaces the invalid bg-surface/60 @apply shorthand */
+    background-color: color-mix(in srgb, var(--surface) 60%, transparent);
+    @apply backdrop-blur-2xl border transition-all duration-300;
     border-color: var(--tg-border);
     border-radius: var(--radius);
     padding: var(--space-4);
-    /* Container query anchor: card adapts to its own width, not viewport */
     container-type: inline-size;
     container-name: card;
   }
@@ -260,7 +250,6 @@
     border-color: var(--tg-border-hover);
   }
 
-  /* Card typography shrinks further inside narrow containers (e.g. sidebar) */
   @container card (max-width: 240px) {
     .card-title  { font-size: var(--text-sm); }
     .card-body   { font-size: var(--text-xs); }
@@ -271,7 +260,7 @@
     background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, calc(var(--glow-opacity) * 3)) 0%, transparent 70%);
   }
 
-  /* ── Media with locked aspect ratios ─────────────────────────────────── */
+  /* ── Media aspect ratios ─────────────────────────────────────────────── */
   .media-16-9 {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -286,18 +275,21 @@
     object-fit: cover;
   }
 
-  /* ── Text gradients (referencing tokens) ─────────────────────────────── */
+  /* ── Text gradients ──────────────────────────────────────────────────── */
   .text-gradient-premium {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-600
+    @apply bg-clip-text text-transparent bg-gradient-to-br
+           from-zinc-900 via-zinc-800 to-zinc-600
            dark:from-white dark:via-white/90 dark:to-white/60;
   }
 
   .text-gradient-purple {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-violet-400 via-violet-500 to-violet-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-br
+           from-violet-400 via-violet-500 to-violet-600;
   }
 
   .text-gradient-cyan {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-cyan-400 to-cyan-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-br
+           from-cyan-400 to-cyan-600;
   }
 
   /* ── Background patterns ─────────────────────────────────────────────── */
@@ -316,11 +308,8 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-  /* Fluid spacing utility classes mapped to design tokens */
   .gap-fluid-1  { gap: var(--space-1); }
   .gap-fluid-2  { gap: var(--space-2); }
   .gap-fluid-3  { gap: var(--space-3); }
@@ -333,7 +322,16 @@
   .p-fluid-6  { padding: var(--space-6); }
   .p-fluid-8  { padding: var(--space-8); }
 
-  /* Text size utilities wired to fluid scale tokens */
+  .px-fluid-1 { padding-inline: var(--space-1); }
+  .px-fluid-2 { padding-inline: var(--space-2); }
+  .px-fluid-3 { padding-inline: var(--space-3); }
+  .px-fluid-4 { padding-inline: var(--space-4); }
+
+  .py-fluid-1 { padding-block: var(--space-1); }
+  .py-fluid-2 { padding-block: var(--space-2); }
+  .py-fluid-3 { padding-block: var(--space-3); }
+  .py-fluid-4 { padding-block: var(--space-4); }
+
   .text-fluid-xs   { font-size: var(--text-xs); }
   .text-fluid-sm   { font-size: var(--text-sm); }
   .text-fluid-base { font-size: var(--text-base); }
@@ -344,16 +342,4 @@
   .text-fluid-4xl  { font-size: var(--text-4xl); }
   .text-fluid-5xl  { font-size: var(--text-5xl); }
   .text-fluid-hero { font-size: var(--text-hero); }
-
-  /* Padding-inline shorthand utilities */
-  .px-fluid-1 { padding-inline: var(--space-1); }
-  .px-fluid-2 { padding-inline: var(--space-2); }
-  .px-fluid-3 { padding-inline: var(--space-3); }
-  .px-fluid-4 { padding-inline: var(--space-4); }
-
-  /* Padding-block shorthand utilities */
-  .py-fluid-1 { padding-block: var(--space-1); }
-  .py-fluid-2 { padding-block: var(--space-2); }
-  .py-fluid-3 { padding-block: var(--space-3); }
-  .py-fluid-4 { padding-block: var(--space-4); }
 }
