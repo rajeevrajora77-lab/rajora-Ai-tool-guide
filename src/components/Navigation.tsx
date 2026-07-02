@@ -26,9 +26,12 @@ const Navigation = memo(() => {
 
   const ThemeIcon = () => {
     switch (theme) {
-      case 'light': return <Sun size={18} />;
-      case 'dark': return <Moon size={18} />;
-      default: return <Monitor size={18} />;
+      case 'light':
+        return <Sun size={18} />;
+      case 'dark':
+        return <Moon size={18} />;
+      default:
+        return <Monitor size={18} />;
     }
   };
 
@@ -45,96 +48,87 @@ const Navigation = memo(() => {
   }, [location.pathname]);
 
   const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(prev => !prev);
+    setIsMobileMenuOpen((prev) => !prev);
   }, []);
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 h-16 flex items-center ${
+        className={`fixed left-0 right-0 top-0 z-[1000] flex h-16 items-center transition-all duration-500 ${
           isScrolled
-            ? 'bg-void/70 backdrop-blur-xl border-b border-white/5 dark:border-white/5 shadow-sm dark:shadow-none'
+            ? 'border-b border-border/70 bg-background/70 shadow-soft-panel backdrop-blur-xl'
             : 'bg-transparent'
         }`}
       >
-        <div className="flex items-center justify-between section-padding w-full">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-2 group"
-          >
+        <div className="section-padding flex w-full items-center justify-between">
+          <Link to="/" className="group flex items-center gap-2">
             <div className="relative flex items-center">
-              <span className="font-display text-xl font-bold text-zinc-900 dark:text-white tracking-tight group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
-                Rajora<span className="text-violet-500">.</span>ai
+              <span className="font-display text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
+                Rajora<span className="text-primary">.</span>ai
               </span>
-              <span className="ml-2 px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">
+              <span className="ml-2 rounded-full border border-primary/20 bg-primary/10 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-primary">
                 Tool Guide
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden items-center gap-2 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
+                className={`relative rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   location.pathname === link.path
-                    ? 'text-zinc-900 dark:text-white'
-                    : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/5'
+                    ? 'text-foreground'
+                    : 'text-foreground/70 hover:bg-muted/80 hover:text-foreground'
                 }`}
               >
                 {link.label}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-2 right-2 h-[2px] bg-violet-600 rounded-full"
+                    className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full bg-primary"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
               </Link>
             ))}
 
-            <div className="w-px h-4 bg-zinc-200 dark:bg-white/10 mx-2" />
+            <div className="mx-2 h-4 w-px bg-border" />
 
-            {/* Command Hint */}
-            <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:border-zinc-200 dark:hover:border-white/20 transition-all text-xs font-mono group">
-              <span className="group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">Search</span>
-              <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10">⌘K</span>
+            <button className="group flex items-center gap-2 rounded-lg border border-border/70 bg-card/80 px-3 py-1.5 text-xs font-mono text-foreground/70 transition-all hover:border-primary/20 hover:text-foreground">
+              <span className="transition-colors group-hover:text-primary">Search</span>
+              <span className="rounded border border-border/70 bg-background px-1.5 py-0.5">⌘K</span>
             </button>
 
-            {/* Theme Toggle */}
             <button
               onClick={cycleTheme}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all group"
+              className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-card/80 text-foreground/70 transition-all hover:border-primary/20 hover:text-foreground"
               title={`Switch to ${theme === 'light' ? 'Dark' : theme === 'dark' ? 'System' : 'Light'} Mode`}
             >
-              <div className="group-hover:scale-110 transition-transform">
+              <div className="transition-transform group-hover:scale-110">
                 <ThemeIcon />
               </div>
             </button>
 
-            {/* CTA */}
             <Link
               to="/tool-guide"
-              className="ml-4 px-5 py-2 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-void text-sm font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-lg"
+              className="ml-4 rounded-lg bg-primary px-5 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90"
             >
               Explore
             </Link>
           </div>
 
-          {/* Mobile Menu Actions */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={cycleTheme}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-500 dark:text-zinc-400"
+              className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-card/80 text-foreground/70 transition-all"
             >
               <ThemeIcon />
             </button>
             <button
               onClick={toggleMobileMenu}
-              className="p-2 rounded-lg bg-white/5 text-zinc-800 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              className="flex h-11 w-11 items-center justify-center rounded-xl bg-card/80 text-foreground/70 transition-colors hover:text-foreground"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -142,16 +136,15 @@ const Navigation = memo(() => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] bg-[#0A0A0F]/98 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-[999] bg-background/95 backdrop-blur-xl lg:hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-6 px-8">
+            <div className="flex h-full flex-col items-center justify-center gap-6 px-8">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.path}
@@ -163,8 +156,8 @@ const Navigation = memo(() => {
                     to={link.path}
                     className={`font-display text-2xl font-semibold transition-colors ${
                       location.pathname === link.path
-                        ? 'text-[#7C3AED]'
-                        : 'text-white hover:text-[#A78BFA]'
+                        ? 'text-primary'
+                        : 'text-foreground/80 hover:text-primary'
                     }`}
                   >
                     {link.label}
@@ -172,17 +165,14 @@ const Navigation = memo(() => {
                 </motion.div>
               ))}
 
-              <div className="w-16 h-px bg-white/10 my-2" />
+              <div className="my-2 h-px w-16 bg-border" />
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
               >
-                <Link
-                  to="/feedback"
-                  className="text-lg text-[#A1A1AA] hover:text-white transition-colors"
-                >
+                <Link to="/feedback" className="text-lg text-foreground/70 transition-colors hover:text-foreground">
                   Feedback
                 </Link>
               </motion.div>
@@ -196,7 +186,7 @@ const Navigation = memo(() => {
                   href="https://rajora.live"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-lg text-[#A78BFA] hover:text-[#7C3AED] transition-colors"
+                  className="flex items-center gap-2 text-lg text-primary transition-colors hover:text-primary/80"
                 >
                   Visit Rajora.ai
                   <ExternalLink size={16} />
@@ -211,7 +201,7 @@ const Navigation = memo(() => {
               >
                 <Link
                   to="/tool-guide"
-                  className="px-8 py-3 rounded-xl bg-[#7C3AED] text-white font-medium hover:bg-[#6D28D9] transition-colors"
+                  className="rounded-xl bg-primary px-8 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   Explore Tools
                 </Link>
