@@ -2,149 +2,291 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── DESIGN TOKENS ──────────────────────────────────────────────────────── */
 @layer base {
   :root {
     color-scheme: light;
+
+    /* shadcn/ui semantic tokens */
     --background: 0 0% 100%;
     --foreground: 240 10% 4%;
-    
     --card: 0 0% 98%;
     --card-foreground: 240 10% 4%;
-    
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 4%;
-    
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
-    
     --secondary: 240 5% 96%;
     --secondary-foreground: 240 10% 4%;
-    
     --muted: 240 5% 90%;
     --muted-foreground: 240 5% 45%;
-    
     --accent: 263 70% 50%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    
     --border: 240 6% 90%;
     --input: 240 6% 90%;
     --ring: 263 70% 50%;
     --radius: 1rem;
 
-    /* Light Theme Premium Tokens */
+    /* Surface stack */
     --void: #FFFFFF;
     --base: #F9FAFB;
     --surface: #F3F4F6;
     --elevated: #E5E7EB;
     --overlay: #D1D5DB;
-    
+
+    /* Brand */
     --cyan-500: #0891B2;
     --violet-600: #7C3AED;
-    --accent-neon: #7C3AED; /* Shift neon to violet in light mode for contrast */
+    --accent-neon: #7C3AED;
 
+    /* Category layer colors */
     --layer-foundation: #10B981;
     --layer-cloud: #06B6D4;
     --layer-devops: #F59E0B;
     --layer-genai: #7C3AED;
     --layer-analytics: #EC4899;
     --layer-fullstack: #3B82F6;
-    
+
     --tg-border: rgba(0, 0, 0, 0.05);
     --tg-border-hover: rgba(124, 58, 237, 0.2);
     --glow-opacity: 0.05;
+
+    /* ── Fluid spacing scale (8px base, clamp between breakpoints) ── */
+    --space-1: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+    --space-2: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+    --space-3: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
+    --space-4: clamp(1rem, 0.8rem + 1vw, 2rem);
+    --space-6: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+    --space-8: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+    --space-12: clamp(3rem, 2rem + 5vw, 6rem);
+
+    /* ── Fluid type scale ── */
+    --text-xs:   clamp(0.7rem,  0.65rem + 0.25vw, 0.8rem);
+    --text-sm:   clamp(0.8rem,  0.75rem + 0.3vw,  0.95rem);
+    --text-base: clamp(0.9rem,  0.85rem + 0.3vw,  1.1rem);
+    --text-lg:   clamp(1rem,    0.9rem  + 0.5vw,  1.25rem);
+    --text-xl:   clamp(1.1rem,  1rem    + 0.75vw, 1.5rem);
+    --text-2xl:  clamp(1.25rem, 1.1rem  + 1vw,    1.875rem);
+    --text-3xl:  clamp(1.5rem,  1.2rem  + 1.5vw,  2.25rem);
+    --text-4xl:  clamp(1.875rem,1.4rem  + 2.5vw,  3rem);
+    --text-5xl:  clamp(2.25rem, 1.5rem  + 4vw,    4rem);
+    --text-hero: clamp(2.5rem,  1.5rem  + 6vw,    5.5rem);
   }
 
   .dark {
     color-scheme: dark;
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
-    
     --card: 240 10% 6%;
     --card-foreground: 0 0% 98%;
-    
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
-    
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
-    
     --secondary: 240 10% 10%;
     --secondary-foreground: 0 0% 98%;
-    
     --muted: 240 5% 15%;
     --muted-foreground: 240 5% 65%;
-    
     --accent: 263 70% 50%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    
     --border: 240 6% 12%;
     --input: 240 6% 12%;
     --ring: 263 70% 50%;
 
-    /* Dark Theme Premium Tokens */
     --void: #030303;
     --base: #0A0A0B;
     --surface: #111112;
     --elevated: #18181A;
     --overlay: #212124;
-    
     --cyan-500: #06B6D4;
     --violet-600: #7C3AED;
     --accent-neon: #B6FF2E;
-
     --layer-foundation: #10B981;
     --layer-cloud: #06B6D4;
     --layer-devops: #F59E0B;
     --layer-genai: #7C3AED;
     --layer-analytics: #EC4899;
     --layer-fullstack: #3B82F6;
-    
     --tg-border: rgba(255, 255, 255, 0.08);
     --tg-border-hover: rgba(124, 58, 237, 0.4);
     --glow-opacity: 0.15;
   }
 }
 
+/* ─── GLOBAL RESET & BASE ────────────────────────────────────────────────── */
 @layer base {
-  * {
+  *, *::before, *::after {
     @apply border-border;
+    box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Fluid base font feeds all rem-based clamp() values */
+    font-size: clamp(15px, 14px + 0.3vw, 18px);
   }
 
   html, body, #root {
     min-height: 100%;
+    /* Safe-area insets for notch + gesture-bar devices */
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased transition-colors duration-300 selection:bg-primary/30 selection:text-primary;
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300
+           selection:bg-primary/30 selection:text-primary;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    font-size: var(--text-base);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden; /* Belt-and-suspenders: no horizontal scroll at any width */
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
+  h1 { font-size: var(--text-hero); @apply font-display font-bold tracking-tight; }
+  h2 { font-size: var(--text-4xl);  @apply font-display font-bold tracking-tight; }
+  h3 { font-size: var(--text-3xl);  @apply font-display font-bold tracking-tight; }
+  h4 { font-size: var(--text-2xl);  @apply font-display font-bold tracking-tight; }
+  h5 { font-size: var(--text-xl);   @apply font-display font-semibold; }
+  h6 { font-size: var(--text-lg);   @apply font-display font-semibold; }
+
+  /* Every image/video is contained — never forces horizontal scroll */
+  img, video, svg, canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
+/* ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────── */
 @layer components {
+
+  /* Fluid section padding: collapses gracefully from 320px to 4K */
   .section-padding {
-    @apply px-6 md:px-12 lg:px-20 xl:px-28;
+    padding-inline: clamp(1rem, 4vw, 7rem);
   }
 
+  /* Fluid section vertical rhythm */
+  .section-gap {
+    padding-block: var(--space-12);
+  }
+
+  /* Max-width page container, centered, fluid gutter */
+  .page-container {
+    width: 100%;
+    max-width: 1536px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 7rem);
+  }
+
+  /* ── Navigation ──────────────────────────────────────────────────────── */
+
+  /* Mobile nav: bottom bar (restructured, not shrunk) */
+  .nav-root {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Respect gesture bar on iPhone */
+    padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+    z-index: 50;
+    @apply bg-elevated/90 backdrop-blur-xl border-t border-border;
+  }
+
+  /* Desktop nav: top horizontal bar at 1024px+ */
+  @media (min-width: 1024px) {
+    .nav-root {
+      position: sticky;
+      top: 0;
+      bottom: unset;
+      left: unset;
+      right: unset;
+      padding-bottom: 0;
+      border-top: none;
+      @apply border-b border-border;
+    }
+  }
+
+  /* Touch targets >= 44x44px on any sub-1024px viewport */
+  @media (max-width: 1023px) {
+    .nav-item, button, [role="button"], a {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* ── Card Grid ───────────────────────────────────────────────────────── */
+
+  /* auto-fit: single column at 320px, expands as space allows */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-4);
+  }
+
+  /* 2-col on tablet explicitly, 3-col on laptop+ */
+  @media (min-width: 768px) {
+    .tool-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    }
+  }
+
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+  .glass-card {
+    @apply bg-surface/60 backdrop-blur-2xl border transition-all duration-300;
+    border-color: var(--tg-border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    /* Container query anchor: card adapts to its own width, not viewport */
+    container-type: inline-size;
+    container-name: card;
+  }
+
+  .glass-card:hover {
+    border-color: var(--tg-border-hover);
+  }
+
+  /* Card typography shrinks further inside narrow containers (e.g. sidebar) */
+  @container card (max-width: 240px) {
+    .card-title  { font-size: var(--text-sm); }
+    .card-body   { font-size: var(--text-xs); }
+  }
+
+  /* ── Hero ────────────────────────────────────────────────────────────── */
+  .hero-glow {
+    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, calc(var(--glow-opacity) * 3)) 0%, transparent 70%);
+  }
+
+  /* ── Media with locked aspect ratios ─────────────────────────────────── */
+  .media-16-9 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .media-1-1 {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  /* ── Text gradients (referencing tokens) ─────────────────────────────── */
   .text-gradient-premium {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-600 dark:from-white dark:via-white/90 dark:to-white/60;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-600
+           dark:from-white dark:via-white/90 dark:to-white/60;
   }
 
   .text-gradient-purple {
@@ -155,30 +297,48 @@
     @apply bg-clip-text text-transparent bg-gradient-to-br from-cyan-400 to-cyan-600;
   }
 
-  .glass-card {
-    @apply bg-surface/60 backdrop-blur-2xl border border-white/5 hover:border-white/10 transition-all duration-300;
-  }
-
-  .hero-glow {
-    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
-  }
-
+  /* ── Background patterns ─────────────────────────────────────────────── */
   .bg-grid-premium {
-    background-image: 
+    background-image:
       linear-gradient(currentColor 1px, transparent 1px),
       linear-gradient(90deg, currentColor 1px, transparent 1px);
-    background-size: 40px 40px;
+    background-size: clamp(24px, 3vw, 48px) clamp(24px, 3vw, 48px);
     @apply text-zinc-900/5 dark:text-white/5;
   }
 }
 
+/* ─── UTILITIES ──────────────────────────────────────────────────────────── */
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Fluid spacing utility classes mapped to design tokens */
+  .gap-fluid-1  { gap: var(--space-1); }
+  .gap-fluid-2  { gap: var(--space-2); }
+  .gap-fluid-3  { gap: var(--space-3); }
+  .gap-fluid-4  { gap: var(--space-4); }
+  .gap-fluid-6  { gap: var(--space-6); }
+  .gap-fluid-8  { gap: var(--space-8); }
+
+  .p-fluid-2  { padding: var(--space-2); }
+  .p-fluid-4  { padding: var(--space-4); }
+  .p-fluid-6  { padding: var(--space-6); }
+  .p-fluid-8  { padding: var(--space-8); }
+
+  /* Text size utilities wired to fluid scale tokens */
+  .text-fluid-xs   { font-size: var(--text-xs); }
+  .text-fluid-sm   { font-size: var(--text-sm); }
+  .text-fluid-base { font-size: var(--text-base); }
+  .text-fluid-lg   { font-size: var(--text-lg); }
+  .text-fluid-xl   { font-size: var(--text-xl); }
+  .text-fluid-2xl  { font-size: var(--text-2xl); }
+  .text-fluid-3xl  { font-size: var(--text-3xl); }
+  .text-fluid-4xl  { font-size: var(--text-4xl); }
+  .text-fluid-5xl  { font-size: var(--text-5xl); }
+  .text-fluid-hero { font-size: var(--text-hero); }
 }

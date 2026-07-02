@@ -3,16 +3,45 @@ module.exports = {
   darkMode: "class",
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    /* Exact 6 breakpoints per responsive spec — no others */
+    screens: {
+      'xs':  '320px',   // small mobile
+      'sm':  '480px',   // mobile
+      'md':  '768px',   // tablet
+      'lg':  '1024px',  // small laptop
+      'xl':  '1280px',  // desktop
+      '2xl': '1536px',  // large desktop / 4K
+    },
     extend: {
+      /* fontSize wired to fluid CSS token scale — never hardcoded */
+      fontSize: {
+        xs:   ['var(--text-xs)',   { lineHeight: '1.4' }],
+        sm:   ['var(--text-sm)',   { lineHeight: '1.5' }],
+        base: ['var(--text-base)', { lineHeight: '1.6' }],
+        lg:   ['var(--text-lg)',   { lineHeight: '1.5' }],
+        xl:   ['var(--text-xl)',   { lineHeight: '1.4' }],
+        '2xl':['var(--text-2xl)', { lineHeight: '1.3' }],
+        '3xl':['var(--text-3xl)', { lineHeight: '1.25' }],
+        '4xl':['var(--text-4xl)', { lineHeight: '1.2' }],
+        '5xl':['var(--text-5xl)', { lineHeight: '1.1' }],
+        hero: ['var(--text-hero)', { lineHeight: '1.05' }],
+      },
+      /* spacing wired to fluid 8px-base token scale */
+      spacing: {
+        'fluid-1':  'var(--space-1)',
+        'fluid-2':  'var(--space-2)',
+        'fluid-3':  'var(--space-3)',
+        'fluid-4':  'var(--space-4)',
+        'fluid-6':  'var(--space-6)',
+        'fluid-8':  'var(--space-8)',
+        'fluid-12': 'var(--space-12)',
+      },
       colors: {
-        // Void Background Hierarchy
-        void: "#030303",     // Absolute black for AMOLED
-        base: "#0A0A0B",     // Primary background
-        surface: "#111112",  // Secondary background
-        elevated: "#18181A", // Elevated surface (cards)
-        overlay: "#212124",  // Modals/Overlays
-        
-        // Semantic Accents
+        void: "var(--void)",
+        base: "var(--base)",
+        surface: "var(--surface)",
+        elevated: "var(--elevated)",
+        overlay: "var(--overlay)",
         cyan: {
           400: "#22D3EE",
           500: "#06B6D4",
@@ -28,14 +57,11 @@ module.exports = {
           500: "#F59E0B",
           600: "#D97706",
         },
-        
-        // Brand Identity
         rajora: {
           primary: "#06B6D4",
           secondary: "#7C3AED",
           accent: "#B6FF2E",
         },
-
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
