@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, memo } from 'react';
+import { useState, useEffect, useCallback, useRef, memo, type FormEvent } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   Menu, X, Sun, Moon, Search, Info, Compass, Grid3X3,
@@ -70,7 +70,7 @@ const Navigation = memo(() => {
       }).slice(0, 5)
     : [];
 
-  const handleSearchSubmit = useCallback((e: React.FormEvent) => {
+  const handleSearchSubmit = useCallback((e: FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/tool-guide?q=${encodeURIComponent(searchQuery.trim())}`);
