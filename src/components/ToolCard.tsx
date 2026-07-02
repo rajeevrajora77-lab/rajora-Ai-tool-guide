@@ -11,13 +11,14 @@ export interface Tool {
 
 interface ToolCardProps {
   tool: Tool;
+  compact?: boolean;
 }
 
-export function ToolCard({ tool }: ToolCardProps) {
+export function ToolCard({ tool, compact }: ToolCardProps) {
   return (
-    <article className="glass-card flex flex-col gap-fluid-2">
+    <article className={`glass-card flex flex-col gap-fluid-2${compact ? ' py-fluid-2' : ''}`}>
       {/* Logo: aspect-ratio + object-fit so it never breaks layout */}
-      {tool.logo && (
+      {!compact && tool.logo && (
         <div
           className="media-1-1 rounded-md overflow-hidden"
           style={{ width: 'clamp(2rem, 5vw, 3rem)', height: 'clamp(2rem, 5vw, 3rem)' }}
@@ -46,10 +47,12 @@ export function ToolCard({ tool }: ToolCardProps) {
       )}
 
       <h3 className="card-title text-fluid-lg font-semibold leading-snug">{tool.name}</h3>
-      <p  className="card-body text-fluid-sm text-muted-foreground line-clamp-3 flex-1">{tool.description}</p>
+      {!compact && (
+        <p className="card-body text-fluid-sm text-muted-foreground line-clamp-3 flex-1">{tool.description}</p>
+      )}
 
       {/* Tags */}
-      {tool.tags && tool.tags.length > 0 && (
+      {!compact && tool.tags && tool.tags.length > 0 && (
         <div className="flex flex-wrap gap-fluid-1">
           {tool.tags.slice(0, 3).map(tag => (
             <span key={tag} className="text-fluid-xs px-fluid-1 py-fluid-1 rounded bg-elevated text-muted-foreground">
