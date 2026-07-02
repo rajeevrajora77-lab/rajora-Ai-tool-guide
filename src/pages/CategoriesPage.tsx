@@ -45,7 +45,7 @@ const CategoriesPage = () => {
           <div className="mb-6">
             <Link
               to="/categories"
-              className="inline-flex items-center gap-2 text-sm text-[#A78BFA] hover:text-[#7C3AED] transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
             >
               <ArrowLeft size={14} />
               All Categories
@@ -61,10 +61,10 @@ const CategoriesPage = () => {
               {activeFilter ? activeCat?.label : 'Categories'}
             </span>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
             {activeFilter ? activeCat?.label : 'Browse by Category'}
           </h1>
-          <p className="text-[#71717A] max-w-2xl">
+          <p className="text-muted-foreground max-w-2xl">
             {activeFilter
               ? activeCat?.desc
               : 'Explore our six carefully organized layers covering the entire modern development stack.'}
@@ -85,7 +85,7 @@ const CategoriesPage = () => {
                 >
                   <Link
                     to={`/categories?filter=${cat.key}`}
-                    className="group block p-6 rounded-2xl bg-[#12121A] border border-white/5 hover:border-white/10 transition-all duration-300"
+                    className="group block p-6 rounded-2xl bg-card border border-border/70 hover:border-border/70 transition-all duration-300"
                   >
                     <div
                       className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-colors"
@@ -94,14 +94,14 @@ const CategoriesPage = () => {
                       <cat.icon size={26} style={{ color: cat.color }} />
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <h2 className="font-display text-xl font-semibold text-white">
+                      <h2 className="font-display text-xl font-semibold text-foreground">
                         {cat.label}
                       </h2>
-                      <span className="px-2 py-0.5 rounded-md text-xs font-mono text-[#52525B] bg-white/5">
+                      <span className="px-2 py-0.5 rounded-md text-xs font-mono text-muted-foreground bg-muted/70">
                         {count}
                       </span>
                     </div>
-                    <p className="text-sm text-[#71717A] leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
                       {cat.desc}
                     </p>
                     <span className="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all"
@@ -120,7 +120,7 @@ const CategoriesPage = () => {
         {activeFilter && (
           <>
             <div className="mb-4">
-              <p className="text-xs text-[#52525B] font-mono">
+              <p className="text-xs text-muted-foreground font-mono">
                 {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''}
               </p>
             </div>

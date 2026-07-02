@@ -34,18 +34,17 @@ const FeedbackPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen pt-24 pb-16"
+      className="min-h-screen bg-background pt-24 pb-16 text-foreground"
     >
-      <div className="section-padding max-w-2xl mx-auto">
-        {/* Header */}
+      <div className="section-padding mx-auto max-w-2xl">
         <div className="mb-10">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#7C3AED] mb-3 block">
+          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.12em] text-primary">
             Feedback
           </span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="mb-4 font-display text-4xl font-bold text-foreground md:text-5xl">
             Share your feedback
           </h1>
-          <p className="text-[#A1A1AA] leading-relaxed">
+          <p className="leading-relaxed text-muted-foreground">
             Help us improve Tool Guide. Your feedback directly shapes what we build next.
           </p>
         </div>
@@ -54,35 +53,34 @@ const FeedbackPage = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="p-12 rounded-2xl bg-[#12121A] border border-[#10B981]/20 text-center"
+            className="rounded-2xl border border-emerald-500/20 bg-card/80 p-12 text-center"
           >
-            <div className="w-16 h-16 rounded-full bg-[#10B981]/10 flex items-center justify-center mx-auto mb-4">
-              <Check size={28} className="text-[#10B981]" />
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
+              <Check size={28} className="text-emerald-500" />
             </div>
-            <h2 className="font-display text-2xl font-bold text-white mb-2">
+            <h2 className="mb-2 font-display text-2xl font-bold text-foreground">
               Thank you!
             </h2>
-            <p className="text-[#71717A]">
+            <p className="text-muted-foreground">
               Your feedback has been received. We appreciate you taking the time.
             </p>
           </motion.div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Type Selection */}
             <div>
-              <label className="font-mono text-xs uppercase tracking-wider text-[#71717A] mb-3 block">
+              <label className="mb-3 block font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Feedback Type
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {feedbackTypes.map((ft) => (
                   <button
                     key={ft.key}
                     type="button"
                     onClick={() => setType(ft.key)}
-                    className={`flex items-center gap-2 p-3 rounded-xl text-sm font-medium transition-all ${
+                    className={`flex items-center gap-2 rounded-xl p-3 text-sm font-medium transition-all ${
                       type === ft.key
-                        ? 'bg-[#7C3AED]/10 border border-[#7C3AED]/30 text-white'
-                        : 'bg-[#12121A] border border-white/5 text-[#71717A] hover:border-white/10'
+                        ? 'border border-primary/30 bg-primary/10 text-foreground'
+                        : 'border border-border/70 bg-card/70 text-muted-foreground hover:border-border'
                     }`}
                   >
                     <ft.icon size={16} style={{ color: type === ft.key ? ft.color : '#52525B' }} />
@@ -92,9 +90,8 @@ const FeedbackPage = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div>
-              <label htmlFor="feedback-email" className="font-mono text-xs uppercase tracking-wider text-[#71717A] mb-2 block">
+              <label htmlFor="feedback-email" className="mb-2 block font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Email (optional)
               </label>
               <input
@@ -103,13 +100,12 @@ const FeedbackPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="w-full px-4 py-3 bg-[#12121A] border border-white/8 rounded-xl text-white placeholder-[#52525B] focus:border-[#7C3AED]/40 focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 transition-all text-sm"
+                className="w-full rounded-xl border border-border/70 bg-card/80 px-4 py-3 text-sm text-foreground placeholder-muted-foreground transition-all focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20"
               />
             </div>
 
-            {/* Message */}
             <div>
-              <label htmlFor="feedback-message" className="font-mono text-xs uppercase tracking-wider text-[#71717A] mb-2 block">
+              <label htmlFor="feedback-message" className="mb-2 block font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Your Feedback
               </label>
               <textarea
@@ -119,15 +115,14 @@ const FeedbackPage = () => {
                 placeholder="Tell us what you think..."
                 rows={6}
                 required
-                className="w-full px-4 py-3 bg-[#12121A] border border-white/8 rounded-xl text-white placeholder-[#52525B] focus:border-[#7C3AED]/40 focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 transition-all text-sm resize-none"
+                className="w-full resize-none rounded-xl border border-border/70 bg-card/80 px-4 py-3 text-sm text-foreground placeholder-muted-foreground transition-all focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/20"
               />
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={!message.trim()}
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#7C3AED] text-white font-medium rounded-xl hover:bg-[#6D28D9] transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-medium text-primary-foreground transition-all hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-40"
             >
               <Send size={16} />
               Submit Feedback

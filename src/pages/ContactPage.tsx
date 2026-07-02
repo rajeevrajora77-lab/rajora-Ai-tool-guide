@@ -8,35 +8,33 @@ const ContactPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen pt-24 pb-16"
+      className="min-h-screen bg-background pt-24 pb-16 text-foreground"
     >
-      <div className="section-padding max-w-4xl mx-auto">
-        {/* Header */}
+      <div className="section-padding mx-auto max-w-4xl">
         <div className="mb-12">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#7C3AED] mb-3 block">
+          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.12em] text-primary">
             Contact
           </span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="mb-4 font-display text-4xl font-bold text-foreground md:text-5xl">
             Get in touch
           </h1>
-          <p className="text-lg text-[#A1A1AA] leading-relaxed max-w-xl">
+          <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             Have questions, suggestions, or want to collaborate?
             We'd love to hear from you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Contact Cards */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <a
             href="mailto:contact@rajora.live"
-            className="group p-6 rounded-2xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all"
+            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/10 flex items-center justify-center mb-4">
-              <Mail size={22} className="text-[#A78BFA]" />
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+              <Mail size={22} className="text-primary" />
             </div>
-            <h3 className="font-semibold text-white text-lg mb-1">Email</h3>
-            <p className="text-sm text-[#71717A] mb-3">Best for detailed questions and partnerships</p>
-            <span className="text-sm text-[#A78BFA] group-hover:text-[#7C3AED] transition-colors">
+            <h3 className="mb-1 text-lg font-semibold text-foreground">Email</h3>
+            <p className="mb-3 text-sm text-muted-foreground">Best for detailed questions and partnerships</p>
+            <span className="text-sm text-primary transition-colors group-hover:text-primary/80">
               contact@rajora.live
             </span>
           </a>
@@ -45,14 +43,14 @@ const ContactPage = () => {
             href="https://github.com/rajeevrajora77-lab/rajora-Ai-tool-guide"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 rounded-2xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all"
+            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
           >
-            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4">
-              <Github size={22} className="text-white" />
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-muted/60">
+              <Github size={22} className="text-foreground" />
             </div>
-            <h3 className="font-semibold text-white text-lg mb-1">GitHub</h3>
-            <p className="text-sm text-[#71717A] mb-3">Report issues, suggest tools, or contribute</p>
-            <span className="inline-flex items-center gap-1 text-sm text-[#A78BFA] group-hover:text-[#7C3AED] transition-colors">
+            <h3 className="mb-1 text-lg font-semibold text-foreground">GitHub</h3>
+            <p className="mb-3 text-sm text-muted-foreground">Report issues, suggest tools, or contribute</p>
+            <span className="inline-flex items-center gap-1 text-sm text-primary transition-colors group-hover:text-primary/80">
               Open an issue <ExternalLink size={12} />
             </span>
           </a>
@@ -61,14 +59,14 @@ const ContactPage = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 rounded-2xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all"
+            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#0077B5]/10 flex items-center justify-center mb-4">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0077B5]/10">
               <Linkedin size={22} className="text-[#0077B5]" />
             </div>
-            <h3 className="font-semibold text-white text-lg mb-1">LinkedIn</h3>
-            <p className="text-sm text-[#71717A] mb-3">Connect professionally</p>
-            <span className="inline-flex items-center gap-1 text-sm text-[#A78BFA] group-hover:text-[#7C3AED] transition-colors">
+            <h3 className="mb-1 text-lg font-semibold text-foreground">LinkedIn</h3>
+            <p className="mb-3 text-sm text-muted-foreground">Connect professionally</p>
+            <span className="inline-flex items-center gap-1 text-sm text-primary transition-colors group-hover:text-primary/80">
               Follow us <ExternalLink size={12} />
             </span>
           </a>
@@ -77,14 +75,14 @@ const ContactPage = () => {
             href="https://rajora.live"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 rounded-2xl bg-gradient-to-br from-[#7C3AED]/10 to-transparent border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all"
+            className="group rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-6 transition-all hover:border-primary/40"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#7C3AED]/15 flex items-center justify-center mb-4">
-              <MapPin size={22} className="text-[#A78BFA]" />
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15">
+              <MapPin size={22} className="text-primary" />
             </div>
-            <h3 className="font-semibold text-white text-lg mb-1">Rajora.ai HQ</h3>
-            <p className="text-sm text-[#71717A] mb-3">Learn more about the parent company</p>
-            <span className="inline-flex items-center gap-1 text-sm text-[#A78BFA] group-hover:text-[#7C3AED] transition-colors">
+            <h3 className="mb-1 text-lg font-semibold text-foreground">Rajora.ai HQ</h3>
+            <p className="mb-3 text-sm text-muted-foreground">Learn more about the parent company</p>
+            <span className="inline-flex items-center gap-1 text-sm text-primary transition-colors group-hover:text-primary/80">
               Visit rajora.live <ExternalLink size={12} />
             </span>
           </a>

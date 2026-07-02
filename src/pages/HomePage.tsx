@@ -25,7 +25,7 @@ const HeroSection = memo(() => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Background effects */}
     <div className="absolute inset-0 bg-dot-pattern opacity-30" />
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#7C3AED]/8 rounded-full blur-[120px]" />
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/8 rounded-full blur-[120px]" />
     <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#06B6D4]/5 rounded-full blur-[100px]" />
 
     <div className="relative z-10 section-padding w-full pt-32 pb-20">
@@ -37,16 +37,16 @@ const HeroSection = memo(() => (
       >
         {/* Badge */}
         <motion.div variants={fadeInUp} className="mb-8">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 text-sm">
-            <Sparkles size={14} className="text-[#A78BFA]" />
-            <span className="text-[#A78BFA] font-medium">150+ Free AI & Developer Tools</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-[#7C3AED]/20 text-sm">
+            <Sparkles size={14} className="text-primary" />
+            <span className="text-primary font-medium">150+ Free AI & Developer Tools</span>
           </span>
         </motion.div>
 
         {/* Headline */}
         <motion.h1
           variants={fadeInUp}
-          className="font-display font-bold text-white leading-[1.05] tracking-tight mb-6"
+          className="font-display font-bold text-foreground leading-[1.05] tracking-tight mb-6"
           style={{ fontSize: 'clamp(40px, 6vw, 80px)' }}
         >
           Discover the{' '}
@@ -58,7 +58,7 @@ const HeroSection = memo(() => (
         {/* Subheading */}
         <motion.p
           variants={fadeInUp}
-          className="text-[#A1A1AA] text-lg md:text-xl leading-relaxed max-w-2xl mb-10"
+          className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mb-10"
         >
           Tool Guide is a curated platform for discovering free developer tools across
           GenAI, DevOps, Cloud, Data Analytics & Full Stack — organized so you can
@@ -69,7 +69,7 @@ const HeroSection = memo(() => (
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
           <Link
             to="/tool-guide"
-            className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#7C3AED] text-white font-semibold rounded-xl hover:bg-[#6D28D9] transition-all duration-300 hover:shadow-[0_0_40px_rgba(124,58,237,0.3)]"
+            className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_40px_rgba(124,58,237,0.3)]"
           >
             <Search size={18} />
             Explore All Tools
@@ -77,7 +77,7 @@ const HeroSection = memo(() => (
           </Link>
           <Link
             to="/categories"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold hover:bg-white/5 hover:border-white/20 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl border border-border/70 text-foreground font-semibold hover:bg-muted/70 hover:border-border transition-all duration-300"
           >
             <Layers size={18} />
             Browse Categories
@@ -87,19 +87,19 @@ const HeroSection = memo(() => (
         {/* Stats */}
         <motion.div
           variants={fadeInUp}
-          className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/5"
+          className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-border/70"
         >
           <div>
-            <p className="text-2xl font-bold text-white">{tools.length}+</p>
-            <p className="text-xs text-[#71717A] font-mono uppercase tracking-wider mt-1">Tools Curated</p>
+            <p className="text-2xl font-bold text-foreground">{tools.length}+</p>
+            <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mt-1">Tools Curated</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-white">6</p>
-            <p className="text-xs text-[#71717A] font-mono uppercase tracking-wider mt-1">Categories</p>
+            <p className="text-2xl font-bold text-foreground">6</p>
+            <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mt-1">Categories</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-white">100%</p>
-            <p className="text-xs text-[#71717A] font-mono uppercase tracking-wider mt-1">Free to Explore</p>
+            <p className="text-2xl font-bold text-foreground">100%</p>
+            <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider mt-1">Free to Explore</p>
           </div>
         </motion.div>
       </motion.div>
@@ -145,10 +145,10 @@ const FeaturesSection = memo(() => (
         <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#7C3AED] mb-3 block">
           Why Tool Guide
         </span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
           Built for developers who value their time
         </h2>
-        <p className="text-[#71717A] max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto">
           Stop wasting hours researching tools. We've done the work so you can focus on building.
         </p>
       </motion.div>
@@ -161,15 +161,15 @@ const FeaturesSection = memo(() => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ delay: index * 0.1 }}
-            className="group p-6 rounded-2xl bg-[#12121A]/60 border border-white/5 hover:border-[#7C3AED]/30 transition-all duration-300"
+            className="group p-6 rounded-2xl bg-card/60 border border-border/70 hover:border-[#7C3AED]/30 transition-all duration-300"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/10 flex items-center justify-center mb-4 group-hover:bg-[#7C3AED]/20 transition-colors">
-              <feature.icon size={20} className="text-[#A78BFA]" />
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <feature.icon size={20} className="text-primary" />
             </div>
-            <h3 className="font-display text-lg font-semibold text-white mb-2">
+            <h3 className="font-display text-lg font-semibold text-foreground mb-2">
               {feature.title}
             </h3>
-            <p className="text-sm text-[#71717A] leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {feature.description}
             </p>
           </motion.div>
@@ -199,13 +199,13 @@ const CategoriesSection = memo(() => (
         viewport={{ once: true, margin: '-100px' }}
         className="text-center mb-16"
       >
-        <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#06B6D4] mb-3 block">
+        <span className="font-mono text-xs uppercase tracking-[0.12em] text-cyan-500 mb-3 block">
           Categories
         </span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
           Explore by category
         </h2>
-        <p className="text-[#71717A] max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto">
           Six carefully organized layers covering the entire modern development stack.
         </p>
       </motion.div>
@@ -221,7 +221,7 @@ const CategoriesSection = memo(() => (
           >
             <Link
               to={`/categories?filter=${cat.key}`}
-              className="group relative block overflow-hidden rounded-2xl bg-[#12121A]/40 border border-white/5 hover:border-white/10 transition-all duration-500 h-64"
+              className="group relative block overflow-hidden rounded-2xl bg-card/40 border border-border/70 hover:border-border/70 transition-all duration-500 h-64"
             >
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
@@ -243,15 +243,15 @@ const CategoriesSection = memo(() => (
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-white text-xl">{cat.label}</h3>
-                    <span className="text-xs text-[#52525B] font-mono">
+                    <h3 className="font-semibold text-foreground text-xl">{cat.label}</h3>
+                    <span className="text-xs text-muted-foreground font-mono">
                       {layerInfo[cat.key as keyof typeof layerInfo]?.tools?.length || 0}
                     </span>
                   </div>
-                  <p className="text-xs text-[#71717A] mt-1 group-hover:text-[#A1A1AA] transition-colors">{cat.desc}</p>
+                  <p className="text-xs text-muted-foreground mt-1 group-hover:text-muted-foreground transition-colors">{cat.desc}</p>
                 </div>
                 <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
-                  <ArrowRight size={20} className="text-white" />
+                  <ArrowRight size={20} className="text-foreground" />
                 </div>
               </div>
             </Link>
@@ -262,7 +262,7 @@ const CategoriesSection = memo(() => (
       <div className="text-center mt-10">
         <Link
           to="/categories"
-          className="inline-flex items-center gap-2 text-sm text-[#A78BFA] hover:text-[#7C3AED] transition-colors font-medium"
+          className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
         >
           View all categories
           <ArrowRight size={14} />
@@ -284,7 +284,7 @@ const TrendingToolsSection = memo(() => {
   const displayTools = trendingTools.length >= 4 ? trendingTools : tools.slice(0, 8);
 
   return (
-    <section className="relative py-24 bg-[#12121A]/30">
+    <section className="relative py-24 bg-card/30">
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       <div className="relative section-padding">
         <motion.div
@@ -298,13 +298,13 @@ const TrendingToolsSection = memo(() => {
               <TrendingUp size={14} className="inline mr-2" />
               Trending
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
               Popular tools right now
             </h2>
           </div>
           <Link
             to="/tool-guide"
-            className="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm text-[#A78BFA] hover:text-[#7C3AED] transition-colors font-medium"
+            className="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
           >
             View all tools <ArrowRight size={14} />
           </Link>
@@ -321,7 +321,7 @@ const TrendingToolsSection = memo(() => {
             >
               <Link
                 to={`/tool/${tool.id}`}
-                className="group block p-5 rounded-2xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all duration-300 h-full"
+                className="group block p-5 rounded-2xl bg-card border border-border/70 hover:border-[#7C3AED]/30 transition-all duration-300 h-full"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span
@@ -335,10 +335,10 @@ const TrendingToolsSection = memo(() => {
                   </span>
                   <Star size={14} className="text-[#F59E0B]/50 group-hover:text-[#F59E0B] transition-colors" />
                 </div>
-                <h3 className="font-semibold text-white mb-1.5 group-hover:text-[#A78BFA] transition-colors">
+                <h3 className="font-semibold text-foreground mb-1.5 group-hover:text-primary transition-colors">
                   {tool.name}
                 </h3>
-                <p className="text-xs text-[#71717A] line-clamp-2 leading-relaxed">
+                <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
                   {tool.description}
                 </p>
               </Link>
@@ -362,10 +362,10 @@ const TrustSection = memo(() => (
           viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-12"
         >
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#10B981] mb-3 block">
+          <span className="font-mono text-xs uppercase tracking-[0.12em] text-emerald-500 mb-3 block">
             Trust & Quality
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Why trust Tool Guide?
           </h2>
         </motion.div>
@@ -382,11 +382,11 @@ const TrustSection = memo(() => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-2xl bg-[#12121A]/40 border border-white/5"
+              className="p-6 rounded-2xl bg-card/40 border border-border/70"
             >
-              <CheckCircle2 size={20} className="text-[#10B981] mb-4" />
-              <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-sm text-[#71717A] leading-relaxed">{item.desc}</p>
+              <CheckCircle2 size={20} className="text-emerald-500 mb-4" />
+              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -425,7 +425,7 @@ const ecosystemProducts = [
 ];
 
 const EcosystemSection = memo(() => (
-  <section className="relative py-24 bg-[#12121A]/30">
+  <section className="relative py-24 bg-card/30">
     <div className="absolute inset-0 bg-dot-pattern opacity-20" />
     <div className="relative section-padding">
       <motion.div
@@ -434,13 +434,13 @@ const EcosystemSection = memo(() => (
         viewport={{ once: true, margin: '-100px' }}
         className="text-center mb-12"
       >
-        <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#A78BFA] mb-3 block">
+        <span className="font-mono text-xs uppercase tracking-[0.12em] text-primary mb-3 block">
           Part of something bigger
         </span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
           The Rajora.ai Ecosystem
         </h2>
-        <p className="text-[#71717A] max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto">
           Tool Guide is one product in the Rajora.ai family of AI-powered solutions.
         </p>
       </motion.div>
@@ -456,7 +456,7 @@ const EcosystemSection = memo(() => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.08 }}
-            className="group p-5 rounded-2xl bg-[#0A0A0F]/60 border border-white/5 hover:border-white/10 transition-all duration-300 text-left"
+            className="group p-5 rounded-2xl bg-card/60 border border-border/70 hover:border-border/70 transition-all duration-300 text-left"
           >
             <span
               className="inline-block px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider mb-3"
@@ -464,11 +464,11 @@ const EcosystemSection = memo(() => (
             >
               {product.tag}
             </span>
-            <h3 className="font-semibold text-white mb-1 flex items-center gap-2">
+            <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2">
               {product.name}
-              <ExternalLink size={12} className="text-[#52525B] group-hover:text-white/50 transition-colors" />
+              <ExternalLink size={12} className="text-muted-foreground group-hover:text-foreground/50 transition-colors" />
             </h3>
-            <p className="text-xs text-[#71717A] leading-relaxed">{product.description}</p>
+            <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
           </motion.a>
         ))}
       </div>
@@ -478,7 +478,7 @@ const EcosystemSection = memo(() => (
           href="https://rajora.live"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#7C3AED]/30 text-[#A78BFA] hover:bg-[#7C3AED]/10 transition-all text-sm font-medium"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#7C3AED]/30 text-primary hover:bg-primary/10 transition-all text-sm font-medium"
         >
           Explore Rajora.ai ecosystem
           <ExternalLink size={14} />
@@ -500,25 +500,25 @@ const CTASection = memo(() => (
         className="max-w-3xl mx-auto text-center"
       >
         <div className="p-12 rounded-3xl bg-gradient-to-br from-[#7C3AED]/10 to-[#06B6D4]/5 border border-[#7C3AED]/20 relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[200px] bg-[#7C3AED]/10 rounded-full blur-[80px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[200px] bg-primary/10 rounded-full blur-[80px]" />
           <div className="relative">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to build faster?
             </h2>
-            <p className="text-[#A1A1AA] mb-8 max-w-md mx-auto">
+            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
               Explore our curated collection of 150+ free tools and start building production-ready applications today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/tool-guide"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7C3AED] text-white font-semibold rounded-xl hover:bg-[#6D28D9] transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all"
               >
                 Start Exploring
                 <ArrowRight size={18} />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white rounded-xl hover:bg-white/5 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border/70 text-foreground rounded-xl hover:bg-muted/70 transition-all"
               >
                 Learn More
               </Link>

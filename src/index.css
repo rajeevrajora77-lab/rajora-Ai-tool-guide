@@ -122,8 +122,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  html, body, #root {
+    min-height: 100%;
+  }
+
   body {
-    @apply bg-void text-foreground font-body antialiased transition-colors duration-300 selection:bg-violet-600/30 selection:text-violet-400;
+    @apply bg-background text-foreground font-body antialiased transition-colors duration-300 selection:bg-primary/30 selection:text-primary;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
