@@ -5,10 +5,10 @@ import {
   MessageSquare, Mail, Sparkles, Bot,
   Github, Globe, ChevronRight, ExternalLink, Layers
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../hooks/useTheme';
 import { tools } from '../data/tools';
-import { LucideIcon } from 'lucide-react';
 
 type InternalItem = { label: string; path: string; icon: LucideIcon; internal: true };
 type ExternalItem = { label: string; href: string; icon: LucideIcon; internal: false };
@@ -27,11 +27,11 @@ const mobileMenuSections: { id: string; title: string; icon: LucideIcon; items: 
     title: 'Tool Guide',
     icon: Layers,
     items: [
-      { label: 'Explore Tools', path: '/tool-guide', icon: Compass,      internal: true },
-      { label: 'Categories',    path: '/categories', icon: Grid3X3,      internal: true },
-      { label: 'About',         path: '/about',      icon: Info,         internal: true },
-      { label: 'Feedback',      path: '/feedback',   icon: MessageSquare,internal: true },
-      { label: 'Contact',       path: '/contact',    icon: Mail,         internal: true },
+      { label: 'Explore Tools', path: '/tool-guide', icon: Compass,       internal: true },
+      { label: 'Categories',    path: '/categories', icon: Grid3X3,       internal: true },
+      { label: 'About',         path: '/about',      icon: Info,          internal: true },
+      { label: 'Feedback',      path: '/feedback',   icon: MessageSquare, internal: true },
+      { label: 'Contact',       path: '/contact',    icon: Mail,          internal: true },
     ],
   },
   {
@@ -310,7 +310,7 @@ const Navigation = memo(() => {
                     <div className="flex-1 h-px bg-border/60 ml-1" />
                   </div>
 
-                  {/* Items — properly narrowed */}
+                  {/* Items — discriminated union narrowed */}
                   <div className="space-y-0.5">
                     {section.items.map((item) => (
                       item.internal ? (
