@@ -43,7 +43,7 @@ const PrivacyPolicyPage = () => {
               1. Introduction
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Tool Guide ("we", "our", "us") is a product of Rajora.ai. This Privacy Policy explains
+              Tool Guide (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a product of Rajora AI. This Privacy Policy explains
               how we collect, use, and protect information when you use our website and services.
             </p>
           </section>
@@ -107,8 +107,11 @@ const PrivacyPolicyPage = () => {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:contact@rajora.live" className="text-primary hover:text-primary/80 transition-colors">
-                contact@rajora.live
+              <a
+                href="mailto:hello@rajora.live"
+                className="text-primary hover:text-primary/80 transition-colors"
+              >
+                hello@rajora.live
               </a>
               {' '}or visit{' '}
               <a
