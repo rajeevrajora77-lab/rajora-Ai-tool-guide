@@ -1,10 +1,9 @@
 // ToolCard: fluid spacing + container queries + aspect-ratio media + 44px touch target
-import React from 'react';
 
 export interface Tool {
   name: string;
   description: string;
-  url: string;
+  officialUrl: string;
   logo?: string;
   category?: string;
   tags?: string[];
@@ -62,7 +61,7 @@ export function ToolCard({ tool }: ToolCardProps) {
 
       {/* CTA: min 44px touch target enforced via nav-item global rule below 1024px */}
       <a
-        href={tool.url}
+        href={tool.officialUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="nav-item mt-auto text-fluid-sm font-medium text-primary hover:underline justify-start pl-0"
