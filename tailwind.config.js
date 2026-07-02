@@ -96,6 +96,7 @@ module.exports = {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         'premium': '0 0 50px -12px rgba(0, 0, 0, 0.5)',
         'glow-cyan': '0 0 20px -5px rgba(6, 182, 212, 0.3)',
+        'soft-panel': '0 16px 48px -24px rgba(15, 23, 42, 0.35)',
       },
       keyframes: {
         "accordion-down": {

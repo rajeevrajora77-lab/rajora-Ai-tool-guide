@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    color-scheme: light;
     --background: 0 0% 100%;
     --foreground: 240 10% 4%;
     
@@ -50,6 +51,7 @@
   }
 
   .dark {
+    color-scheme: dark;
     --background: 240 10% 4%;
     --foreground: 0 0% 98%;
     
@@ -107,7 +109,7 @@
   }
 
   body {
-    @apply bg-void text-foreground font-body antialiased selection:bg-violet-600/30 selection:text-violet-400;
+    @apply bg-void text-foreground font-body antialiased transition-colors duration-300 selection:bg-violet-600/30 selection:text-violet-400;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
