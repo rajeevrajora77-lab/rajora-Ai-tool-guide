@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, ExternalLink, MapPin } from 'lucide-react';
+import { Mail, Github, ExternalLink, MapPin } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -20,14 +20,15 @@ const ContactPage = () => {
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             Have questions, suggestions, or want to collaborate?
-            We'd love to hear from you.
+            We&apos;d love to hear from you.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Email */}
           <a
-            href="mailto:contact@rajora.live"
-            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
+            href="mailto:hello@rajora.live"
+            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
               <Mail size={22} className="text-primary" />
@@ -35,15 +36,16 @@ const ContactPage = () => {
             <h3 className="mb-1 text-lg font-semibold text-foreground">Email</h3>
             <p className="mb-3 text-sm text-muted-foreground">Best for detailed questions and partnerships</p>
             <span className="text-sm text-primary transition-colors group-hover:text-primary/80">
-              contact@rajora.live
+              hello@rajora.live
             </span>
           </a>
 
+          {/* GitHub */}
           <a
             href="https://github.com/rajeevrajora77-lab/rajora-Ai-tool-guide"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
+            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-muted/60">
               <Github size={22} className="text-foreground" />
@@ -55,33 +57,18 @@ const ContactPage = () => {
             </span>
           </a>
 
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-2xl border border-border/70 bg-card/80 p-6 transition-all hover:border-primary/30"
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0077B5]/10">
-              <Linkedin size={22} className="text-[#0077B5]" />
-            </div>
-            <h3 className="mb-1 text-lg font-semibold text-foreground">LinkedIn</h3>
-            <p className="mb-3 text-sm text-muted-foreground">Connect professionally</p>
-            <span className="inline-flex items-center gap-1 text-sm text-primary transition-colors group-hover:text-primary/80">
-              Follow us <ExternalLink size={12} />
-            </span>
-          </a>
-
+          {/* Rajora AI */}
           <a
             href="https://rajora.live"
             target="_blank"
             rel="noopener noreferrer"
-            className="group rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-6 transition-all hover:border-primary/40"
+            className="group rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 md:col-span-2"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15">
               <MapPin size={22} className="text-primary" />
             </div>
-            <h3 className="mb-1 text-lg font-semibold text-foreground">Rajora.ai HQ</h3>
-            <p className="mb-3 text-sm text-muted-foreground">Learn more about the parent company</p>
+            <h3 className="mb-1 text-lg font-semibold text-foreground">Rajora AI HQ</h3>
+            <p className="mb-3 text-sm text-muted-foreground">Learn more about the parent company and our full product ecosystem</p>
             <span className="inline-flex items-center gap-1 text-sm text-primary transition-colors group-hover:text-primary/80">
               Visit rajora.live <ExternalLink size={12} />
             </span>
