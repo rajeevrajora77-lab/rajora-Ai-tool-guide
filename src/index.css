@@ -7,33 +7,35 @@
   :root {
     color-scheme: light;
 
-    --background: 0 0% 100%;
+    /* Background: warm off-white #F8F7F4 = hsl(40 13% 97%) */
+    --background: 40 13% 97%;
     --foreground: 240 10% 4%;
-    --card: 0 0% 98%;
+    /* Card: slightly warmer #F3F2EF */
+    --card: 40 10% 95%;
     --card-foreground: 240 10% 4%;
-    --popover: 0 0% 100%;
+    --popover: 40 13% 97%;
     --popover-foreground: 240 10% 4%;
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 96%;
+    --secondary: 40 8% 93%;
     --secondary-foreground: 240 10% 4%;
-    --muted: 240 5% 90%;
+    --muted: 40 6% 88%;
     --muted-foreground: 240 5% 45%;
     --accent: 263 70% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
+    --border: 40 8% 87%;
+    --input: 40 8% 87%;
     --ring: 263 70% 50%;
     --radius: 0.875rem;
 
-    /* Surface stack */
-    --void: #FFFFFF;
-    --base: #F9FAFB;
-    --surface: #F3F4F6;
-    --elevated: #E5E7EB;
-    --overlay: #D1D5DB;
+    /* Surface stack — warm off-white palette */
+    --void: #F8F7F4;
+    --base: #F3F2EF;
+    --surface: #ECEAE6;
+    --elevated: #E4E2DD;
+    --overlay: #D8D5CF;
 
     /* Brand */
     --cyan-500: #0891B2;
