@@ -44,6 +44,13 @@
     --cyan-500: #0891B2;
     --violet-600: #7C3AED;
     --accent-neon: #7C3AED; /* Shift neon to violet in light mode for contrast */
+
+    --layer-foundation: #10B981;
+    --layer-cloud: #06B6D4;
+    --layer-devops: #F59E0B;
+    --layer-genai: #7C3AED;
+    --layer-analytics: #EC4899;
+    --layer-fullstack: #3B82F6;
     
     --tg-border: rgba(0, 0, 0, 0.05);
     --tg-border-hover: rgba(124, 58, 237, 0.2);
@@ -90,6 +97,13 @@
     --cyan-500: #06B6D4;
     --violet-600: #7C3AED;
     --accent-neon: #B6FF2E;
+
+    --layer-foundation: #10B981;
+    --layer-cloud: #06B6D4;
+    --layer-devops: #F59E0B;
+    --layer-genai: #7C3AED;
+    --layer-analytics: #EC4899;
+    --layer-fullstack: #3B82F6;
     
     --tg-border: rgba(255, 255, 255, 0.08);
     --tg-border-hover: rgba(124, 58, 237, 0.4);

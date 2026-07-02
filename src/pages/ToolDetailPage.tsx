@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { tools } from '../data/tools';
 import { useState, useCallback } from 'react';
+import ToolCard from '../components/ToolCard';
 
 function getCategoryColor(layer: string): string {
   const colors: Record<string, string> = {
@@ -214,18 +215,9 @@ const ToolDetailPage = () => {
             <h2 className="font-display text-xl font-semibold text-white mb-6">
               More {tool.layer} tools
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedTools.map((related) => (
-                <Link
-                  key={related.id}
-                  to={`/tool/${related.id}`}
-                  className="group p-4 rounded-xl bg-[#12121A] border border-white/5 hover:border-[#7C3AED]/30 transition-all"
-                >
-                  <h4 className="font-semibold text-white text-sm mb-1 group-hover:text-[#A78BFA] transition-colors">
-                    {related.name}
-                  </h4>
-                  <p className="text-xs text-[#71717A] line-clamp-2">{related.description}</p>
-                </Link>
+                <ToolCard key={related.id} tool={related} compact />
               ))}
             </div>
           </div>

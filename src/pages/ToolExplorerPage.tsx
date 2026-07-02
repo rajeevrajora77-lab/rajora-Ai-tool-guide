@@ -1,12 +1,12 @@
 import { useState, useMemo, useDeferredValue, useCallback, memo, useRef, type ChangeEvent, type MouseEvent } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useVirtualizer, type VirtualItem } from '@tanstack/react-virtual';
 import {
   Search, Filter, ExternalLink, X, Terminal, BookOpen, Github,
-  Layers, ArrowRight
+  Layers
 } from 'lucide-react';
 import { tools, layerInfo, type Tool } from '../data/tools';
+import ToolCard from '../components/ToolCard';
 
 const ITEMS_PER_ROW_DESKTOP = 4;
 const ITEMS_PER_ROW_TABLET = 2;
@@ -34,53 +34,6 @@ function getCategoryColor(layer: string): string {
   };
   return colors[layer] || '#7C3AED';
 }
-
-// ─── Tool Card ───
-const ToolCard = memo(({ tool }: { tool: Tool }) => (
-  <Link
-    to={`/tool/${tool.id}`}
-    className="group relative flex flex-col p-6 rounded-2xl bg-surface/50 border border-white/5 hover:border-violet-500/30 transition-all duration-500 h-full overflow-hidden"
-  >
-    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-    
-    <div className="relative z-10 flex items-center justify-between mb-4">
-      <span
-        className="px-2 py-0.5 rounded-full font-mono text-[9px] uppercase tracking-wider border"
-        style={{
-          backgroundColor: `${getCategoryColor(tool.layer)}10`,
-          color: getCategoryColor(tool.layer),
-          borderColor: `${getCategoryColor(tool.layer)}20`,
-        }}
-      >
-        {tool.layer}
-      </span>
-      <ArrowRight
-        size={14}
-        className="text-zinc-500 group-hover:text-white transform group-hover:translate-x-1 transition-all"
-      />
-    </div>
-
-    <h3 className="relative z-10 font-display font-bold text-white text-lg mb-2 group-hover:text-violet-100 transition-colors">
-      {tool.name}
-    </h3>
-
-    <p className="relative z-10 text-xs text-zinc-400 font-body line-clamp-2 leading-relaxed mb-4 flex-grow">
-      {tool.description}
-    </p>
-
-    <div className="relative z-10 flex flex-wrap gap-1.5 mt-auto">
-      {tool.tags.slice(0, 3).map((tag) => (
-        <span
-          key={tag}
-          className="px-2 py-0.5 bg-white/5 rounded-md text-zinc-500 text-[9px] font-mono uppercase tracking-wider group-hover:text-zinc-300 transition-colors"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
-  </Link>
-));
-ToolCard.displayName = 'ToolCard';
 
 // ─── Tool Detail Modal ───
 const ToolModal = memo(({ tool, onClose }: { tool: Tool; onClose: () => void }) => (
@@ -358,13 +311,7 @@ const ToolExplorerPage = () => {
                       transform: `translateY(${virtualRow.start}px)`,
                     }}
                   >
-                    <div className={`grid gap-4 h-full ${
-                      itemsPerRow === 4
-                        ? 'grid-cols-4'
-                        : itemsPerRow === 2
-                        ? 'grid-cols-2'
-                        : 'grid-cols-1'
-                    }`}>
+                    <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
                       {rowTools.map((tool) => (
                         <ToolCard key={tool.id} tool={tool} />
                       ))}
