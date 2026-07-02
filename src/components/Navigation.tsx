@@ -2,31 +2,36 @@ import { useState, useEffect, useCallback, useRef, memo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   Menu, X, Sun, Moon, Search, Info, Compass, Grid3X3,
-  MessageSquare, Mail, Sparkles, Bot, Monitor as MonitorIcon,
+  MessageSquare, Mail, Sparkles, Bot,
   Github, Globe, ChevronRight, ExternalLink, Layers
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../hooks/useTheme';
 import { tools } from '../data/tools';
+import { LucideIcon } from 'lucide-react';
+
+type InternalItem = { label: string; path: string; icon: LucideIcon; internal: true };
+type ExternalItem = { label: string; href: string; icon: LucideIcon; internal: false };
+type MenuItem = InternalItem | ExternalItem;
 
 const navLinks = [
-  { label: 'Tool Guide',   path: '/tool-guide',  icon: Compass },
-  { label: 'Categories',   path: '/categories',  icon: Grid3X3 },
-  { label: 'About',        path: '/about',        icon: Info },
-  { label: 'Contact',      path: '/contact',      icon: Mail },
+  { label: 'Tool Guide', path: '/tool-guide', icon: Compass },
+  { label: 'Categories', path: '/categories', icon: Grid3X3 },
+  { label: 'About',      path: '/about',       icon: Info },
+  { label: 'Contact',    path: '/contact',     icon: Mail },
 ];
 
-const mobileMenuSections = [
+const mobileMenuSections: { id: string; title: string; icon: LucideIcon; items: MenuItem[] }[] = [
   {
     id: 'toolguide',
     title: 'Tool Guide',
     icon: Layers,
     items: [
-      { label: 'Explore Tools', path: '/tool-guide',  icon: Compass, internal: true },
-      { label: 'Categories',    path: '/categories',  icon: Grid3X3,        internal: true },
-      { label: 'About',         path: '/about',        icon: Info,           internal: true },
-      { label: 'Feedback',      path: '/feedback',     icon: MessageSquare,  internal: true },
-      { label: 'Contact',       path: '/contact',      icon: Mail,           internal: true },
+      { label: 'Explore Tools', path: '/tool-guide', icon: Compass,      internal: true },
+      { label: 'Categories',    path: '/categories', icon: Grid3X3,      internal: true },
+      { label: 'About',         path: '/about',      icon: Info,         internal: true },
+      { label: 'Feedback',      path: '/feedback',   icon: MessageSquare,internal: true },
+      { label: 'Contact',       path: '/contact',    icon: Mail,         internal: true },
     ],
   },
   {
@@ -34,23 +39,23 @@ const mobileMenuSections = [
     title: 'Rajora AI',
     icon: Sparkles,
     items: [
-      { label: 'Rajora AI',        href: 'https://rajora.live',          icon: Globe,       internal: false },
-      { label: 'AION',             href: 'https://chat.rajora.co.in',    icon: Bot,         internal: false },
-      { label: 'GitHub',           href: 'https://github.com/rajeevrajora77-lab', icon: Github, internal: false },
+      { label: 'Rajora AI', href: 'https://rajora.live',                   icon: Globe,  internal: false },
+      { label: 'AION',      href: 'https://chat.rajora.co.in',             icon: Bot,    internal: false },
+      { label: 'GitHub',    href: 'https://github.com/rajeevrajora77-lab', icon: Github, internal: false },
     ],
   },
 ];
 
 const Navigation = memo(() => {
-  const [isScrolled, setIsScrolled]           = useState(false);
+  const [isScrolled, setIsScrolled]             = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen]           = useState(false);
-  const [searchQuery, setSearchQuery]         = useState('');
-  const { theme, setTheme }                   = useTheme();
-  const location                              = useLocation();
-  const navigate                              = useNavigate();
-  const searchInputRef                        = useRef<HTMLInputElement>(null);
-  const searchWrapRef                         = useRef<HTMLDivElement>(null);
+  const [searchOpen, setSearchOpen]             = useState(false);
+  const [searchQuery, setSearchQuery]           = useState('');
+  const { theme, setTheme }                     = useTheme();
+  const location                                = useLocation();
+  const navigate                                = useNavigate();
+  const searchInputRef                          = useRef<HTMLInputElement>(null);
+  const searchWrapRef                           = useRef<HTMLDivElement>(null);
 
   const isDark = theme === 'dark';
   const toggleTheme = useCallback(() => setTheme(isDark ? 'light' : 'dark'), [isDark, setTheme]);
@@ -107,7 +112,6 @@ const Navigation = memo(() => {
     setIsMobileMenuOpen(false); setSearchOpen(false); setSearchQuery('');
   }, [location.pathname]);
 
-  // Lock body scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -293,7 +297,7 @@ const Navigation = memo(() => {
 
             {/* Nav Sections */}
             <div className="flex-1 px-5 pt-3 pb-4 space-y-1">
-              {mobileMenuSections.map((section, si) => (
+              {mobileMenuSections.map((section) => (
                 <div key={section.id}>
                   {/* Section header */}
                   <div className="flex items-center gap-2 pt-4 pb-2">
@@ -306,17 +310,20 @@ const Navigation = memo(() => {
                     <div className="flex-1 h-px bg-border/60 ml-1" />
                   </div>
 
-                  {/* Items */}
+                  {/* Items — properly narrowed */}
                   <div className="space-y-0.5">
                     {section.items.map((item) => (
                       item.internal ? (
-                        <Link key={item.label} to={item.path!}
+                        <Link
+                          key={item.label}
+                          to={item.path}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={`group flex items-center gap-3 rounded-xl px-3 py-3 transition-all duration-200 active:scale-[0.98] ${
                             location.pathname === item.path
                               ? 'bg-primary/10 text-primary'
                               : 'text-foreground/80 hover:bg-muted/60 hover:text-foreground'
-                          }`}>
+                          }`}
+                        >
                           <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
                             location.pathname === item.path ? 'bg-primary/20' : 'bg-muted/80 group-hover:bg-muted'
                           }`}>
@@ -326,8 +333,13 @@ const Navigation = memo(() => {
                           <ChevronRight size={15} className="text-foreground/30 group-hover:text-foreground/50 transition-colors" />
                         </Link>
                       ) : (
-                        <a key={item.label} href={(item as any).href} target="_blank" rel="noopener noreferrer"
-                          className="group flex items-center gap-3 rounded-xl px-3 py-3 text-foreground/80 hover:bg-muted/60 hover:text-foreground transition-all duration-200 active:scale-[0.98]">
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-3 rounded-xl px-3 py-3 text-foreground/80 hover:bg-muted/60 hover:text-foreground transition-all duration-200 active:scale-[0.98]"
+                        >
                           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-muted/80 group-hover:bg-muted transition-colors">
                             <item.icon size={17} />
                           </div>
@@ -349,8 +361,10 @@ const Navigation = memo(() => {
                   <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Contact</span>
                   <div className="flex-1 h-px bg-border/60 ml-1" />
                 </div>
-                <a href="mailto:hello@rajora.live"
-                  className="group flex items-center gap-3.5 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm px-4 py-3.5 transition-all duration-300 hover:border-primary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-primary/5 active:scale-[0.98]">
+                <a
+                  href="mailto:hello@rajora.live"
+                  className="group flex items-center gap-3.5 rounded-2xl border border-border/60 bg-card/60 backdrop-blur-sm px-4 py-3.5 transition-all duration-300 hover:border-primary/30 hover:bg-card/90 hover:shadow-lg hover:shadow-primary/5 active:scale-[0.98]"
+                >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
                     <Mail size={18} className="text-primary" />
                   </div>
@@ -367,9 +381,7 @@ const Navigation = memo(() => {
 
             {/* Footer strip */}
             <div className="shrink-0 border-t border-border/50 px-5 py-3 flex items-center justify-between">
-              <p className="text-[11px] text-muted-foreground font-mono">
-                © 2026 Rajora AI
-              </p>
+              <p className="text-[11px] text-muted-foreground font-mono">© 2026 Rajora AI</p>
               <div className="flex items-center gap-2">
                 <a href="https://github.com/rajeevrajora77-lab" target="_blank" rel="noopener noreferrer"
                   className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted/60 text-foreground/60 hover:text-foreground transition-colors">
