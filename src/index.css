@@ -198,7 +198,10 @@
     /* Respect gesture bar on iPhone */
     padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
     z-index: 50;
-    @apply bg-elevated/90 backdrop-blur-xl border-t border-border;
+    /* bg-elevated/90 is invalid (@apply can't use opacity modifier on CSS vars);
+       use raw CSS with color-mix for the semi-transparent elevated surface */
+    background-color: color-mix(in srgb, var(--elevated) 90%, transparent);
+    @apply backdrop-blur-xl border-t border-border;
   }
 
   /* Desktop nav: top horizontal bar at 1024px+ */
@@ -341,4 +344,16 @@
   .text-fluid-4xl  { font-size: var(--text-4xl); }
   .text-fluid-5xl  { font-size: var(--text-5xl); }
   .text-fluid-hero { font-size: var(--text-hero); }
+
+  /* Padding-inline shorthand utilities */
+  .px-fluid-1 { padding-inline: var(--space-1); }
+  .px-fluid-2 { padding-inline: var(--space-2); }
+  .px-fluid-3 { padding-inline: var(--space-3); }
+  .px-fluid-4 { padding-inline: var(--space-4); }
+
+  /* Padding-block shorthand utilities */
+  .py-fluid-1 { padding-block: var(--space-1); }
+  .py-fluid-2 { padding-block: var(--space-2); }
+  .py-fluid-3 { padding-block: var(--space-3); }
+  .py-fluid-4 { padding-block: var(--space-4); }
 }
