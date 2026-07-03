@@ -43,7 +43,7 @@
 
 ## 🎯 About
 
-**Rajora.Ai** is a beautifully crafted, scroll-driven web experience that organizes **150+ free developer tools** into 6 progressive layers — from terminal setup to production-ready full-stack deployment.
+**Rajora.Ai** is a beautifully crafted, scroll-driven web experience that organizes **1200+ free developer tools** into 6 progressive layers — from terminal setup to production-ready full-stack deployment.
 
 Whether you're a beginner setting up your first dev environment or a senior engineer exploring new free-tier services, this guide maps out everything you need — with install commands, free-tier details, and direct links.
 
